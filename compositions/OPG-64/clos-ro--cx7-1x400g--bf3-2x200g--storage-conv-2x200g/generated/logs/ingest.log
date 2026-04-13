@@ -1,0 +1,6 @@
+🧬 loaded config '/etc/netbox/config/configuration.py'
+🧬 loaded config '/etc/netbox/config/extra.py'
+🧬 loaded config '/etc/netbox/config/logging.py'
+🧬 loaded config '/etc/netbox/config/plugins.py'
+Reference mode: ensure
+Applied case 'training_opg64_clos_ro_air_2srv' -> plan 'Training OPG-64 Clos RO Air 2srv'
