@@ -1,0 +1,32 @@
+🧬 loaded config '/etc/netbox/config/configuration.py'
+🧬 loaded config '/etc/netbox/config/extra.py'
+🧬 loaded config '/etc/netbox/config/logging.py'
+🧬 loaded config '/etc/netbox/config/plugins.py'
+Exporting wiring YAML for plan: Training XOC-64 1x OPG-64 Mesh Converged RO Air 2srv (ID: 156)
+
+[OK] Export complete: /tmp/ra_pipeline/training_xoc64_1xopg64_mesh_conv_ro_air_2srv/wiring_tmp/wiring-inb-mgmt.yaml
+  plan_id:    156
+  fabric:     inb-mgmt
+  timestamp:  2026-04-12T23:47:04.713211+00:00
+  sha256:     5b79f0f0409db1533b5942e61710511021864a1d8ac2d658b87af152f99f862c
+  bytes:      8752
+  lines:      432
+  documents:  38
+
+[OK] Export complete: /tmp/ra_pipeline/training_xoc64_1xopg64_mesh_conv_ro_air_2srv/wiring_tmp/wiring-scale-out.yaml
+  plan_id:    156
+  fabric:     scale-out
+  timestamp:  2026-04-12T23:47:07.299532+00:00
+  sha256:     e3e42bcd2b85c199f331a441aa656d23a7f84eff2e5dfc1c8c4fe93d709fd5b0
+  bytes:      23013
+  lines:      1041
+  documents:  77
+
+[OK] Export complete: /tmp/ra_pipeline/training_xoc64_1xopg64_mesh_conv_ro_air_2srv/wiring_tmp/wiring-soc-storage.yaml
+  plan_id:    156
+  fabric:     soc-storage
+  timestamp:  2026-04-12T23:47:10.177295+00:00
+  sha256:     5a952036f0694a45523145ce2df3fb5bf4b93a1c5cae1f1cf934c8d907e54c44
+  bytes:      12872
+  lines:      595
+  documents:  47

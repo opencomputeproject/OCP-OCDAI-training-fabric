@@ -1,0 +1,431 @@
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: VLANNamespace
+metadata:
+  name: default
+  namespace: default
+spec:
+  ranges:
+  - from: 1000
+    to: 2999
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: IPv4Namespace
+metadata:
+  name: default
+  namespace: default
+spec:
+  subnets:
+  - 10.0.0.0/16
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Switch
+metadata:
+  name: inb-mgmt-leaf-01
+  namespace: default
+spec:
+  role: server-leaf
+  profile: celestica-ds2000
+  boot:
+    mac: 02:95:80:2f:70:b5
+  portBreakouts:
+    E1/1: 1x25G
+    E1/2: 1x25G
+    E1/3: 1x25G
+    E1/4: 1x25G
+    E1/5: 1x25G
+    E1/6: 1x25G
+    E1/7: 1x25G
+    E1/8: 1x25G
+    E1/9: 1x25G
+    E1/10: 1x25G
+    E1/11: 1x25G
+    E1/12: 1x25G
+    E1/13: 1x25G
+    E1/14: 1x25G
+    E1/15: 1x25G
+    E1/16: 1x25G
+    E1/17: 1x25G
+    E1/18: 1x25G
+    E1/19: 1x25G
+    E1/20: 1x25G
+    E1/21: 1x25G
+    E1/22: 1x25G
+    E1/23: 1x25G
+    E1/24: 1x25G
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Switch
+metadata:
+  name: inb-mgmt-leaf-02
+  namespace: default
+spec:
+  role: server-leaf
+  profile: celestica-ds2000
+  boot:
+    mac: 02:21:8a:6c:f3:cc
+  portBreakouts:
+    E1/1: 1x25G
+    E1/2: 1x25G
+    E1/3: 1x25G
+    E1/4: 1x25G
+    E1/5: 1x25G
+    E1/6: 1x25G
+    E1/7: 1x25G
+    E1/8: 1x25G
+    E1/9: 1x25G
+    E1/10: 1x25G
+    E1/11: 1x25G
+    E1/12: 1x25G
+    E1/13: 1x25G
+    E1/14: 1x25G
+    E1/15: 1x25G
+    E1/16: 1x25G
+    E1/17: 1x25G
+    E1/18: 1x25G
+    E1/19: 1x25G
+    E1/20: 1x25G
+    E1/21: 1x25G
+    E1/22: 1x25G
+    E1/23: 1x25G
+    E1/24: 1x25G
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: compute-xpu-001
+  namespace: default
+spec: {}
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: compute-xpu-002
+  namespace: default
+spec: {}
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: compute-xpu-003
+  namespace: default
+spec: {}
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: compute-xpu-004
+  namespace: default
+spec: {}
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: compute-xpu-005
+  namespace: default
+spec: {}
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: compute-xpu-006
+  namespace: default
+spec: {}
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: compute-xpu-007
+  namespace: default
+spec: {}
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: compute-xpu-008
+  namespace: default
+spec: {}
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: hh-controller-001
+  namespace: default
+spec: {}
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: hh-gateway-001
+  namespace: default
+spec: {}
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: hh-gateway-002
+  namespace: default
+spec: {}
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: metadata-srv-001
+  namespace: default
+spec: {}
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: metadata-srv-002
+  namespace: default
+spec: {}
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: metadata-srv-003
+  namespace: default
+spec: {}
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: storage-srv-001
+  namespace: default
+spec: {}
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: storage-srv-002
+  namespace: default
+spec: {}
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: storage-srv-003
+  namespace: default
+spec: {}
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-xpu-001-inb-mgmt-mgmt0-unbundled-inb-mgmt-leaf-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute_xpu-001/inb_mgmt-mgmt0
+      switch:
+        port: inb_mgmt_leaf-01/E1/1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-xpu-002-inb-mgmt-mgmt0-unbundled-inb-mgmt-leaf-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute_xpu-002/inb_mgmt-mgmt0
+      switch:
+        port: inb_mgmt_leaf-01/E1/2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-xpu-003-inb-mgmt-mgmt0-unbundled-inb-mgmt-leaf-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute_xpu-003/inb_mgmt-mgmt0
+      switch:
+        port: inb_mgmt_leaf-01/E1/3
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-xpu-004-inb-mgmt-mgmt0-unbundled-inb-mgmt-leaf-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute_xpu-004/inb_mgmt-mgmt0
+      switch:
+        port: inb_mgmt_leaf-01/E1/4
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-xpu-005-inb-mgmt-mgmt0-unbundled-inb-mgmt-leaf-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute_xpu-005/inb_mgmt-mgmt0
+      switch:
+        port: inb_mgmt_leaf-01/E1/5
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-xpu-006-inb-mgmt-mgmt0-unbundled-inb-mgmt-leaf-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute_xpu-006/inb_mgmt-mgmt0
+      switch:
+        port: inb_mgmt_leaf-01/E1/6
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-xpu-007-inb-mgmt-mgmt0-unbundled-inb-mgmt-leaf-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute_xpu-007/inb_mgmt-mgmt0
+      switch:
+        port: inb_mgmt_leaf-01/E1/7
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-xpu-008-inb-mgmt-mgmt0-unbundled-inb-mgmt-leaf-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute_xpu-008/inb_mgmt-mgmt0
+      switch:
+        port: inb_mgmt_leaf-01/E1/8
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: hh-controller-001-inb-mgmt-mgmt0-unbundled-inb-mgmt-leaf-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: hh_controller-001/inb_mgmt-mgmt0
+      switch:
+        port: inb_mgmt_leaf-01/E1/9
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: hh-gateway-001-inb-mgmt-mgmt0-unbundled-inb-mgmt-leaf-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: hh_gateway-001/inb_mgmt-mgmt0
+      switch:
+        port: inb_mgmt_leaf-01/E1/10
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: hh-gateway-002-inb-mgmt-mgmt0-unbundled-inb-mgmt-leaf-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: hh_gateway-002/inb_mgmt-mgmt0
+      switch:
+        port: inb_mgmt_leaf-01/E1/11
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: metadata-srv-001-inb-mgmt-mgmt0-unbundled-inb-mgmt-leaf-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: metadata_srv-001/inb_mgmt-mgmt0
+      switch:
+        port: inb_mgmt_leaf-01/E1/12
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: metadata-srv-002-inb-mgmt-mgmt0-unbundled-inb-mgmt-leaf-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: metadata_srv-002/inb_mgmt-mgmt0
+      switch:
+        port: inb_mgmt_leaf-01/E1/13
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: metadata-srv-003-inb-mgmt-mgmt0-unbundled-inb-mgmt-leaf-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: metadata_srv-003/inb_mgmt-mgmt0
+      switch:
+        port: inb_mgmt_leaf-01/E1/14
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: storage-srv-001-inb-mgmt-mgmt0-unbundled-inb-mgmt-leaf-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: storage_srv-001/inb_mgmt-mgmt0
+      switch:
+        port: inb_mgmt_leaf-01/E1/15
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: storage-srv-002-inb-mgmt-mgmt0-unbundled-inb-mgmt-leaf-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: storage_srv-002/inb_mgmt-mgmt0
+      switch:
+        port: inb_mgmt_leaf-01/E1/16
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: storage-srv-003-inb-mgmt-mgmt0-unbundled-inb-mgmt-leaf-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: storage_srv-003/inb_mgmt-mgmt0
+      switch:
+        port: inb_mgmt_leaf-01/E1/17

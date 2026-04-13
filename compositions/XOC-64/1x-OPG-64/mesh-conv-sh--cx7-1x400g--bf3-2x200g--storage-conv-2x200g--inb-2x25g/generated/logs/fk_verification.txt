@@ -1,0 +1,1 @@
+total=14non_null_transceiver_fk=4
