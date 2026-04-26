@@ -1,0 +1,33 @@
+{
+  "metadata": {
+    "name": "opg-256-virtual",
+    "variant": "virtual-soc-storage-eslag--fe-2x25g",
+    "status": "scaffold",
+    "purpose": "teaching inventory for virtual RA workflow",
+    "import_ready": false,
+    "notes": [
+      "This file is a starter inventory scaffold rather than a finalized NetBox export.",
+      "The logical model includes 32 xPU-node servers while the VLAB subset deploys only four representative lab hosts."
+    ]
+  },
+  "device_groups": {
+    "soc_storage_leaves": ["soc-leaf-01", "soc-leaf-02"],
+    "soc_storage_spines": ["soc-spine-01", "soc-spine-02"],
+    "scale_out_leaves": ["so-leaf-01", "so-leaf-02", "so-leaf-03", "so-leaf-04"],
+    "scale_out_spines": ["so-spine-01", "so-spine-02"],
+    "xpu_nodes": [
+      "compute-01", "compute-02", "compute-03", "compute-04",
+      "compute-05", "compute-06", "compute-07", "compute-08",
+      "compute-09", "compute-10", "compute-11", "compute-12",
+      "compute-13", "compute-14", "compute-15", "compute-16",
+      "compute-17", "compute-18", "compute-19", "compute-20",
+      "compute-21", "compute-22", "compute-23", "compute-24",
+      "compute-25", "compute-26", "compute-27", "compute-28",
+      "compute-29", "compute-30", "compute-31", "compute-32"
+    ]
+  },
+  "interface_model": {
+    "xpu_node_soc_storage": ["soc0", "soc1"],
+    "xpu_node_scale_out": ["so0", "so1", "so2", "so3", "so4", "so5", "so6", "so7"]
+  }
+}

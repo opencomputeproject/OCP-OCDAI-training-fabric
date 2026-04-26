@@ -1,0 +1,10 @@
+# Cluster-oriented starter wiring scaffold for the VLAB subset.
+# Use the OPG-oriented virtual composition if you want the same lab from a building-block viewpoint.
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: xoc-256-virtual-note
+spec:
+  notes:
+    - This file intentionally mirrors the reduced SO-C/storage lab subset.
+    - Use it as a cluster-facing entry point for the same VLAB workflow.

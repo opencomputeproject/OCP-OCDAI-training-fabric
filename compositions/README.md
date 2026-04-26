@@ -14,6 +14,7 @@ Why it matters
 How this folder is organized
 - OPG sizes: `OPG-64`, `OPG-128`, `OPG-256`, `OPG-512`
 - XOC tiers: `XOC-256`, `XOC-512`, `XOC-1024` (bundles of OPGs)
+- Virtual learning compositions: `OPG-256-virtual`, `XOC-256-virtual`
 - Each size/tier contains one or more variants (e.g., `clos-ro--cx7-1x400g--...` for rail‑optimized Clos). Variant names are tokenized for clarity and grep‑ability.
 
 Assets you’ll find in each variant
@@ -40,6 +41,7 @@ Cooling
 
 A note on completeness
 - Some large XOC tiers may list partial assets (e.g., topology map only) where scale pushes against current port budgets. Those READMEs call out what’s pending so you can track follow‑ups.
+- The virtual learning compositions are intentionally pedagogical. They model RA workflows and naming, but they simplify the deployable lab subset so operators can learn Hedgehog artifact usage without needing a real xPU cluster.
 
 References
 - OPG‑M System Architecture (2026‑01‑14): https://www.opencompute.org/documents/opg-m-system-architecture-final-14-january-2026-pdf

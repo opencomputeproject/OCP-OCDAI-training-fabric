@@ -1,0 +1,99 @@
+# Starter wiring scaffold for the VLAB-deployable SO-C/storage subset.
+# This file is intentionally limited to the lab subset and may need schema adjustment.
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Switch
+metadata:
+  name: soc-leaf-01
+spec:
+  role: server-leaf
+  profile: generic-vlab-switch
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Switch
+metadata:
+  name: soc-leaf-02
+spec:
+  role: server-leaf
+  profile: generic-vlab-switch
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Switch
+metadata:
+  name: soc-spine-01
+spec:
+  role: spine
+  profile: generic-vlab-switch
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Switch
+metadata:
+  name: soc-spine-02
+spec:
+  role: spine
+  profile: generic-vlab-switch
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: compute-01
+spec:
+  description: Lab host representing a logical xPU-node
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: compute-02
+spec:
+  description: Lab host representing a logical xPU-node
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: compute-03
+spec:
+  description: Lab host representing a logical xPU-node
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: compute-04
+spec:
+  description: Lab host representing a logical xPU-node
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: soc-uplinks
+spec:
+  links:
+    - a: soc-leaf-01/E1/1
+      b: soc-spine-01/E1/1
+    - a: soc-leaf-01/E1/2
+      b: soc-spine-02/E1/1
+    - a: soc-leaf-02/E1/1
+      b: soc-spine-01/E1/2
+    - a: soc-leaf-02/E1/2
+      b: soc-spine-02/E1/2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-eslag-links
+spec:
+  links:
+    - a: compute-01/soc0
+      b: soc-leaf-01/E1/3
+    - a: compute-01/soc1
+      b: soc-leaf-02/E1/3
+    - a: compute-02/soc0
+      b: soc-leaf-01/E1/4
+    - a: compute-02/soc1
+      b: soc-leaf-02/E1/4
+    - a: compute-03/soc0
+      b: soc-leaf-01/E1/5
+    - a: compute-03/soc1
+      b: soc-leaf-02/E1/5
+    - a: compute-04/soc0
+      b: soc-leaf-01/E1/6
+    - a: compute-04/soc1
+      b: soc-leaf-02/E1/6

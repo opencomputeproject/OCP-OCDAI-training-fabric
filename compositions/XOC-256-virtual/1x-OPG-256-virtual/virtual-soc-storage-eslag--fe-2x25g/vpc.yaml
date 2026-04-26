@@ -1,0 +1,10 @@
+# Cluster-oriented starter VPC scaffold for the VLAB subset.
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPC
+metadata:
+  name: xoc-256-virtual-soc-storage
+spec:
+  ipv4Namespace: default
+  subnets:
+    - name: lab-subnet
+      cidr: 10.45.0.0/24

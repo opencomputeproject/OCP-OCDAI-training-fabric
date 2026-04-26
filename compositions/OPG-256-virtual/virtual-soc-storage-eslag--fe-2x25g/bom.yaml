@@ -1,0 +1,32 @@
+metadata:
+  name: opg-256-virtual
+  variant: virtual-soc-storage-eslag--fe-2x25g
+  status: scaffold
+  purpose: teaching-and-vlab-learning
+logical_topology:
+  xpu_nodes: 32
+  xpus_total: 256
+  fabrics:
+    soc_storage:
+      leaves: 2
+      spines: 2
+      server_links_per_node: 2
+      link_speed: 25G
+      multihoming: eslag-in-vlab
+    scale_out:
+      leaves: 4
+      spines: 2
+      server_links_per_node: 8
+      link_speed: 400G
+vlab_subset:
+  deployed_fabrics:
+    - soc-storage
+  lab_hosts: 4
+  switches:
+    - soc-leaf-01
+    - soc-leaf-02
+    - soc-spine-01
+    - soc-spine-02
+  notes:
+    - VLAB subset is intentionally smaller than the logical model.
+    - Link speeds are illustrative and are not intended for workload benchmarking.

@@ -1,0 +1,20 @@
+{
+  "metadata": {
+    "name": "xoc-256-virtual",
+    "bundle": "1x-opg-256-virtual",
+    "status": "scaffold",
+    "import_ready": false,
+    "notes": [
+      "Cluster-oriented wrapper around the OPG-256 Virtual inventory scaffold.",
+      "This file is intended to teach artifact structure before a finalized generator-backed export exists."
+    ]
+  },
+  "logical_counts": {
+    "xpu_nodes": 32,
+    "xpus_total": 256,
+    "soc_storage_leaves": 2,
+    "soc_storage_spines": 2,
+    "scale_out_leaves": 4,
+    "scale_out_spines": 2
+  }
+}

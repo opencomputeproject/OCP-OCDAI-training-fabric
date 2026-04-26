@@ -1,0 +1,43 @@
+# Starter VPC scaffold for the VLAB-deployable SO-C/storage subset.
+# This file is intentionally simple and may need schema adjustment.
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPC
+metadata:
+  name: virtual-soc-storage
+spec:
+  ipv4Namespace: default
+  subnets:
+    - name: lab-subnet
+      cidr: 10.44.0.0/24
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: compute-01-soc-storage
+spec:
+  vpc: virtual-soc-storage
+  endpoint: compute-01
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: compute-02-soc-storage
+spec:
+  vpc: virtual-soc-storage
+  endpoint: compute-02
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: compute-03-soc-storage
+spec:
+  vpc: virtual-soc-storage
+  endpoint: compute-03
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: compute-04-soc-storage
+spec:
+  vpc: virtual-soc-storage
+  endpoint: compute-04

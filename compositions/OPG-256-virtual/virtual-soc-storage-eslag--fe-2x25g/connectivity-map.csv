@@ -1,0 +1,101 @@
+node_type,node_id,port,peer_type,peer_id,peer_port,speed,media_type,network_type,lag_id,plane,comments
+switch,soc-leaf-01,E1/1,switch,soc-spine-01,E1/1,25G,SFP28-DAC,soc-storage,,,VLAB subset uplink
+switch,soc-leaf-01,E1/2,switch,soc-spine-02,E1/1,25G,SFP28-DAC,soc-storage,,,VLAB subset uplink
+switch,soc-leaf-02,E1/1,switch,soc-spine-01,E1/2,25G,SFP28-DAC,soc-storage,,,VLAB subset uplink
+switch,soc-leaf-02,E1/2,switch,soc-spine-02,E1/2,25G,SFP28-DAC,soc-storage,,,VLAB subset uplink
+server,compute-01,soc0,switch,soc-leaf-01,E1/3,25G,SFP28-DAC,soc-storage,eslag-01,,Logical xPU-node SO-C link
+server,compute-01,soc1,switch,soc-leaf-02,E1/3,25G,SFP28-DAC,soc-storage,eslag-01,,Logical xPU-node SO-C link
+server,compute-02,soc0,switch,soc-leaf-01,E1/4,25G,SFP28-DAC,soc-storage,eslag-02,,Logical xPU-node SO-C link
+server,compute-02,soc1,switch,soc-leaf-02,E1/4,25G,SFP28-DAC,soc-storage,eslag-02,,Logical xPU-node SO-C link
+server,compute-03,soc0,switch,soc-leaf-01,E1/5,25G,SFP28-DAC,soc-storage,eslag-03,,Logical xPU-node SO-C link
+server,compute-03,soc1,switch,soc-leaf-02,E1/5,25G,SFP28-DAC,soc-storage,eslag-03,,Logical xPU-node SO-C link
+server,compute-04,soc0,switch,soc-leaf-01,E1/6,25G,SFP28-DAC,soc-storage,eslag-04,,Logical xPU-node SO-C link
+server,compute-04,soc1,switch,soc-leaf-02,E1/6,25G,SFP28-DAC,soc-storage,eslag-04,,Logical xPU-node SO-C link
+server,compute-05,soc0,switch,soc-leaf-01,E1/7,25G,SFP28-DAC,soc-storage,eslag-05,,Logical xPU-node SO-C link
+server,compute-05,soc1,switch,soc-leaf-02,E1/7,25G,SFP28-DAC,soc-storage,eslag-05,,Logical xPU-node SO-C link
+server,compute-06,soc0,switch,soc-leaf-01,E1/8,25G,SFP28-DAC,soc-storage,eslag-06,,Logical xPU-node SO-C link
+server,compute-06,soc1,switch,soc-leaf-02,E1/8,25G,SFP28-DAC,soc-storage,eslag-06,,Logical xPU-node SO-C link
+server,compute-07,soc0,switch,soc-leaf-01,E1/9,25G,SFP28-DAC,soc-storage,eslag-07,,Logical xPU-node SO-C link
+server,compute-07,soc1,switch,soc-leaf-02,E1/9,25G,SFP28-DAC,soc-storage,eslag-07,,Logical xPU-node SO-C link
+server,compute-08,soc0,switch,soc-leaf-01,E1/10,25G,SFP28-DAC,soc-storage,eslag-08,,Logical xPU-node SO-C link
+server,compute-08,soc1,switch,soc-leaf-02,E1/10,25G,SFP28-DAC,soc-storage,eslag-08,,Logical xPU-node SO-C link
+server,compute-09,soc0,switch,soc-leaf-01,E1/11,25G,SFP28-DAC,soc-storage,eslag-09,,Logical xPU-node SO-C link
+server,compute-09,soc1,switch,soc-leaf-02,E1/11,25G,SFP28-DAC,soc-storage,eslag-09,,Logical xPU-node SO-C link
+server,compute-10,soc0,switch,soc-leaf-01,E1/12,25G,SFP28-DAC,soc-storage,eslag-10,,Logical xPU-node SO-C link
+server,compute-10,soc1,switch,soc-leaf-02,E1/12,25G,SFP28-DAC,soc-storage,eslag-10,,Logical xPU-node SO-C link
+server,compute-11,soc0,switch,soc-leaf-01,E1/13,25G,SFP28-DAC,soc-storage,eslag-11,,Logical xPU-node SO-C link
+server,compute-11,soc1,switch,soc-leaf-02,E1/13,25G,SFP28-DAC,soc-storage,eslag-11,,Logical xPU-node SO-C link
+server,compute-12,soc0,switch,soc-leaf-01,E1/14,25G,SFP28-DAC,soc-storage,eslag-12,,Logical xPU-node SO-C link
+server,compute-12,soc1,switch,soc-leaf-02,E1/14,25G,SFP28-DAC,soc-storage,eslag-12,,Logical xPU-node SO-C link
+server,compute-13,soc0,switch,soc-leaf-01,E1/15,25G,SFP28-DAC,soc-storage,eslag-13,,Logical xPU-node SO-C link
+server,compute-13,soc1,switch,soc-leaf-02,E1/15,25G,SFP28-DAC,soc-storage,eslag-13,,Logical xPU-node SO-C link
+server,compute-14,soc0,switch,soc-leaf-01,E1/16,25G,SFP28-DAC,soc-storage,eslag-14,,Logical xPU-node SO-C link
+server,compute-14,soc1,switch,soc-leaf-02,E1/16,25G,SFP28-DAC,soc-storage,eslag-14,,Logical xPU-node SO-C link
+server,compute-15,soc0,switch,soc-leaf-01,E1/17,25G,SFP28-DAC,soc-storage,eslag-15,,Logical xPU-node SO-C link
+server,compute-15,soc1,switch,soc-leaf-02,E1/17,25G,SFP28-DAC,soc-storage,eslag-15,,Logical xPU-node SO-C link
+server,compute-16,soc0,switch,soc-leaf-01,E1/18,25G,SFP28-DAC,soc-storage,eslag-16,,Logical xPU-node SO-C link
+server,compute-16,soc1,switch,soc-leaf-02,E1/18,25G,SFP28-DAC,soc-storage,eslag-16,,Logical xPU-node SO-C link
+server,compute-17,soc0,switch,soc-leaf-01,E1/19,25G,SFP28-DAC,soc-storage,eslag-17,,Logical xPU-node SO-C link
+server,compute-17,soc1,switch,soc-leaf-02,E1/19,25G,SFP28-DAC,soc-storage,eslag-17,,Logical xPU-node SO-C link
+server,compute-18,soc0,switch,soc-leaf-01,E1/20,25G,SFP28-DAC,soc-storage,eslag-18,,Logical xPU-node SO-C link
+server,compute-18,soc1,switch,soc-leaf-02,E1/20,25G,SFP28-DAC,soc-storage,eslag-18,,Logical xPU-node SO-C link
+server,compute-19,soc0,switch,soc-leaf-01,E1/21,25G,SFP28-DAC,soc-storage,eslag-19,,Logical xPU-node SO-C link
+server,compute-19,soc1,switch,soc-leaf-02,E1/21,25G,SFP28-DAC,soc-storage,eslag-19,,Logical xPU-node SO-C link
+server,compute-20,soc0,switch,soc-leaf-01,E1/22,25G,SFP28-DAC,soc-storage,eslag-20,,Logical xPU-node SO-C link
+server,compute-20,soc1,switch,soc-leaf-02,E1/22,25G,SFP28-DAC,soc-storage,eslag-20,,Logical xPU-node SO-C link
+server,compute-21,soc0,switch,soc-leaf-01,E1/23,25G,SFP28-DAC,soc-storage,eslag-21,,Logical xPU-node SO-C link
+server,compute-21,soc1,switch,soc-leaf-02,E1/23,25G,SFP28-DAC,soc-storage,eslag-21,,Logical xPU-node SO-C link
+server,compute-22,soc0,switch,soc-leaf-01,E1/24,25G,SFP28-DAC,soc-storage,eslag-22,,Logical xPU-node SO-C link
+server,compute-22,soc1,switch,soc-leaf-02,E1/24,25G,SFP28-DAC,soc-storage,eslag-22,,Logical xPU-node SO-C link
+server,compute-23,soc0,switch,soc-leaf-01,E1/25,25G,SFP28-DAC,soc-storage,eslag-23,,Logical xPU-node SO-C link
+server,compute-23,soc1,switch,soc-leaf-02,E1/25,25G,SFP28-DAC,soc-storage,eslag-23,,Logical xPU-node SO-C link
+server,compute-24,soc0,switch,soc-leaf-01,E1/26,25G,SFP28-DAC,soc-storage,eslag-24,,Logical xPU-node SO-C link
+server,compute-24,soc1,switch,soc-leaf-02,E1/26,25G,SFP28-DAC,soc-storage,eslag-24,,Logical xPU-node SO-C link
+server,compute-25,soc0,switch,soc-leaf-01,E1/27,25G,SFP28-DAC,soc-storage,eslag-25,,Logical xPU-node SO-C link
+server,compute-25,soc1,switch,soc-leaf-02,E1/27,25G,SFP28-DAC,soc-storage,eslag-25,,Logical xPU-node SO-C link
+server,compute-26,soc0,switch,soc-leaf-01,E1/28,25G,SFP28-DAC,soc-storage,eslag-26,,Logical xPU-node SO-C link
+server,compute-26,soc1,switch,soc-leaf-02,E1/28,25G,SFP28-DAC,soc-storage,eslag-26,,Logical xPU-node SO-C link
+server,compute-27,soc0,switch,soc-leaf-01,E1/29,25G,SFP28-DAC,soc-storage,eslag-27,,Logical xPU-node SO-C link
+server,compute-27,soc1,switch,soc-leaf-02,E1/29,25G,SFP28-DAC,soc-storage,eslag-27,,Logical xPU-node SO-C link
+server,compute-28,soc0,switch,soc-leaf-01,E1/30,25G,SFP28-DAC,soc-storage,eslag-28,,Logical xPU-node SO-C link
+server,compute-28,soc1,switch,soc-leaf-02,E1/30,25G,SFP28-DAC,soc-storage,eslag-28,,Logical xPU-node SO-C link
+server,compute-29,soc0,switch,soc-leaf-01,E1/31,25G,SFP28-DAC,soc-storage,eslag-29,,Logical xPU-node SO-C link
+server,compute-29,soc1,switch,soc-leaf-02,E1/31,25G,SFP28-DAC,soc-storage,eslag-29,,Logical xPU-node SO-C link
+server,compute-30,soc0,switch,soc-leaf-01,E1/32,25G,SFP28-DAC,soc-storage,eslag-30,,Logical xPU-node SO-C link
+server,compute-30,soc1,switch,soc-leaf-02,E1/32,25G,SFP28-DAC,soc-storage,eslag-30,,Logical xPU-node SO-C link
+server,compute-31,soc0,switch,soc-leaf-01,E1/33,25G,SFP28-DAC,soc-storage,eslag-31,,Logical xPU-node SO-C link
+server,compute-31,soc1,switch,soc-leaf-02,E1/33,25G,SFP28-DAC,soc-storage,eslag-31,,Logical xPU-node SO-C link
+server,compute-32,soc0,switch,soc-leaf-01,E1/34,25G,SFP28-DAC,soc-storage,eslag-32,,Logical xPU-node SO-C link
+server,compute-32,soc1,switch,soc-leaf-02,E1/34,25G,SFP28-DAC,soc-storage,eslag-32,,Logical xPU-node SO-C link
+server,compute-01,so0,switch,so-leaf-01,E1/3/1,400G,DR4,scale-out,,plane-a,Representative scale-out pattern
+server,compute-01,so1,switch,so-leaf-01,E1/3/2,400G,DR4,scale-out,,plane-a,Representative scale-out pattern
+server,compute-01,so2,switch,so-leaf-02,E1/3/1,400G,DR4,scale-out,,plane-a,Representative scale-out pattern
+server,compute-01,so3,switch,so-leaf-02,E1/3/2,400G,DR4,scale-out,,plane-a,Representative scale-out pattern
+server,compute-01,so4,switch,so-leaf-03,E1/3/1,400G,DR4,scale-out,,plane-a,Representative scale-out pattern
+server,compute-01,so5,switch,so-leaf-03,E1/3/2,400G,DR4,scale-out,,plane-a,Representative scale-out pattern
+server,compute-01,so6,switch,so-leaf-04,E1/3/1,400G,DR4,scale-out,,plane-a,Representative scale-out pattern
+server,compute-01,so7,switch,so-leaf-04,E1/3/2,400G,DR4,scale-out,,plane-a,Representative scale-out pattern
+server,compute-02,so0,switch,so-leaf-01,E1/4/1,400G,DR4,scale-out,,plane-a,Representative scale-out pattern
+server,compute-02,so1,switch,so-leaf-01,E1/4/2,400G,DR4,scale-out,,plane-a,Representative scale-out pattern
+server,compute-02,so2,switch,so-leaf-02,E1/4/1,400G,DR4,scale-out,,plane-a,Representative scale-out pattern
+server,compute-02,so3,switch,so-leaf-02,E1/4/2,400G,DR4,scale-out,,plane-a,Representative scale-out pattern
+server,compute-02,so4,switch,so-leaf-03,E1/4/1,400G,DR4,scale-out,,plane-a,Representative scale-out pattern
+server,compute-02,so5,switch,so-leaf-03,E1/4/2,400G,DR4,scale-out,,plane-a,Representative scale-out pattern
+server,compute-02,so6,switch,so-leaf-04,E1/4/1,400G,DR4,scale-out,,plane-a,Representative scale-out pattern
+server,compute-02,so7,switch,so-leaf-04,E1/4/2,400G,DR4,scale-out,,plane-a,Representative scale-out pattern
+server,compute-03,so0,switch,so-leaf-01,E1/5/1,400G,DR4,scale-out,,plane-a,Representative scale-out pattern
+server,compute-03,so1,switch,so-leaf-01,E1/5/2,400G,DR4,scale-out,,plane-a,Representative scale-out pattern
+server,compute-03,so2,switch,so-leaf-02,E1/5/1,400G,DR4,scale-out,,plane-a,Representative scale-out pattern
+server,compute-03,so3,switch,so-leaf-02,E1/5/2,400G,DR4,scale-out,,plane-a,Representative scale-out pattern
+server,compute-03,so4,switch,so-leaf-03,E1/5/1,400G,DR4,scale-out,,plane-a,Representative scale-out pattern
+server,compute-03,so5,switch,so-leaf-03,E1/5/2,400G,DR4,scale-out,,plane-a,Representative scale-out pattern
+server,compute-03,so6,switch,so-leaf-04,E1/5/1,400G,DR4,scale-out,,plane-a,Representative scale-out pattern
+server,compute-03,so7,switch,so-leaf-04,E1/5/2,400G,DR4,scale-out,,plane-a,Representative scale-out pattern
+server,compute-04,so0,switch,so-leaf-01,E1/6/1,400G,DR4,scale-out,,plane-a,Representative scale-out pattern
+server,compute-04,so1,switch,so-leaf-01,E1/6/2,400G,DR4,scale-out,,plane-a,Representative scale-out pattern
+server,compute-04,so2,switch,so-leaf-02,E1/6/1,400G,DR4,scale-out,,plane-a,Representative scale-out pattern
+server,compute-04,so3,switch,so-leaf-02,E1/6/2,400G,DR4,scale-out,,plane-a,Representative scale-out pattern
+server,compute-04,so4,switch,so-leaf-03,E1/6/1,400G,DR4,scale-out,,plane-a,Representative scale-out pattern
+server,compute-04,so5,switch,so-leaf-03,E1/6/2,400G,DR4,scale-out,,plane-a,Representative scale-out pattern
+server,compute-04,so6,switch,so-leaf-04,E1/6/1,400G,DR4,scale-out,,plane-a,Representative scale-out pattern
+server,compute-04,so7,switch,so-leaf-04,E1/6/2,400G,DR4,scale-out,,plane-a,Representative scale-out pattern

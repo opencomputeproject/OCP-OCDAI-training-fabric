@@ -1,0 +1,17 @@
+metadata:
+  name: xoc-256-virtual
+  bundle: 1x-opg-256-virtual
+  variant: virtual-soc-storage-eslag--fe-2x25g
+  status: scaffold
+  purpose: cluster-entry teaching-and-vlab-learning
+logical_topology:
+  cluster_xpu_nodes: 32
+  cluster_xpus_total: 256
+  composed_from:
+    - opg-256-virtual
+vlab_subset:
+  deployed_fabrics:
+    - soc-storage
+  lab_hosts: 4
+  notes:
+    - Cluster-facing wrapper around the same reduced deployable subset used by OPG-256 Virtual.
