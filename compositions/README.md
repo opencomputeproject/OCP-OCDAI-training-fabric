@@ -14,7 +14,7 @@ Why it matters
 How this folder is organized
 - OPG sizes: `OPG-64`, `OPG-128`, `OPG-256`, `OPG-512`
 - XOC tiers: `XOC-256`, `XOC-512`, `XOC-1024` (bundles of OPGs)
-- Virtual learning compositions: `OPG-256-virtual`, `XOC-256-virtual`
+- Virtual learning compositions: `OPG-64-virtual`, `XOC-64-virtual`
 - Each size/tier contains one or more variants (e.g., `clos-ro--cx7-1x400g--...` for rail‑optimized Clos). Variant names are tokenized for clarity and grep‑ability.
 
 Assets you’ll find in each variant

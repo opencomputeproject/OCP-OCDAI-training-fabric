@@ -1,0 +1,25 @@
+node_type,node_id,port,peer_type,peer_id,peer_port,speed,media_type,network_type,lag_id,plane,comments
+server,xpu-node-01,enp2s1,switch,leaf-01,E1/1,"","",soc-storage,xpu-node-01--eslag--leaf-01--leaf-02,"",Derived from wiring-diagram.yaml ESLAG link
+server,xpu-node-01,enp2s2,switch,leaf-02,E1/1,"","",soc-storage,xpu-node-01--eslag--leaf-01--leaf-02,"",Derived from wiring-diagram.yaml ESLAG link
+server,xpu-node-02,enp2s1,switch,leaf-01,E1/2,"","",soc-storage,xpu-node-02--eslag--leaf-01--leaf-02,"",Derived from wiring-diagram.yaml ESLAG link
+server,xpu-node-02,enp2s2,switch,leaf-02,E1/2,"","",soc-storage,xpu-node-02--eslag--leaf-01--leaf-02,"",Derived from wiring-diagram.yaml ESLAG link
+server,xpu-node-03,enp2s1,switch,leaf-01,E1/3,"","",soc-storage,xpu-node-03--eslag--leaf-01--leaf-02,"",Derived from wiring-diagram.yaml ESLAG link
+server,xpu-node-03,enp2s2,switch,leaf-02,E1/3,"","",soc-storage,xpu-node-03--eslag--leaf-01--leaf-02,"",Derived from wiring-diagram.yaml ESLAG link
+server,xpu-node-04,enp2s1,switch,leaf-01,E1/4,"","",soc-storage,xpu-node-04--eslag--leaf-01--leaf-02,"",Derived from wiring-diagram.yaml ESLAG link
+server,xpu-node-04,enp2s2,switch,leaf-02,E1/4,"","",soc-storage,xpu-node-04--eslag--leaf-01--leaf-02,"",Derived from wiring-diagram.yaml ESLAG link
+server,xpu-node-05,enp2s1,switch,leaf-01,E1/5,"","",soc-storage,xpu-node-05--eslag--leaf-01--leaf-02,"",Derived from wiring-diagram.yaml ESLAG link
+server,xpu-node-05,enp2s2,switch,leaf-02,E1/5,"","",soc-storage,xpu-node-05--eslag--leaf-01--leaf-02,"",Derived from wiring-diagram.yaml ESLAG link
+server,xpu-node-06,enp2s1,switch,leaf-01,E1/6,"","",soc-storage,xpu-node-06--eslag--leaf-01--leaf-02,"",Derived from wiring-diagram.yaml ESLAG link
+server,xpu-node-06,enp2s2,switch,leaf-02,E1/6,"","",soc-storage,xpu-node-06--eslag--leaf-01--leaf-02,"",Derived from wiring-diagram.yaml ESLAG link
+server,xpu-node-07,enp2s1,switch,leaf-01,E1/7,"","",soc-storage,xpu-node-07--eslag--leaf-01--leaf-02,"",Derived from wiring-diagram.yaml ESLAG link
+server,xpu-node-07,enp2s2,switch,leaf-02,E1/7,"","",soc-storage,xpu-node-07--eslag--leaf-01--leaf-02,"",Derived from wiring-diagram.yaml ESLAG link
+server,xpu-node-08,enp2s1,switch,leaf-01,E1/8,"","",soc-storage,xpu-node-08--eslag--leaf-01--leaf-02,"",Derived from wiring-diagram.yaml ESLAG link
+server,xpu-node-08,enp2s2,switch,leaf-02,E1/8,"","",soc-storage,xpu-node-08--eslag--leaf-01--leaf-02,"",Derived from wiring-diagram.yaml ESLAG link
+switch,leaf-01,E1/9,switch,spine-01,E1/5,"","",fabric,spine-01--fabric--leaf-01,"",Derived from wiring-diagram.yaml fabric link
+switch,leaf-01,E1/10,switch,spine-01,E1/6,"","",fabric,spine-01--fabric--leaf-01,"",Derived from wiring-diagram.yaml fabric link
+switch,leaf-02,E1/9,switch,spine-01,E1/7,"","",fabric,spine-01--fabric--leaf-02,"",Derived from wiring-diagram.yaml fabric link
+switch,leaf-02,E1/10,switch,spine-01,E1/8,"","",fabric,spine-01--fabric--leaf-02,"",Derived from wiring-diagram.yaml fabric link
+switch,leaf-01,E1/11,switch,spine-02,E1/5,"","",fabric,spine-02--fabric--leaf-01,"",Derived from wiring-diagram.yaml fabric link
+switch,leaf-01,E1/12,switch,spine-02,E1/6,"","",fabric,spine-02--fabric--leaf-01,"",Derived from wiring-diagram.yaml fabric link
+switch,leaf-02,E1/11,switch,spine-02,E1/7,"","",fabric,spine-02--fabric--leaf-02,"",Derived from wiring-diagram.yaml fabric link
+switch,leaf-02,E1/12,switch,spine-02,E1/8,"","",fabric,spine-02--fabric--leaf-02,"",Derived from wiring-diagram.yaml fabric link
