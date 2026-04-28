@@ -7,7 +7,7 @@ Operator benefits
 - Better performance with rail‑local placement: jobs kept within an OPG minimize spine load.
 
 Bundle
-- 2x-OPG-128/
+- 2x-opg-128/
 
 What you’ll find in each variant
 - `connectivity-map.csv`, `topology-map.yaml`, `wiring/`, `diagrams/`, `netbox_inventory.json`

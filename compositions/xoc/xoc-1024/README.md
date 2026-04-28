@@ -6,7 +6,7 @@ Operator note
 - At this scale, we publish `topology-map.yaml` first and follow with connectivity maps, wiring, diagrams, and NetBox inventory once final port budgeting is ratified.
 
 Bundle
-- 2x-OPG-512/
+- 2x-opg-512/
 
 See also
 - Compositions overview: ../README.md

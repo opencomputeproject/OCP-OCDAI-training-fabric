@@ -7,7 +7,7 @@ Operator benefits
 - Provides a clean place for tokenized variant naming and future XOC-specific assets without mutating the underlying OPG source immediately.
 
 Bundles
-- 1x-OPG-64/
+- 1x-opg-64/
 
 What you'll find in each variant
 - `connectivity-map.csv`, `topology-map.yaml`, `wiring/`, `diagrams/`, `netbox_inventory.json`

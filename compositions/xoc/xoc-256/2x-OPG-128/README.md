@@ -36,5 +36,5 @@ tradeoffs, and deployment guidance.
 ## See also
 
 - XOC‑256 tier overview: [`../README.md`](../README.md)
-- OPG‑128 building‑block specs: [`../../OPG-128/`](../../OPG-128/README.md)
+- OPG‑128 building‑block specs: [`../../opg-128/`](../../opg-128/README.md)
 - Compositions overview: [`../../README.md`](../../README.md)

@@ -21,4 +21,4 @@ See each variant folder for the full composed‑solution guide.
 ## See also
 
 - XOC‑512 tier overview: [`../../README.md`](../../README.md)
-- OPG‑512 building‑block specs: [`../../../OPG-512/`](../../../OPG-512/README.md)
+- OPG‑512 building‑block specs: [`../../../opg-512/`](../../../opg-512/README.md)

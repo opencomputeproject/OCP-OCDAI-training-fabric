@@ -9,8 +9,8 @@ Operator benefits
 - Rail‑optimized variants reduce spine utilization when jobs are rail‑local; dual‑plane variants add isolation and bandwidth headroom.
 
 Bundles
-- 1x-OPG-512/
-- 4x-OPG-128/
+- 1x-opg-512/
+- 4x-opg-128/
 
 What you’ll find in each variant
 - `connectivity-map.csv`, `topology-map.yaml`, `wiring/`, `diagrams/`, `netbox_inventory.json`

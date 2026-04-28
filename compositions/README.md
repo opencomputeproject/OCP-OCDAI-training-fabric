@@ -12,9 +12,8 @@ Why it matters
 - OPGs make it easier to size and plan. XOCs provide the interconnect and external connectivity required to operate OPGs as a cluster, with clear trade‑offs by variant.
 
 How this folder is organized
-- OPG sizes: `OPG-64`, `OPG-128`, `OPG-256`, `OPG-512`
-- XOC tiers: `XOC-256`, `XOC-512`, `XOC-1024` (bundles of OPGs)
-- Virtual learning compositions: `OPG-64-virtual`, `XOC-64-virtual`
+- OPG catalog: `opg/` contains `opg-64`, `opg-64-virtual`, `opg-128`, `opg-256`, and `opg-512`
+- XOC catalog: `xoc/` contains `xoc-64`, `xoc-64-virtual`, `xoc-256`, `xoc-512`, and `xoc-1024`
 - Each size/tier contains one or more variants (e.g., `clos-ro--cx7-1x400g--...` for rail‑optimized Clos). Variant names are tokenized for clarity and grep‑ability.
 
 Assets you’ll find in each variant

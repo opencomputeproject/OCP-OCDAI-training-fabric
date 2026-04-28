@@ -78,5 +78,5 @@ egress, the XOC spine is required.
 ## See also
 
 - OPG‑64 overview: `../README.md`
-- Example XOC using this OPG: `../../../XOC-256/` (illustrative; not prescriptive)
+- Example XOC using this OPG: `../../../xoc-256/` (illustrative; not prescriptive)
 - Compositions overview: `../../../README.md`

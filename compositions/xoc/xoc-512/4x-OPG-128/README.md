@@ -16,9 +16,9 @@ the network topology.
 - [`clos-sh--cx7-1x400g--bf3-2x200g--storage-conv-2x200g/`](clos-sh--cx7-1x400g--bf3-2x200g--storage-conv-2x200g/README.md)
   Single‑homed backend (CX7 1×400G)
 
-For the sub‑bundle structure see [`2x-OPG-128/`](2x-OPG-128/README.md).
+For the sub‑bundle structure see [`2x-opg-128/`](2x-opg-128/README.md).
 
 ## See also
 
 - XOC‑512 tier overview: [`../../README.md`](../../README.md)
-- OPG‑128 building‑block specs: [`../../../OPG-128/`](../../../OPG-128/README.md)
+- OPG‑128 building‑block specs: [`../../../opg-128/`](../../../opg-128/README.md)
