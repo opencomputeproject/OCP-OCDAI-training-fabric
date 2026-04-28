@@ -1,0 +1,62 @@
+# Fabricator object and at least one ControlNode are required
+# For more configuration options see https://docs.githedgehog.com
+
+# For generating password hash use `openssl passwd -5`
+
+apiVersion: fabricator.githedgehog.com/v1beta1
+kind: Fabricator
+metadata:
+  name: default
+  namespace: fab
+spec:
+  config:
+    control:
+      #tlsSAN: # IPs and DNS names that will be used to access API
+      #  - "fabric.local"
+      # join token that will be used for the first control node installation and joining other nodes to the cluster
+      # if it wasn't set the random one will be generated, but if first control node is already installed, it could be
+      # retrieved from the control node file /var/lib/rancher/k3s/server/token
+      #joinToken: super-secret-join-token
+
+      defaultUser: # user 'core' on all control nodes
+        password: "$5$8nAYPGcl4l6G7Av1$Qi4/gnM0yPtGv9kjpMh78NuNSfQWy7vR1rulHpurL36" # password hash
+        authorizedKeys:
+          - "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIGpF2+9I1Nj4BcN7y6DjzTbq1VcUYIRGyfzId5ZoBEFj"
+
+    fabric:
+      mode: spine-leaf # "spine-leaf"
+      
+      
+      includeBCM: true
+      
+      
+      defaultSwitchUsers:
+        admin: # at least one user with name 'admin' and role 'admin'
+          role: admin
+          password: "$5$8nAYPGcl4l6G7Av1$Qi4/gnM0yPtGv9kjpMh78NuNSfQWy7vR1rulHpurL36" # password hash
+          authorizedKeys:
+            - "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIGpF2+9I1Nj4BcN7y6DjzTbq1VcUYIRGyfzId5ZoBEFj"
+        op: # optional read-only user
+          role: operator
+          password: "$5$8nAYPGcl4l6G7Av1$Qi4/gnM0yPtGv9kjpMh78NuNSfQWy7vR1rulHpurL36" # password hash
+          authorizedKeys:
+            - "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIGpF2+9I1Nj4BcN7y6DjzTbq1VcUYIRGyfzId5ZoBEFj"
+    observability:
+      defaults: ""
+      
+    
+
+---
+apiVersion: fabricator.githedgehog.com/v1beta1
+kind: ControlNode
+metadata:
+  name: control-1
+  namespace: fab
+spec:
+  bootstrap:
+   disk: "/dev/sda" # disk to install OS on, e.g. "sda" or "nvme0n1"
+  external:
+    interface: enp2s0 # interface for external
+    ip:	dhcp # IP address for external interface
+  management:
+    interface: enp2s1 # interface for management
