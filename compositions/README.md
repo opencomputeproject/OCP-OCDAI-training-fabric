@@ -13,7 +13,7 @@ Why it matters
 
 How this folder is organized
 - OPG catalog: `opg/` contains `opg-64`, `opg-64-virtual`, `opg-128`, `opg-256`, and `opg-512`
-- XOC catalog: `xoc/` contains `xoc-64`, `xoc-64-virtual`, `xoc-256`, `xoc-512`, and `xoc-1024`
+- XOC catalog: `xoc/` contains `xoc-64`, `xoc-64-virtual`, `xoc-128`, `xoc-256`, `xoc-512`, and `xoc-1024`
 - Each size/tier contains one or more variants (e.g., `clos-ro--cx7-1x400g--...` for rail‑optimized Clos). Variant names are tokenized for clarity and grep‑ability.
 
 Assets you’ll find in each variant
