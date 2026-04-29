@@ -105,56 +105,56 @@ spec:
 apiVersion: wiring.githedgehog.com/v1beta1
 kind: Server
 metadata:
-  name: xpu-node-01
+  name: server-01
 spec:
   description: S-01 ESLAG leaf-01 leaf-02
 ---
 apiVersion: wiring.githedgehog.com/v1beta1
 kind: Server
 metadata:
-  name: xpu-node-02
+  name: server-02
 spec:
   description: S-02 ESLAG leaf-01 leaf-02
 ---
 apiVersion: wiring.githedgehog.com/v1beta1
 kind: Server
 metadata:
-  name: xpu-node-03
+  name: server-03
 spec:
   description: S-03 ESLAG leaf-01 leaf-02
 ---
 apiVersion: wiring.githedgehog.com/v1beta1
 kind: Server
 metadata:
-  name: xpu-node-04
+  name: server-04
 spec:
   description: S-04 ESLAG leaf-01 leaf-02
 ---
 apiVersion: wiring.githedgehog.com/v1beta1
 kind: Server
 metadata:
-  name: xpu-node-05
+  name: server-05
 spec:
   description: S-05 ESLAG leaf-01 leaf-02
 ---
 apiVersion: wiring.githedgehog.com/v1beta1
 kind: Server
 metadata:
-  name: xpu-node-06
+  name: server-06
 spec:
   description: S-06 ESLAG leaf-01 leaf-02
 ---
 apiVersion: wiring.githedgehog.com/v1beta1
 kind: Server
 metadata:
-  name: xpu-node-07
+  name: server-07
 spec:
   description: S-07 ESLAG leaf-01 leaf-02
 ---
 apiVersion: wiring.githedgehog.com/v1beta1
 kind: Server
 metadata:
-  name: xpu-node-08
+  name: server-08
 spec:
   description: S-08 ESLAG leaf-01 leaf-02
 #
@@ -164,128 +164,128 @@ spec:
 apiVersion: wiring.githedgehog.com/v1beta1
 kind: Connection
 metadata:
-  name: xpu-node-01--eslag--leaf-01--leaf-02
+  name: server-01--eslag--leaf-01--leaf-02
 spec:
   eslag:
     links:
     - server:
-        port: xpu-node-01/enp2s1
+        port: server-01/enp2s1
       switch:
         port: leaf-01/E1/1
     - server:
-        port: xpu-node-01/enp2s2
+        port: server-01/enp2s2
       switch:
         port: leaf-02/E1/1
 ---
 apiVersion: wiring.githedgehog.com/v1beta1
 kind: Connection
 metadata:
-  name: xpu-node-02--eslag--leaf-01--leaf-02
+  name: server-02--eslag--leaf-01--leaf-02
 spec:
   eslag:
     links:
     - server:
-        port: xpu-node-02/enp2s1
+        port: server-02/enp2s1
       switch:
         port: leaf-01/E1/2
     - server:
-        port: xpu-node-02/enp2s2
+        port: server-02/enp2s2
       switch:
         port: leaf-02/E1/2
 ---
 apiVersion: wiring.githedgehog.com/v1beta1
 kind: Connection
 metadata:
-  name: xpu-node-03--eslag--leaf-01--leaf-02
+  name: server-03--eslag--leaf-01--leaf-02
 spec:
   eslag:
     links:
     - server:
-        port: xpu-node-03/enp2s1
+        port: server-03/enp2s1
       switch:
         port: leaf-01/E1/3
     - server:
-        port: xpu-node-03/enp2s2
+        port: server-03/enp2s2
       switch:
         port: leaf-02/E1/3
 ---
 apiVersion: wiring.githedgehog.com/v1beta1
 kind: Connection
 metadata:
-  name: xpu-node-04--eslag--leaf-01--leaf-02
+  name: server-04--eslag--leaf-01--leaf-02
 spec:
   eslag:
     links:
     - server:
-        port: xpu-node-04/enp2s1
+        port: server-04/enp2s1
       switch:
         port: leaf-01/E1/4
     - server:
-        port: xpu-node-04/enp2s2
+        port: server-04/enp2s2
       switch:
         port: leaf-02/E1/4
 ---
 apiVersion: wiring.githedgehog.com/v1beta1
 kind: Connection
 metadata:
-  name: xpu-node-05--eslag--leaf-01--leaf-02
+  name: server-05--eslag--leaf-01--leaf-02
 spec:
   eslag:
     links:
     - server:
-        port: xpu-node-05/enp2s1
+        port: server-05/enp2s1
       switch:
         port: leaf-01/E1/5
     - server:
-        port: xpu-node-05/enp2s2
+        port: server-05/enp2s2
       switch:
         port: leaf-02/E1/5
 ---
 apiVersion: wiring.githedgehog.com/v1beta1
 kind: Connection
 metadata:
-  name: xpu-node-06--eslag--leaf-01--leaf-02
+  name: server-06--eslag--leaf-01--leaf-02
 spec:
   eslag:
     links:
     - server:
-        port: xpu-node-06/enp2s1
+        port: server-06/enp2s1
       switch:
         port: leaf-01/E1/6
     - server:
-        port: xpu-node-06/enp2s2
+        port: server-06/enp2s2
       switch:
         port: leaf-02/E1/6
 ---
 apiVersion: wiring.githedgehog.com/v1beta1
 kind: Connection
 metadata:
-  name: xpu-node-07--eslag--leaf-01--leaf-02
+  name: server-07--eslag--leaf-01--leaf-02
 spec:
   eslag:
     links:
     - server:
-        port: xpu-node-07/enp2s1
+        port: server-07/enp2s1
       switch:
         port: leaf-01/E1/7
     - server:
-        port: xpu-node-07/enp2s2
+        port: server-07/enp2s2
       switch:
         port: leaf-02/E1/7
 ---
 apiVersion: wiring.githedgehog.com/v1beta1
 kind: Connection
 metadata:
-  name: xpu-node-08--eslag--leaf-01--leaf-02
+  name: server-08--eslag--leaf-01--leaf-02
 spec:
   eslag:
     links:
     - server:
-        port: xpu-node-08/enp2s1
+        port: server-08/enp2s1
       switch:
         port: leaf-01/E1/8
     - server:
-        port: xpu-node-08/enp2s2
+        port: server-08/enp2s2
       switch:
         port: leaf-02/E1/8
 ---
