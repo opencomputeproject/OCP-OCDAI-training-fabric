@@ -299,11 +299,11 @@ spec:
     - leaf:
         port: leaf-01/E1/9
       spine:
-        port: spine-01/E1/5
+        port: spine-01/E1/1
     - leaf:
         port: leaf-01/E1/10
       spine:
-        port: spine-01/E1/6
+        port: spine-01/E1/2
 ---
 apiVersion: wiring.githedgehog.com/v1beta1
 kind: Connection
@@ -315,11 +315,11 @@ spec:
     - leaf:
         port: leaf-02/E1/9
       spine:
-        port: spine-01/E1/7
+        port: spine-01/E1/3
     - leaf:
         port: leaf-02/E1/10
       spine:
-        port: spine-01/E1/8
+        port: spine-01/E1/4
 ---
 apiVersion: wiring.githedgehog.com/v1beta1
 kind: Connection
@@ -331,11 +331,11 @@ spec:
     - leaf:
         port: leaf-01/E1/11
       spine:
-        port: spine-02/E1/5
+        port: spine-02/E1/1
     - leaf:
         port: leaf-01/E1/12
       spine:
-        port: spine-02/E1/6
+        port: spine-02/E1/2
 ---
 apiVersion: wiring.githedgehog.com/v1beta1
 kind: Connection
@@ -347,8 +347,8 @@ spec:
     - leaf:
         port: leaf-02/E1/11
       spine:
-        port: spine-02/E1/7
+        port: spine-02/E1/3
     - leaf:
         port: leaf-02/E1/12
       spine:
-        port: spine-02/E1/8
+        port: spine-02/E1/4
