@@ -1,0 +1,55 @@
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPC
+metadata:
+  name: tenant-a
+  namespace: default
+spec:
+  ipv4Namespace: default
+  vlanNamespace: default
+  subnets:
+    default:
+      subnet: 10.0.1.0/24
+      gateway: 10.0.1.1
+      vlan: 1001
+      dhcp:
+        enable: true
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: tenant-a--xpu-node-01
+  namespace: default
+spec:
+  subnet: tenant-a/default
+  connection: xpu-node-01--eslag--leaf-01--leaf-02
+  nativeVLAN: true
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: tenant-a--xpu-node-02
+  namespace: default
+spec:
+  subnet: tenant-a/default
+  connection: xpu-node-02--eslag--leaf-01--leaf-02
+  nativeVLAN: true
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: tenant-a--xpu-node-03
+  namespace: default
+spec:
+  subnet: tenant-a/default
+  connection: xpu-node-03--eslag--leaf-01--leaf-02
+  nativeVLAN: true
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: tenant-a--xpu-node-04
+  namespace: default
+spec:
+  subnet: tenant-a/default
+  connection: xpu-node-04--eslag--leaf-01--leaf-02
+  nativeVLAN: true
