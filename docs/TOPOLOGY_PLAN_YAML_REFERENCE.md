@@ -1,10 +1,7 @@
 # DIET Topology Plan YAML Reference
 
-This is the current agent-focused reference for YAML-defined DIET topology plans
-loaded by `apply_diet_test_case`.
-
-Use this when another agent needs to create a valid topology plan YAML without
-reverse-engineering the loader or copying a large case file.
+This is the current reference for YAML-defined DIET topology plans
+consumed by the Hedgehog NetBox Plugin (HNP).
 
 ## What this file is
 
@@ -12,24 +9,33 @@ reverse-engineering the loader or copying a large case file.
   - `netbox_hedgehog/test_cases/loader.py`
   - `netbox_hedgehog/test_cases/schema.py`
   - `netbox_hedgehog/test_cases/ingest.py`
-- It is not the exported Hedgehog wiring YAML.
-- It is the authoring format for creating a DIET plan inside NetBox.
+- It documents the authoring format for creating a DIET topology plan inside NetBox.
+- The primary contract is **`diet/v2`**. Legacy v1 is supported for
+  backwards compatibility but should not be used for new files.
 
-## Fast rules
+## What it is not
 
-- Required top-level sections:
-  - `meta`
-  - `plan`
-  - `switch_classes`
-  - `server_classes`
-  - `server_connections`
-- Usually also needed in real cases:
-  - `reference_data`
-  - `switch_port_zones`
-  - `server_nics`
-- `meta.managed_by` must be exactly `yaml`.
-- `meta.case_id` must match `^[a-z0-9_]+$`.
-- `plan.status` must be one of: `draft`, `review`, `approved`, `exported`.
+- It is not the exported Hedgehog wiring YAML (the `Connection`, `Switch`, and
+  `Server` CRDs that `hhfab` consumes).
+- It is not the NetBox REST API shape.
+
+## Fast rules (v2)
+
+- Top-level required fields: `apiVersion`, `kind`, `metadata`, `spec`.
+- `apiVersion` must be exactly `diet/v2`.
+- `kind` must be exactly `TopologyPlan`.
+- `metadata.managed_by` must be exactly `yaml`.
+- `metadata.case_id` must match `^[a-z0-9_]+$`.
+- `metadata.version` must be the integer `2`.
+- `spec.plan.status` must be one of: `draft`, `review`, `approved`, `exported`.
+- `reference_data` is **forbidden** in v2 — the schema rejects it. Use
+  `test_fixtures` for test-time object creation, or rely on pre-seeded inventory.
+- Device types, breakout options, and module types are resolved from pre-seeded
+  inventory by slug or composite key — not symbolic local IDs.
+- In `spec.switch_classes[]`, use `device_type: <slug>` (not `device_type_extension`).
+- In `spec.switch_port_zones[]`, `breakout_option` is a `breakout_id` string.
+- In `spec.server_nics[]`, `module_type` is a slug string or a
+  `{manufacturer, model}` composite lookup.
 - Do not use deprecated keys:
   - `server_connections[].target_switch_class`
   - `server_connections[].nic_module_type`
@@ -37,247 +43,129 @@ reverse-engineering the loader or copying a large case file.
   - `server_connections[].target_zone: "<switch_class_id>/<zone_name>"`
   - `server_connections[].nic: "<nic_id>"`
 
-## Minimal valid example
+## Minimal valid v2 example
+
+This example uses `test_fixtures` so it is self-contained on any fresh
+installation. In production plans backed by pre-seeded inventory, omit
+`test_fixtures` and reference the existing slugs directly.
 
 ```yaml
-meta:
-  case_id: agent_minimal_example
-  name: Agent Minimal Example
-  description: Small valid DIET topology plan
-  version: 1
+apiVersion: diet/v2
+kind: TopologyPlan
+metadata:
+  case_id: minimal_v2_example
+  name: Minimal v2 Example
+  version: 2
   managed_by: yaml
-  tags: [agent, example]
 
-reference_data:
-  manufacturers:
-    - id: generic
-      name: Generic
-      slug: generic
-    - id: nvidia
-      name: NVIDIA
-      slug: nvidia
-
+test_fixtures:
   device_types:
-    - id: server_dt
-      manufacturer: generic
-      model: Example Server
-      slug: example-server
-      interface_templates:
-        - name: eth1
-          type: 200gbase-x-qsfp56
-    - id: switch_dt
+    - slug: ex-switch
       manufacturer: generic
       model: Example Switch
-      slug: example-switch
       interface_templates:
         - name: E1/1
-          type: 800gbase-x-qsfpdd
+          type: 800gbase-x-osfp
         - name: E1/2
-          type: 800gbase-x-qsfpdd
+          type: 800gbase-x-osfp
         - name: E1/3
-          type: 800gbase-x-qsfpdd
+          type: 800gbase-x-osfp
         - name: E1/4
-          type: 800gbase-x-qsfpdd
-
-  device_type_extensions:
-    - id: switch_ext
-      device_type: switch_dt
-      mclag_capable: false
-      hedgehog_roles: [server-leaf]
-      supported_breakouts: [1x800g, 4x200g]
-      native_speed: 800
-      uplink_ports: 0
-
+          type: 800gbase-x-osfp
+      device_type_extension:
+        hedgehog_roles: [server-leaf]
+        uplink_ports: 0
+        native_speed: 800
+        supported_breakouts: []
+    - slug: ex-server
+      manufacturer: generic
+      model: Example Server
   breakout_options:
-    - id: bo_4x200
-      breakout_id: 4x200g
+    - breakout_id: ex-1x800g
       from_speed: 800
-      logical_ports: 4
-      logical_speed: 200
-      optic_type: QSFP-DD
-
+      logical_ports: 1
+      logical_speed: 800
   module_types:
-    - id: nic_single
-      manufacturer: nvidia
-      model: Example NIC 1x200G
-      interface_templates:
-        - name: p0
-          type: other
+    - manufacturer: generic
+      model: Example NIC 1x800G
 
-plan:
-  name: Agent Minimal Example
-  status: draft
-  description: One switch class, one server class, one connection
+spec:
+  plan:
+    name: Minimal v2 Example
+    status: draft
 
-switch_classes:
-  - switch_class_id: fe-leaf
-    fabric_name: frontend
-    fabric_class: managed
-    hedgehog_role: server-leaf
-    device_type_extension: switch_ext
-    uplink_ports_per_switch: 0
+  switch_classes:
+    - switch_class_id: leaf
+      fabric_name: backend
+      fabric_class: managed
+      hedgehog_role: server-leaf
+      device_type: ex-switch
+      uplink_ports_per_switch: 0
 
-switch_port_zones:
-  - switch_class: fe-leaf
-    zone_name: server-ports
-    zone_type: server
-    port_spec: 1-4
-    breakout_option: bo_4x200
-    allocation_strategy: sequential
-    priority: 100
+  switch_port_zones:
+    - switch_class: leaf
+      zone_name: server-ports
+      zone_type: server
+      port_spec: 1-4
+      breakout_option: ex-1x800g
 
-server_classes:
-  - server_class_id: gpu-small
-    description: Small GPU server class
-    category: gpu
-    quantity: 2
-    gpus_per_server: 8
-    server_device_type: server_dt
+  server_classes:
+    - server_class_id: gpu
+      quantity: 2
+      server_device_type: ex-server
 
-server_nics:
-  - server_class: gpu-small
-    nic_id: nic-fe
-    module_type: nic_single
-    description: Frontend NIC
+  server_nics:
+    - server_class: gpu
+      nic_id: be
+      module_type:
+        manufacturer: generic
+        model: Example NIC 1x800G
 
-server_connections:
-  - server_class: gpu-small
-    connection_id: fe
-    connection_name: frontend
-    nic: nic-fe
-    port_index: 0
-    ports_per_connection: 1
-    hedgehog_conn_type: unbundled
-    distribution: same-switch
-    target_zone: fe-leaf/server-ports
-    speed: 200
-    port_type: data
+  server_connections:
+    - server_class: gpu
+      connection_id: be
+      nic: be
+      port_index: 0
+      ports_per_connection: 1
+      hedgehog_conn_type: unbundled
+      distribution: same-switch
+      target_zone: leaf/server-ports
+      speed: 800
+      port_type: data
 ```
 
-## Section reference
+## Section reference (v2)
 
-### `meta`
+### `apiVersion` and `kind`
 
-Required:
+Both are required in v2.
 
-- `case_id`
-- `name`
-- `version`
-- `managed_by`
+- `apiVersion` must be exactly `diet/v2`.
+- `kind` must be exactly `TopologyPlan`.
 
-Optional:
+### `metadata`
+
+Required. Must be a mapping.
+
+Required fields:
+
+- `case_id` — lowercase snake case (`^[a-z0-9_]+$`)
+- `name` — human-readable display name
+- `version` — must be the integer `2`
+- `managed_by` — must be the literal string `yaml`
+
+Optional fields:
 
 - `description`
 - `tags`
 
-Rules:
+### `spec`
 
-- `case_id` must be lowercase snake case.
-- `managed_by` must be `yaml`.
+Required. All topology payload lives under `spec`.
 
-### `reference_data`
+#### `spec.plan`
 
-This section is how the loader resolves or creates NetBox reference objects.
-
-Subsections:
-
-- `manufacturers`
-- `device_types`
-- `device_type_extensions`
-- `breakout_options`
-- `module_types`
-
-Reference rule:
-
-- IDs inside `reference_data` are case-local symbolic IDs.
-- Other sections reference these IDs, not database PKs.
-
-#### `manufacturers[]`
-
-Required:
-
-- `id`
-- `name`
-
-Optional:
-
-- `slug`
-
-#### `device_types[]`
-
-Required:
-
-- `id`
-- `manufacturer`
-- `model`
-
-Optional:
-
-- `slug`
-- `u_height`
-- `is_full_depth`
-- `interface_templates`
-
-Notes:
-
-- `manufacturer` points to `reference_data.manufacturers[].id`.
-- `interface_templates[]` should usually be present for realistic plans.
-
-#### `device_type_extensions[]`
-
-Required:
-
-- `id`
-- `device_type`
-
-Optional:
-
-- `mclag_capable`
-- `hedgehog_roles`
-- `supported_breakouts`
-- `native_speed`
-- `uplink_ports`
-- `hedgehog_profile_name`
-- `notes`
-
-Notes:
-
-- `device_type` points to `reference_data.device_types[].id`.
-- Switch classes reference this object, not raw `device_type`.
-
-#### `breakout_options[]`
-
-Required:
-
-- `id`
-- `breakout_id`
-
-Optional but normally needed:
-
-- `from_speed`
-- `logical_ports`
-- `logical_speed`
-- `optic_type`
-
-#### `module_types[]`
-
-Required:
-
-- `id`
-- `manufacturer`
-- `model`
-
-Optional:
-
-- `attribute_data`
-- `interface_templates`
-
-Critical rule:
-
-- `interface_templates[]` must exist if the module type will be used by
-  `server_nics`, otherwise connection validation fails.
-
-### `plan`
+Required. Describes the NetBox topology plan object.
 
 Required:
 
@@ -288,224 +176,216 @@ Optional:
 
 - `description`
 
-Valid `status` values:
+Valid `status` values: `draft`, `review`, `approved`, `exported`.
 
-- `draft`
-- `review`
-- `approved`
-- `exported`
+#### `spec.switch_classes[]`
 
-### `switch_classes[]`
-
-Required:
+Required fields:
 
 - `switch_class_id`
 - `fabric_name`
-- `device_type_extension`
+- `device_type` — DeviceType slug (resolved from pre-seeded inventory)
 
-Optional:
+Optional fields:
 
-- `fabric_class`
-- `hedgehog_role`
+- `fabric_class` — `managed` or `unmanaged`
+- `hedgehog_role` — `spine`, `server-leaf`, `border-leaf`, `virtual`
 - `uplink_ports_per_switch`
 - `mclag_pair`
 - `override_quantity`
-- `redundancy_type`
+- `redundancy_type` — `mclag` or `eslag`
 - `redundancy_group`
-- `topology_mode`
+- `topology_mode` — `spine-leaf` or `prefer-mesh`
 - `groups`
-- `fabric`
-
-Valid values:
-
-- `fabric_class`: `managed`, `unmanaged`
-- `hedgehog_role`: `spine`, `server-leaf`, `border-leaf`, `virtual`
-- `redundancy_type`: `mclag`, `eslag`
-- `topology_mode`: `spine-leaf`, `prefer-mesh`
 
 Rules:
 
-- `fabric_name` must be non-blank.
-- If both `fabric` and `fabric_name` are present, they must match.
-- `device_type_extension` points to `reference_data.device_type_extensions[].id`.
+- `device_type` is a DeviceType slug resolved from pre-seeded inventory.
+  The corresponding `DeviceTypeExtension` is looked up automatically.
 - If `redundancy_type` is set, `redundancy_group` is required.
-- If `mclag_pair: true` and `redundancy_type` is omitted, the model auto-fills
-  `redundancy_type: mclag` and a generated `redundancy_group`.
-- If `override_quantity` is present:
-  - `mclag` requires an even quantity and at least `2`
-  - `eslag` requires `2-4`
+- If `mclag_pair: true` and `redundancy_type` is omitted, the model
+  auto-fills `redundancy_type: mclag` and a generated `redundancy_group`.
 - `prefer-mesh` cannot coexist with a spine class in the same fabric.
-- All non-spine switch classes in the same fabric must share the same
-  `topology_mode`.
 
-### `switch_port_zones[]`
+#### `spec.switch_port_zones[]`
 
-Not required by the shallow schema, but normally required because
-`server_connections` target zones, not switch classes.
+Not required by the schema, but normally required because `server_connections`
+target zones.
 
-Required:
+Required fields:
 
-- `switch_class`
+- `switch_class` — points to `spec.switch_classes[].switch_class_id`
 - `zone_name`
 - `zone_type`
 - `port_spec`
 
-Optional:
+Optional fields:
 
-- `breakout_option`
+- `breakout_option` — a `breakout_id` string resolved from pre-seeded inventory
 - `allocation_strategy`
 - `allocation_order`
 - `priority`
-- `peer_zone`
+- `peer_zone` — `"<switch_class_id>/<zone_name>"`
 
-Valid values:
+Valid `zone_type` values: `server`, `uplink`, `mclag`, `peer`, `session`, `oob`, `fabric`, `mesh`.
 
-- `zone_type`: `server`, `uplink`, `mclag`, `peer`, `session`, `oob`, `fabric`, `mesh`
-- `allocation_strategy`: `sequential`, `interleaved`, `spaced`, `custom`
+Valid `allocation_strategy` values: `sequential`, `interleaved`, `spaced`, `custom`.
 
-Rules:
+`port_spec` uses the DIET port-spec grammar, for example:
 
-- `switch_class` points to `switch_classes[].switch_class_id`.
-- `breakout_option` points to `reference_data.breakout_options[].id`.
-- `peer_zone`, if used, must be `"<switch_class_id>/<zone_name>"`.
-- `port_spec` uses the DIET port-spec grammar, for example:
-  - `1-32`
-  - `1-63:2`
-  - `1,3,5,7`
-- If `allocation_strategy: custom`, then `allocation_order` is required and
-  must exactly match the parsed port list.
+- `1-32`
+- `1-63:2`
+- `1,3,5,7`
 
-### `server_classes[]`
+If `allocation_strategy: custom`, then `allocation_order` is required and must
+exactly match the parsed port list.
 
-Required:
+#### `spec.server_classes[]`
+
+Required fields:
 
 - `server_class_id`
-- `quantity`
-- `server_device_type`
+- `quantity` — must be at least `1`
+- `server_device_type` — DeviceType slug resolved from pre-seeded inventory
 
-Optional:
+Optional fields:
 
 - `description`
-- `category`
+- `category` — `gpu`, `storage`, or `infrastructure`
 - `gpus_per_server`
 
-Valid `category` values:
+#### `spec.server_nics[]`
 
-- `gpu`
-- `storage`
-- `infrastructure`
+NIC-first modeling is required for all v2 cases.
 
-Rules:
+Required fields:
 
-- `quantity` must be at least `1`.
-- `server_device_type` points to `reference_data.device_types[].id`.
+- `server_class` — points to `spec.server_classes[].server_class_id`
+- `nic_id` — alphanumeric characters, `_`, and `-`; must start with alphanumeric
+- `module_type` — either a slug string or a `{manufacturer, model}` composite
+  resolved from pre-seeded inventory
 
-### `server_nics[]`
-
-Current ingest requires NIC-first modeling for modern cases.
-
-Required:
-
-- `server_class`
-- `nic_id`
-- `module_type`
-
-Optional:
+Optional fields:
 
 - `description`
 
-Rules:
+#### `spec.server_connections[]`
 
-- `server_class` points to `server_classes[].server_class_id`.
-- `module_type` points to `reference_data.module_types[].id`.
-- `nic_id` must start with an alphanumeric character and then use only:
-  - letters
-  - digits
-  - `_`
-  - `-`
+Required fields:
 
-### `server_connections[]`
-
-Required:
-
-- `server_class`
-- `connection_id`
-- `nic`
+- `server_class` — points to `spec.server_classes[].server_class_id`
+- `connection_id` — alphanumeric, `_`, and `-`
+- `nic` — points to `spec.server_nics[].nic_id` within the same server class
 - `ports_per_connection`
-- `target_zone`
+- `target_zone` — `"<switch_class_id>/<zone_name>"`
 - `speed`
 
-Optional:
+Optional fields:
 
 - `connection_name`
-- `port_index`
-- `hedgehog_conn_type`
-- `distribution`
+- `port_index` — zero-based
+- `hedgehog_conn_type` — `unbundled`, `bundled`, `mclag`, `eslag`
+- `distribution` — `same-switch`, `alternating`, `rail-optimized`
 - `rail`
-- `port_type`
-- `cage_type`
-- `medium`
-- `connector`
+- `port_type` — `data`, `ipmi`, `pxe`
+- `cage_type` — `QSFP112`, `OSFP`, `QSFP-DD`, `QSFP28`, `SFP28`, `SFP+`, `RJ45`
+- `medium` — `MMF`, `SMF`, `DAC`, `ACC`
+- `connector` — `LC`, `MPO-12`, `MPO-16`, `Direct`
 - `standard`
-
-Valid values:
-
-- `hedgehog_conn_type`: `unbundled`, `bundled`, `mclag`, `eslag`
-- `distribution`: `same-switch`, `alternating`, `rail-optimized`
-- `port_type`: `data`, `ipmi`, `pxe`
-- `cage_type`: `QSFP112`, `OSFP`, `QSFP-DD`, `QSFP28`, `SFP28`, `SFP+`, `RJ45`
-- `medium`: `MMF`, `SMF`, `DAC`, `ACC`
-- `connector`: `LC`, `MPO-12`, `MPO-16`, `Direct`
 
 Rules:
 
-- `server_class` points to `server_classes[].server_class_id`.
-- `nic` points to `server_nics[].nic_id` within the same server class.
-- `target_zone` must be `"<switch_class_id>/<zone_name>"`.
-- `connection_id` may only use alphanumeric characters, `_`, and `-`.
-- `port_index` is zero-based.
+- Connections may only target `server` or `oob` zones.
+- IPMI connections must target an `oob` zone.
+- `distribution: alternating` with `hedgehog_conn_type` of `bundled`, `mclag`,
+  or `eslag` requires the target switch class to have `redundancy_type` set.
+- `distribution: rail-optimized` should include `rail`.
 - `port_index + ports_per_connection` must fit within the NIC module type's
   interface template count.
-- IPMI connections must target an `oob` zone.
-- Non-IPMI connections cannot target an `oob` zone.
-- Connections may only target `server` or `oob` zones.
-- `distribution: alternating` with `hedgehog_conn_type` of `bundled`,
-  `mclag`, or `eslag` requires the target switch class to have
-  `redundancy_type` set.
-- `distribution: rail-optimized` should include `rail`.
 
-### `expected`
+### `status` (optional)
 
-Optional assertion block used by the loader after apply.
+A machine-written block populated by the `dump_plan_status` command. On ingest
+this section is **ignored** — it does not affect the topology plan state in NetBox.
 
-Supported today:
+When present, the schema enforces that generation counts are integers.
 
-- `expected.counts`
+```yaml
+status:
+  calculated_at: "2026-05-11T00:00:00Z"
+  generation:
+    status: generated
+    device_count: 175
+    interface_count: 1313
+    cable_count: 1017
+    generated_at: "2026-05-11T00:01:00Z"
+```
 
-Important meaning:
+### `contract` (optional)
 
-- `expected.counts.connections` means the number of ingested DIET
-  `PlanServerConnection` objects created from `server_connections[]`.
-- It does not mean the number of exported Hedgehog wiring `Connection` CRDs.
-- A single `server_connections[]` entry can expand into many generated wiring
-  `Connection` documents after device generation and YAML export.
+Assertion block validated against the live NetBox state after apply. On ingest
+this section is **ignored** — it is used by `validate_contract` assertions only.
+
+Supported sub-sections:
+
+- `counts` — expected object counts (integers)
+- `generation` — expected generation counts (integers); skipped if no
+  `GenerationState` exists
+- `zones` — required zone assertions
+- `topology` — topology-shape assertions
 
 Example:
 
 ```yaml
-expected:
+contract:
   counts:
-    server_classes: 1
-    switch_classes: 2
-    connections: 3
+    server_classes: 2
+    switch_classes: 4
+    connections: 6
+  generation:
+    device_count: 175
+    interface_count: 1313
+    cable_count: 1017
 ```
 
-Example interpretation:
+Note on `counts.connections`: this is the number of `PlanServerConnection`
+objects created from `spec.server_connections[]`, not the number of exported
+Hedgehog wiring `Connection` CRDs. A single entry can expand into many CRDs
+after device generation and YAML export.
 
-- If `server_connections[]` contains 9 entries, then
-  `expected.counts.connections: 9` is correct.
-- The generated wiring YAML may still contain dozens of Hedgehog `Connection`
-  CRDs after expansion across all concrete devices and fabric links.
+### `test_fixtures` (optional)
+
+Provides test-time object bootstrap. Use this to create DeviceTypes, BreakoutOptions,
+and ModuleTypes that do not exist in pre-seeded inventory, for example in unit tests
+or portable examples. Unlike v1 `reference_data`, these objects are created with
+`get_or_create` semantics so the block is idempotent.
+
+Supported sub-sections:
+
+- `device_types[]` — each entry may include `slug`, `manufacturer`, `model`,
+  `interface_templates`, and an inline `device_type_extension` mapping
+- `breakout_options[]` — each entry requires `breakout_id`; optional `from_speed`,
+  `logical_ports`, `logical_speed`
+- `module_types[]` — each entry requires `manufacturer` and `model`
+
+Production plans backed by pre-seeded inventory should omit `test_fixtures`
+and reference slugs directly.
+
+## Reference resolution in v2
+
+v2 resolves references from pre-seeded NetBox inventory using stable identifiers:
+
+| Field | Lookup key |
+|---|---|
+| `spec.switch_classes[].device_type` | DeviceType slug |
+| `spec.switch_port_zones[].breakout_option` | BreakoutOption `breakout_id` |
+| `spec.server_classes[].server_device_type` | DeviceType slug |
+| `spec.server_nics[].module_type` (string form) | ModuleType slug |
+| `spec.server_nics[].module_type` (dict form) | `{manufacturer, model}` composite |
+
+When a referenced object is missing and `reference_mode=require`, ingest raises
+a `missing_reference` error. When `reference_mode=ensure` (the default), missing
+reference objects are created or updated.
 
 ## Deprecated fields
 
@@ -513,29 +393,23 @@ Do not emit these in new YAML:
 
 - `server_connections[].target_switch_class`
 - `server_connections[].nic_module_type`
+- `breakout_options[].optic_type` (never used by HNP; field is ignored if present
+  in v1 `reference_data`, but omit it)
 
 Use this pattern instead:
 
 ```yaml
-server_nics:
-  - server_class: gpu-small
-    nic_id: nic-fe
-    module_type: nic_bf3
+spec:
+  server_nics:
+    - server_class: gpu-small
+      nic_id: nic-fe
+      module_type: gpu-server-fe-nic-slug
 
-server_connections:
-  - server_class: gpu-small
-    nic: nic-fe
-    target_zone: fe-leaf/server-downlinks
+  server_connections:
+    - server_class: gpu-small
+      nic: nic-fe
+      target_zone: fe-leaf/server-downlinks
 ```
-
-## Recommended authoring workflow for agents
-
-1. Start from the minimal example in this file.
-2. Copy patterns from a nearby real case in `netbox_hedgehog/test_cases/`.
-3. Keep IDs stable and symbolic.
-4. Prefer `target_zone` names that read clearly.
-5. Declare `server_nics` first, then reference them from connections.
-6. Validate with a dry run before relying on the case.
 
 ## Validation command
 
@@ -548,20 +422,72 @@ docker compose exec -T netbox python manage.py apply_diet_test_case --case <case
 
 Useful flags:
 
-- `--require-reference`
-  - Fails if referenced manufacturers/device types/module types are not already present.
-- Default mode is ensure mode
-  - Missing reference objects from `reference_data` are created or updated.
+- `--require-reference` — fails if referenced slugs are not already present in inventory
+- Default mode is ensure mode — missing reference objects are created or updated
 
 ## Good source examples
 
-- Current large regression case:
-  - `netbox_hedgehog/test_cases/ux_case_128gpu_odd_ports.yaml`
-- Modern generated-plan cases:
-  - `netbox_hedgehog/test_cases/training_opg128_clos_ro.yaml`
-  - `netbox_hedgehog/test_cases/inference_opg64_clos_ro.yaml`
+These are production v1 cases that can be used as structural reference for
+the payload shape (switch_classes, switch_port_zones, server_classes, etc.);
+note that they use the v1 top-level layout rather than the v2 `spec:` nesting:
 
-## Important note
+- Large regression case: `netbox_hedgehog/test_cases/ux_case_128gpu_odd_ports.yaml`
+- Training reference architecture: `netbox_hedgehog/test_cases/training_opg128_clos_ro.yaml`
+- Inference: `netbox_hedgehog/test_cases/inference_opg64_clos_ro.yaml`
 
-`docs/DIET_TEST_CASES.md` is a scenario write-up for a specific regression case.
-It is useful as a design example, but it is not the schema reference.
+For a v2-format structural example, see the `_v2_base()` helper in:
+`netbox_hedgehog/tests/test_topology_planning/test_yaml_contract_v2.py`
+
+## Legacy v1 compatibility
+
+v1 format is still accepted by the loader and continues to work unchanged.
+It is not the recommended authoring format for new files.
+
+Key differences from v2:
+
+| Concern | v1 | v2 |
+|---|---|---|
+| Version signal | no `apiVersion` field | `apiVersion: diet/v2` |
+| Kind field | absent | `kind: TopologyPlan` |
+| Identity block | `meta:` | `metadata:` |
+| `meta.version` | integer (e.g. `1`) | must be `2` |
+| Payload location | top-level | nested under `spec:` |
+| Reference objects | `reference_data:` block with symbolic IDs | pre-seeded inventory; slugs |
+| Test-time objects | `reference_data:` (ensure mode creates them) | `test_fixtures:` |
+
+A minimal v1 document looks like:
+
+```yaml
+meta:
+  case_id: my_legacy_case
+  name: My Legacy Case
+  version: 1
+  managed_by: yaml
+
+reference_data:
+  manufacturers: [...]
+  device_types: [...]
+  device_type_extensions: [...]
+  breakout_options: [...]
+  module_types: [...]
+
+plan:
+  name: My Legacy Case
+  status: draft
+
+switch_classes: [...]
+switch_port_zones: [...]
+server_classes: [...]
+server_nics: [...]
+server_connections: [...]
+```
+
+When migrating a v1 file to v2:
+
+1. Add `apiVersion: diet/v2` and `kind: TopologyPlan`.
+2. Rename `meta:` to `metadata:` and set `metadata.version: 2`.
+3. Move `switch_classes`, `switch_port_zones`, `server_classes`, `server_nics`,
+   `server_connections`, and `plan` under a new `spec:` key.
+4. Replace `reference_data:` symbolic ID references with slug-based lookups
+   (ensure the target DeviceTypes and BreakoutOptions exist in inventory first).
+5. Remove `reference_data:` entirely — the schema will reject it in v2.
