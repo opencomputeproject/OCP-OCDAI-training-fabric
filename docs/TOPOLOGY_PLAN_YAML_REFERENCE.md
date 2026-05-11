@@ -34,8 +34,9 @@ consumed by the Hedgehog NetBox Plugin (HNP).
   inventory by slug or composite key — not symbolic local IDs.
 - In `spec.switch_classes[]`, use `device_type: <slug>` (not `device_type_extension`).
 - In `spec.switch_port_zones[]`, `breakout_option` is a `breakout_id` string.
-- In `spec.server_nics[]`, `module_type` is a slug string or a
-  `{manufacturer, model}` composite lookup.
+- In `spec.server_nics[]`, `module_type` must be a `{manufacturer, model}`
+  composite mapping. String/slug form is not currently supported and is silently
+  skipped by ingest.
 - Do not use deprecated keys:
   - `server_connections[].target_switch_class`
   - `server_connections[].nic_module_type`
@@ -262,8 +263,8 @@ Required fields:
 
 - `server_class` — points to `spec.server_classes[].server_class_id`
 - `nic_id` — alphanumeric characters, `_`, and `-`; must start with alphanumeric
-- `module_type` — either a slug string or a `{manufacturer, model}` composite
-  resolved from pre-seeded inventory
+- `module_type` — a `{manufacturer, model}` composite mapping resolved from
+  pre-seeded inventory (slug/string form is not supported; use the dict form)
 
 Optional fields:
 
@@ -380,12 +381,12 @@ v2 resolves references from pre-seeded NetBox inventory using stable identifiers
 | `spec.switch_classes[].device_type` | DeviceType slug |
 | `spec.switch_port_zones[].breakout_option` | BreakoutOption `breakout_id` |
 | `spec.server_classes[].server_device_type` | DeviceType slug |
-| `spec.server_nics[].module_type` (string form) | ModuleType slug |
-| `spec.server_nics[].module_type` (dict form) | `{manufacturer, model}` composite |
+| `spec.server_nics[].module_type` | `{manufacturer, model}` composite |
 
-When a referenced object is missing and `reference_mode=require`, ingest raises
-a `missing_reference` error. When `reference_mode=ensure` (the default), missing
-reference objects are created or updated.
+v2 ingest does not honor `reference_mode=ensure` for slug-based resolution. All
+referenced objects must already exist in inventory or be bootstrapped via
+`test_fixtures`. If a slug or composite key cannot be resolved, ingest raises a
+`missing_reference` error regardless of mode.
 
 ## Deprecated fields
 
@@ -403,7 +404,9 @@ spec:
   server_nics:
     - server_class: gpu-small
       nic_id: nic-fe
-      module_type: gpu-server-fe-nic-slug
+      module_type:
+        manufacturer: nvidia
+        model: ConnectX-7 Dual 200G
 
   server_connections:
     - server_class: gpu-small
@@ -422,8 +425,11 @@ docker compose exec -T netbox python manage.py apply_diet_test_case --case <case
 
 Useful flags:
 
-- `--require-reference` — fails if referenced slugs are not already present in inventory
-- Default mode is ensure mode — missing reference objects are created or updated
+- `--require-reference` — fails if referenced objects are not already present in
+  inventory (applies to v1 `reference_data`; v2 always errors on missing references)
+- Default mode is ensure mode — for v1 `reference_data`, missing manufacturers /
+  device types are created or updated; v2 slug-based resolution always requires
+  pre-existing inventory or `test_fixtures`
 
 ## Good source examples
 
@@ -452,7 +458,7 @@ Key differences from v2:
 | Identity block | `meta:` | `metadata:` |
 | `meta.version` | integer (e.g. `1`) | must be `2` |
 | Payload location | top-level | nested under `spec:` |
-| Reference objects | `reference_data:` block with symbolic IDs | pre-seeded inventory; slugs |
+| Reference objects | `reference_data:` block with symbolic IDs | pre-seeded inventory; slugs (DeviceType, BreakoutOption) or `{manufacturer, model}` composite (ModuleType) |
 | Test-time objects | `reference_data:` (ensure mode creates them) | `test_fixtures:` |
 
 A minimal v1 document looks like:
@@ -488,6 +494,11 @@ When migrating a v1 file to v2:
 2. Rename `meta:` to `metadata:` and set `metadata.version: 2`.
 3. Move `switch_classes`, `switch_port_zones`, `server_classes`, `server_nics`,
    `server_connections`, and `plan` under a new `spec:` key.
-4. Replace `reference_data:` symbolic ID references with slug-based lookups
-   (ensure the target DeviceTypes and BreakoutOptions exist in inventory first).
+4. Replace `reference_data:` symbolic ID references:
+   - `switch_classes[].device_type_extension` → `device_type: <slug>` (DeviceType slug)
+   - `switch_port_zones[].breakout_option` → `breakout_option: <breakout_id>` (BreakoutOption `breakout_id`)
+   - `server_classes[].server_device_type` → DeviceType slug
+   - `server_nics[].module_type` → `{manufacturer: <slug>, model: <model>}` composite
+     (slug/string form is not supported in v2 ingest)
+   - Ensure all referenced objects already exist in inventory or add them to `test_fixtures`.
 5. Remove `reference_data:` entirely — the schema will reject it in v2.
