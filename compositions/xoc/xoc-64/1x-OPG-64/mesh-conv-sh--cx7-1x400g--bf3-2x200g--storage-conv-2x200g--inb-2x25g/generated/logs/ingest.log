@@ -3,4 +3,4 @@
 🧬 loaded config '/etc/netbox/config/logging.py'
 🧬 loaded config '/etc/netbox/config/plugins.py'
 Reference mode: ensure
-Applied case 'training_xoc64_1xopg64_mesh_conv_sh_air_2srv' -> plan 'Training XOC-64 1x OPG-64 Mesh Converged SH Air 2srv'
+Applied case 'training_xoc64_1xopg64_mesh_conv_sh' -> plan 'Training XOC-64 1x OPG-64 Mesh Converged SH'
