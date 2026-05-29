@@ -1,0 +1,38 @@
+🧬 loaded config '/etc/netbox/config/configuration.py'
+🧬 loaded config '/etc/netbox/config/extra.py'
+🧬 loaded config '/etc/netbox/config/logging.py'
+🧬 loaded config '/etc/netbox/config/plugins.py'
+⚠️  DIET Data Reset - Plan 'Training XOC-64 1x OPG-64 Mesh Converged RO' (ID: 10)
+The following objects will be deleted for plan 'Training XOC-64 1x OPG-64 Mesh Converged RO':
+  DIET Planning Data:
+    - TopologyPlans: 1
+    - PlanServerClasses: 5
+    - PlanSwitchClasses: 3
+    - PlanServerConnections: 21
+    - SwitchPortZones: 7
+    - GenerationStates: 1
+
+  Generated NetBox Objects:
+    - Cables: 128
+    - Devices: 21
+    - Interfaces: 130
+
+  DIET Seed DeviceTypes:
+    - (preserved - use --include-device-types to delete)
+
+  Total objects: 317
+
+🗑️  Deleting DIET data...
+  ✓ Deleted 512 cables
+  ✓ Deleted 260 interfaces
+  ✓ Deleted 1097 devices
+  ✓ Deleted 21 server connections
+  ✓ Deleted 7 port zones
+  ✓ Deleted 4 switch classes
+  ✓ Deleted 19 server classes
+  ✓ Deleted 1 generation states
+  ✓ Deleted 1 topology plans
+
+  Total objects deleted: 1922
+
+✅ DIET data reset complete!

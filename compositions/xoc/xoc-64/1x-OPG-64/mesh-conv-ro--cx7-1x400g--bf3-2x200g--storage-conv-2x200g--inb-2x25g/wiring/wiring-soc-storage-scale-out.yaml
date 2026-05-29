@@ -1,0 +1,1462 @@
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: VLANNamespace
+metadata:
+  name: default
+  namespace: default
+spec:
+  ranges:
+  - from: 1000
+    to: 2999
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: IPv4Namespace
+metadata:
+  name: default
+  namespace: default
+spec:
+  subnets:
+  - 10.0.0.0/16
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Switch
+metadata:
+  name: soc-storage-scale-out-leaf-01
+  namespace: default
+spec:
+  role: server-leaf
+  profile: celestica-ds5000
+  boot:
+    mac: 02:d1:30:5d:84:0c
+  portBreakouts:
+    E1/26: 1x800G
+    E1/28: 1x800G
+    E1/30: 1x800G
+    E1/32: 1x800G
+    E1/34: 1x800G
+    E1/36: 1x800G
+    E1/38: 1x800G
+    E1/39: 1x800G
+    E1/40: 1x800G
+    E1/41: 1x800G
+    E1/42: 1x800G
+    E1/43: 1x800G
+    E1/44: 1x800G
+    E1/45: 1x800G
+    E1/46: 1x800G
+    E1/47: 1x800G
+    E1/48: 1x800G
+    E1/49: 1x800G
+    E1/50: 1x800G
+    E1/51: 1x800G
+    E1/52: 1x800G
+    E1/53: 1x800G
+    E1/54: 1x800G
+    E1/55: 1x800G
+    E1/56: 1x800G
+    E1/57: 1x800G
+    E1/58: 1x800G
+    E1/59: 1x800G
+    E1/60: 1x800G
+    E1/61: 1x800G
+    E1/62: 1x800G
+    E1/63: 1x800G
+    E1/1: 2x400G
+    E1/2: 2x400G
+    E1/3: 2x400G
+    E1/4: 2x400G
+    E1/5: 2x400G
+    E1/6: 2x400G
+    E1/7: 2x400G
+    E1/8: 2x400G
+    E1/9: 2x400G
+    E1/10: 2x400G
+    E1/11: 2x400G
+    E1/12: 2x400G
+    E1/13: 2x400G
+    E1/14: 2x400G
+    E1/15: 2x400G
+    E1/16: 2x400G
+    E1/27: 4x200G
+    E1/29: 4x200G
+    E1/31: 4x200G
+    E1/33: 4x200G
+    E1/35: 4x200G
+    E1/37: 4x200G
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Switch
+metadata:
+  name: soc-storage-scale-out-leaf-02
+  namespace: default
+spec:
+  role: server-leaf
+  profile: celestica-ds5000
+  boot:
+    mac: 02:b7:11:db:8a:74
+  portBreakouts:
+    E1/26: 1x800G
+    E1/28: 1x800G
+    E1/30: 1x800G
+    E1/32: 1x800G
+    E1/34: 1x800G
+    E1/36: 1x800G
+    E1/38: 1x800G
+    E1/39: 1x800G
+    E1/40: 1x800G
+    E1/41: 1x800G
+    E1/42: 1x800G
+    E1/43: 1x800G
+    E1/44: 1x800G
+    E1/45: 1x800G
+    E1/46: 1x800G
+    E1/47: 1x800G
+    E1/48: 1x800G
+    E1/49: 1x800G
+    E1/50: 1x800G
+    E1/51: 1x800G
+    E1/52: 1x800G
+    E1/53: 1x800G
+    E1/54: 1x800G
+    E1/55: 1x800G
+    E1/56: 1x800G
+    E1/57: 1x800G
+    E1/58: 1x800G
+    E1/59: 1x800G
+    E1/60: 1x800G
+    E1/61: 1x800G
+    E1/62: 1x800G
+    E1/63: 1x800G
+    E1/1: 2x400G
+    E1/2: 2x400G
+    E1/3: 2x400G
+    E1/4: 2x400G
+    E1/5: 2x400G
+    E1/6: 2x400G
+    E1/7: 2x400G
+    E1/8: 2x400G
+    E1/9: 2x400G
+    E1/10: 2x400G
+    E1/11: 2x400G
+    E1/12: 2x400G
+    E1/13: 2x400G
+    E1/14: 2x400G
+    E1/15: 2x400G
+    E1/16: 2x400G
+    E1/27: 4x200G
+    E1/29: 4x200G
+    E1/31: 4x200G
+    E1/33: 4x200G
+    E1/35: 4x200G
+    E1/37: 4x200G
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: compute-xpu-001
+  namespace: default
+spec: {}
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: compute-xpu-002
+  namespace: default
+spec: {}
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: compute-xpu-003
+  namespace: default
+spec: {}
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: compute-xpu-004
+  namespace: default
+spec: {}
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: compute-xpu-005
+  namespace: default
+spec: {}
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: compute-xpu-006
+  namespace: default
+spec: {}
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: compute-xpu-007
+  namespace: default
+spec: {}
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: compute-xpu-008
+  namespace: default
+spec: {}
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: metadata-srv-001
+  namespace: default
+spec: {}
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: metadata-srv-002
+  namespace: default
+spec: {}
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: metadata-srv-003
+  namespace: default
+spec: {}
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: storage-srv-001
+  namespace: default
+spec: {}
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: storage-srv-002
+  namespace: default
+spec: {}
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: storage-srv-003
+  namespace: default
+spec: {}
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-xpu-001-scale-out-so0--unbundled--soc-storage-scale-out
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-xpu-001/scale_out-so0
+      switch:
+        port: soc-storage-scale-out-leaf-01/E1/1/1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-xpu-001-scale-out-so1--unbundled--soc-storage-scale-out
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-xpu-001/scale_out-so1
+      switch:
+        port: soc-storage-scale-out-leaf-01/E1/1/2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-xpu-001-scale-out-so2--unbundled--soc-storage-scale-out
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-xpu-001/scale_out-so2
+      switch:
+        port: soc-storage-scale-out-leaf-01/E1/2/1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-xpu-001-scale-out-so3--unbundled--soc-storage-scale-out
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-xpu-001/scale_out-so3
+      switch:
+        port: soc-storage-scale-out-leaf-01/E1/2/2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-xpu-001-scale-out-so4--unbundled--soc-storage-scale-out
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-xpu-001/scale_out-so4
+      switch:
+        port: soc-storage-scale-out-leaf-02/E1/1/1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-xpu-001-scale-out-so5--unbundled--soc-storage-scale-out
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-xpu-001/scale_out-so5
+      switch:
+        port: soc-storage-scale-out-leaf-02/E1/1/2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-xpu-001-scale-out-so6--unbundled--soc-storage-scale-out
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-xpu-001/scale_out-so6
+      switch:
+        port: soc-storage-scale-out-leaf-02/E1/2/1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-xpu-001-scale-out-so7--unbundled--soc-storage-scale-out
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-xpu-001/scale_out-so7
+      switch:
+        port: soc-storage-scale-out-leaf-02/E1/2/2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-xpu-001-soc-storage-ss0--unbundled--soc-storage-scale-o
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-xpu-001/soc_storage-ss0
+      switch:
+        port: soc-storage-scale-out-leaf-01/E1/27/1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-xpu-001-soc-storage-ss1--unbundled--soc-storage-scale-o
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-xpu-001/soc_storage-ss1
+      switch:
+        port: soc-storage-scale-out-leaf-01/E1/27/2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-xpu-002-scale-out-so0--unbundled--soc-storage-scale-out
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-xpu-002/scale_out-so0
+      switch:
+        port: soc-storage-scale-out-leaf-01/E1/3/1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-xpu-002-scale-out-so1--unbundled--soc-storage-scale-out
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-xpu-002/scale_out-so1
+      switch:
+        port: soc-storage-scale-out-leaf-01/E1/3/2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-xpu-002-scale-out-so2--unbundled--soc-storage-scale-out
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-xpu-002/scale_out-so2
+      switch:
+        port: soc-storage-scale-out-leaf-01/E1/4/1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-xpu-002-scale-out-so3--unbundled--soc-storage-scale-out
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-xpu-002/scale_out-so3
+      switch:
+        port: soc-storage-scale-out-leaf-01/E1/4/2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-xpu-002-scale-out-so4--unbundled--soc-storage-scale-out
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-xpu-002/scale_out-so4
+      switch:
+        port: soc-storage-scale-out-leaf-02/E1/3/1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-xpu-002-scale-out-so5--unbundled--soc-storage-scale-out
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-xpu-002/scale_out-so5
+      switch:
+        port: soc-storage-scale-out-leaf-02/E1/3/2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-xpu-002-scale-out-so6--unbundled--soc-storage-scale-out
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-xpu-002/scale_out-so6
+      switch:
+        port: soc-storage-scale-out-leaf-02/E1/4/1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-xpu-002-scale-out-so7--unbundled--soc-storage-scale-out
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-xpu-002/scale_out-so7
+      switch:
+        port: soc-storage-scale-out-leaf-02/E1/4/2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-xpu-002-soc-storage-ss0--unbundled--soc-storage-scale-o
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-xpu-002/soc_storage-ss0
+      switch:
+        port: soc-storage-scale-out-leaf-01/E1/27/3
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-xpu-002-soc-storage-ss1--unbundled--soc-storage-scale-o
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-xpu-002/soc_storage-ss1
+      switch:
+        port: soc-storage-scale-out-leaf-01/E1/27/4
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-xpu-003-scale-out-so0--unbundled--soc-storage-scale-out
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-xpu-003/scale_out-so0
+      switch:
+        port: soc-storage-scale-out-leaf-01/E1/5/1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-xpu-003-scale-out-so1--unbundled--soc-storage-scale-out
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-xpu-003/scale_out-so1
+      switch:
+        port: soc-storage-scale-out-leaf-01/E1/5/2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-xpu-003-scale-out-so2--unbundled--soc-storage-scale-out
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-xpu-003/scale_out-so2
+      switch:
+        port: soc-storage-scale-out-leaf-01/E1/6/1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-xpu-003-scale-out-so3--unbundled--soc-storage-scale-out
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-xpu-003/scale_out-so3
+      switch:
+        port: soc-storage-scale-out-leaf-01/E1/6/2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-xpu-003-scale-out-so4--unbundled--soc-storage-scale-out
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-xpu-003/scale_out-so4
+      switch:
+        port: soc-storage-scale-out-leaf-02/E1/5/1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-xpu-003-scale-out-so5--unbundled--soc-storage-scale-out
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-xpu-003/scale_out-so5
+      switch:
+        port: soc-storage-scale-out-leaf-02/E1/5/2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-xpu-003-scale-out-so6--unbundled--soc-storage-scale-out
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-xpu-003/scale_out-so6
+      switch:
+        port: soc-storage-scale-out-leaf-02/E1/6/1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-xpu-003-scale-out-so7--unbundled--soc-storage-scale-out
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-xpu-003/scale_out-so7
+      switch:
+        port: soc-storage-scale-out-leaf-02/E1/6/2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-xpu-003-soc-storage-ss0--unbundled--soc-storage-scale-o
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-xpu-003/soc_storage-ss0
+      switch:
+        port: soc-storage-scale-out-leaf-01/E1/29/1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-xpu-003-soc-storage-ss1--unbundled--soc-storage-scale-o
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-xpu-003/soc_storage-ss1
+      switch:
+        port: soc-storage-scale-out-leaf-01/E1/29/2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-xpu-004-scale-out-so0--unbundled--soc-storage-scale-out
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-xpu-004/scale_out-so0
+      switch:
+        port: soc-storage-scale-out-leaf-01/E1/7/1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-xpu-004-scale-out-so1--unbundled--soc-storage-scale-out
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-xpu-004/scale_out-so1
+      switch:
+        port: soc-storage-scale-out-leaf-01/E1/7/2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-xpu-004-scale-out-so2--unbundled--soc-storage-scale-out
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-xpu-004/scale_out-so2
+      switch:
+        port: soc-storage-scale-out-leaf-01/E1/8/1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-xpu-004-scale-out-so3--unbundled--soc-storage-scale-out
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-xpu-004/scale_out-so3
+      switch:
+        port: soc-storage-scale-out-leaf-01/E1/8/2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-xpu-004-scale-out-so4--unbundled--soc-storage-scale-out
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-xpu-004/scale_out-so4
+      switch:
+        port: soc-storage-scale-out-leaf-02/E1/7/1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-xpu-004-scale-out-so5--unbundled--soc-storage-scale-out
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-xpu-004/scale_out-so5
+      switch:
+        port: soc-storage-scale-out-leaf-02/E1/7/2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-xpu-004-scale-out-so6--unbundled--soc-storage-scale-out
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-xpu-004/scale_out-so6
+      switch:
+        port: soc-storage-scale-out-leaf-02/E1/8/1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-xpu-004-scale-out-so7--unbundled--soc-storage-scale-out
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-xpu-004/scale_out-so7
+      switch:
+        port: soc-storage-scale-out-leaf-02/E1/8/2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-xpu-004-soc-storage-ss0--unbundled--soc-storage-scale-o
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-xpu-004/soc_storage-ss0
+      switch:
+        port: soc-storage-scale-out-leaf-01/E1/29/3
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-xpu-004-soc-storage-ss1--unbundled--soc-storage-scale-o
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-xpu-004/soc_storage-ss1
+      switch:
+        port: soc-storage-scale-out-leaf-01/E1/29/4
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-xpu-005-scale-out-so0--unbundled--soc-storage-scale-out
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-xpu-005/scale_out-so0
+      switch:
+        port: soc-storage-scale-out-leaf-01/E1/9/1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-xpu-005-scale-out-so1--unbundled--soc-storage-scale-out
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-xpu-005/scale_out-so1
+      switch:
+        port: soc-storage-scale-out-leaf-01/E1/9/2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-xpu-005-scale-out-so2--unbundled--soc-storage-scale-out
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-xpu-005/scale_out-so2
+      switch:
+        port: soc-storage-scale-out-leaf-01/E1/10/1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-xpu-005-scale-out-so3--unbundled--soc-storage-scale-out
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-xpu-005/scale_out-so3
+      switch:
+        port: soc-storage-scale-out-leaf-01/E1/10/2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-xpu-005-scale-out-so4--unbundled--soc-storage-scale-out
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-xpu-005/scale_out-so4
+      switch:
+        port: soc-storage-scale-out-leaf-02/E1/9/1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-xpu-005-scale-out-so5--unbundled--soc-storage-scale-out
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-xpu-005/scale_out-so5
+      switch:
+        port: soc-storage-scale-out-leaf-02/E1/9/2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-xpu-005-scale-out-so6--unbundled--soc-storage-scale-out
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-xpu-005/scale_out-so6
+      switch:
+        port: soc-storage-scale-out-leaf-02/E1/10/1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-xpu-005-scale-out-so7--unbundled--soc-storage-scale-out
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-xpu-005/scale_out-so7
+      switch:
+        port: soc-storage-scale-out-leaf-02/E1/10/2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-xpu-005-soc-storage-ss0--unbundled--soc-storage-scale-o
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-xpu-005/soc_storage-ss0
+      switch:
+        port: soc-storage-scale-out-leaf-02/E1/27/1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-xpu-005-soc-storage-ss1--unbundled--soc-storage-scale-o
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-xpu-005/soc_storage-ss1
+      switch:
+        port: soc-storage-scale-out-leaf-02/E1/27/2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-xpu-006-scale-out-so0--unbundled--soc-storage-scale-out
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-xpu-006/scale_out-so0
+      switch:
+        port: soc-storage-scale-out-leaf-01/E1/11/1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-xpu-006-scale-out-so1--unbundled--soc-storage-scale-out
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-xpu-006/scale_out-so1
+      switch:
+        port: soc-storage-scale-out-leaf-01/E1/11/2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-xpu-006-scale-out-so2--unbundled--soc-storage-scale-out
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-xpu-006/scale_out-so2
+      switch:
+        port: soc-storage-scale-out-leaf-01/E1/12/1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-xpu-006-scale-out-so3--unbundled--soc-storage-scale-out
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-xpu-006/scale_out-so3
+      switch:
+        port: soc-storage-scale-out-leaf-01/E1/12/2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-xpu-006-scale-out-so4--unbundled--soc-storage-scale-out
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-xpu-006/scale_out-so4
+      switch:
+        port: soc-storage-scale-out-leaf-02/E1/11/1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-xpu-006-scale-out-so5--unbundled--soc-storage-scale-out
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-xpu-006/scale_out-so5
+      switch:
+        port: soc-storage-scale-out-leaf-02/E1/11/2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-xpu-006-scale-out-so6--unbundled--soc-storage-scale-out
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-xpu-006/scale_out-so6
+      switch:
+        port: soc-storage-scale-out-leaf-02/E1/12/1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-xpu-006-scale-out-so7--unbundled--soc-storage-scale-out
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-xpu-006/scale_out-so7
+      switch:
+        port: soc-storage-scale-out-leaf-02/E1/12/2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-xpu-006-soc-storage-ss0--unbundled--soc-storage-scale-o
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-xpu-006/soc_storage-ss0
+      switch:
+        port: soc-storage-scale-out-leaf-02/E1/27/3
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-xpu-006-soc-storage-ss1--unbundled--soc-storage-scale-o
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-xpu-006/soc_storage-ss1
+      switch:
+        port: soc-storage-scale-out-leaf-02/E1/27/4
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-xpu-007-scale-out-so0--unbundled--soc-storage-scale-out
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-xpu-007/scale_out-so0
+      switch:
+        port: soc-storage-scale-out-leaf-01/E1/13/1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-xpu-007-scale-out-so1--unbundled--soc-storage-scale-out
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-xpu-007/scale_out-so1
+      switch:
+        port: soc-storage-scale-out-leaf-01/E1/13/2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-xpu-007-scale-out-so2--unbundled--soc-storage-scale-out
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-xpu-007/scale_out-so2
+      switch:
+        port: soc-storage-scale-out-leaf-01/E1/14/1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-xpu-007-scale-out-so3--unbundled--soc-storage-scale-out
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-xpu-007/scale_out-so3
+      switch:
+        port: soc-storage-scale-out-leaf-01/E1/14/2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-xpu-007-scale-out-so4--unbundled--soc-storage-scale-out
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-xpu-007/scale_out-so4
+      switch:
+        port: soc-storage-scale-out-leaf-02/E1/13/1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-xpu-007-scale-out-so5--unbundled--soc-storage-scale-out
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-xpu-007/scale_out-so5
+      switch:
+        port: soc-storage-scale-out-leaf-02/E1/13/2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-xpu-007-scale-out-so6--unbundled--soc-storage-scale-out
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-xpu-007/scale_out-so6
+      switch:
+        port: soc-storage-scale-out-leaf-02/E1/14/1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-xpu-007-scale-out-so7--unbundled--soc-storage-scale-out
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-xpu-007/scale_out-so7
+      switch:
+        port: soc-storage-scale-out-leaf-02/E1/14/2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-xpu-007-soc-storage-ss0--unbundled--soc-storage-scale-o
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-xpu-007/soc_storage-ss0
+      switch:
+        port: soc-storage-scale-out-leaf-02/E1/29/1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-xpu-007-soc-storage-ss1--unbundled--soc-storage-scale-o
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-xpu-007/soc_storage-ss1
+      switch:
+        port: soc-storage-scale-out-leaf-02/E1/29/2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-xpu-008-scale-out-so0--unbundled--soc-storage-scale-out
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-xpu-008/scale_out-so0
+      switch:
+        port: soc-storage-scale-out-leaf-01/E1/15/1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-xpu-008-scale-out-so1--unbundled--soc-storage-scale-out
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-xpu-008/scale_out-so1
+      switch:
+        port: soc-storage-scale-out-leaf-01/E1/15/2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-xpu-008-scale-out-so2--unbundled--soc-storage-scale-out
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-xpu-008/scale_out-so2
+      switch:
+        port: soc-storage-scale-out-leaf-01/E1/16/1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-xpu-008-scale-out-so3--unbundled--soc-storage-scale-out
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-xpu-008/scale_out-so3
+      switch:
+        port: soc-storage-scale-out-leaf-01/E1/16/2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-xpu-008-scale-out-so4--unbundled--soc-storage-scale-out
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-xpu-008/scale_out-so4
+      switch:
+        port: soc-storage-scale-out-leaf-02/E1/15/1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-xpu-008-scale-out-so5--unbundled--soc-storage-scale-out
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-xpu-008/scale_out-so5
+      switch:
+        port: soc-storage-scale-out-leaf-02/E1/15/2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-xpu-008-scale-out-so6--unbundled--soc-storage-scale-out
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-xpu-008/scale_out-so6
+      switch:
+        port: soc-storage-scale-out-leaf-02/E1/16/1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-xpu-008-scale-out-so7--unbundled--soc-storage-scale-out
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-xpu-008/scale_out-so7
+      switch:
+        port: soc-storage-scale-out-leaf-02/E1/16/2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-xpu-008-soc-storage-ss0--unbundled--soc-storage-scale-o
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-xpu-008/soc_storage-ss0
+      switch:
+        port: soc-storage-scale-out-leaf-02/E1/29/3
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-xpu-008-soc-storage-ss1--unbundled--soc-storage-scale-o
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-xpu-008/soc_storage-ss1
+      switch:
+        port: soc-storage-scale-out-leaf-02/E1/29/4
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: mesh-soc-storage-scale-out-leaf-01-soc-storage-scale-out-leaf-0
+  namespace: default
+spec:
+  mesh:
+    links:
+    - leaf1:
+        port: soc-storage-scale-out-leaf-01/E1/26
+      leaf2:
+        port: soc-storage-scale-out-leaf-02/E1/26
+    - leaf1:
+        port: soc-storage-scale-out-leaf-01/E1/28
+      leaf2:
+        port: soc-storage-scale-out-leaf-02/E1/28
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: metadata-srv-001-soc-storage-port0--unbundled--soc-storage-scal
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: metadata-srv-001/soc_storage-port0
+      switch:
+        port: soc-storage-scale-out-leaf-01/E1/31/1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: metadata-srv-001-soc-storage-port1--unbundled--soc-storage-scal
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: metadata-srv-001/soc_storage-port1
+      switch:
+        port: soc-storage-scale-out-leaf-01/E1/31/2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: metadata-srv-002-soc-storage-port0--unbundled--soc-storage-scal
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: metadata-srv-002/soc_storage-port0
+      switch:
+        port: soc-storage-scale-out-leaf-01/E1/31/3
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: metadata-srv-002-soc-storage-port1--unbundled--soc-storage-scal
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: metadata-srv-002/soc_storage-port1
+      switch:
+        port: soc-storage-scale-out-leaf-01/E1/31/4
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: metadata-srv-003-soc-storage-port0--unbundled--soc-storage-scal
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: metadata-srv-003/soc_storage-port0
+      switch:
+        port: soc-storage-scale-out-leaf-02/E1/31/1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: metadata-srv-003-soc-storage-port1--unbundled--soc-storage-scal
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: metadata-srv-003/soc_storage-port1
+      switch:
+        port: soc-storage-scale-out-leaf-02/E1/31/2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: storage-srv-001-soc-storage-port0--unbundled--soc-storage-scale
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: storage-srv-001/soc_storage-port0
+      switch:
+        port: soc-storage-scale-out-leaf-01/E1/33/1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: storage-srv-001-soc-storage-port1--unbundled--soc-storage-scale
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: storage-srv-001/soc_storage-port1
+      switch:
+        port: soc-storage-scale-out-leaf-01/E1/33/2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: storage-srv-002-soc-storage-port0--unbundled--soc-storage-scale
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: storage-srv-002/soc_storage-port0
+      switch:
+        port: soc-storage-scale-out-leaf-01/E1/33/3
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: storage-srv-002-soc-storage-port1--unbundled--soc-storage-scale
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: storage-srv-002/soc_storage-port1
+      switch:
+        port: soc-storage-scale-out-leaf-01/E1/33/4
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: storage-srv-003-soc-storage-port0--unbundled--soc-storage-scale
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: storage-srv-003/soc_storage-port0
+      switch:
+        port: soc-storage-scale-out-leaf-02/E1/31/3
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: storage-srv-003-soc-storage-port1--unbundled--soc-storage-scale
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: storage-srv-003/soc_storage-port1
+      switch:
+        port: soc-storage-scale-out-leaf-02/E1/31/4

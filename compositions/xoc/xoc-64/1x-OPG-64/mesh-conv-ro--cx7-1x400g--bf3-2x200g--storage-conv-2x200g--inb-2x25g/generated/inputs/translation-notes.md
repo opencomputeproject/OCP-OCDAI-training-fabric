@@ -3,26 +3,29 @@
 ## Pass-1 Status: complete-pass1
 
 ## Generation Summary
-- Plan ID at generation: 156
+- Plan ID at generation: 10
 - Site slug: xoc64-ro-air
-- Device count: 0
+- Device count: 21
 
-## Known Gaps
+## Wiring Artifacts
+All managed-fabric wiring artifacts produced by --split-by-fabric are preserved in
+wiring/. Each wiring-<fabric>.yaml file is independently consumable.
+See hhfab/ for per-fabric validation logs (hhfab_validate_<fabric>.log).
 
-### Frontend Wiring Export
-Frontend wiring YAML export fails with:
-  "Switch references group 'fe-mclag' but no PlanMCLAGDomain exists"
-This is a pre-existing DIET gap affecting all DS5000 L3MH variants.
-Backend wiring exported and validated successfully.
+If a fabric's wiring export or hhfab validation failed, the artifact is still
+preserved and the failure is recorded in the corresponding log file.
+Known gap: frontend (DS5000 L3MH variants) export may fail with a mclag gap —
+"Switch references group 'fe-mclag' but no PlanMCLAGDomain exists". This is
+tracked as a pre-existing DIET gap. The artifact is kept even if export partially
+failed; see wiring_export.log for the full error.
 
 
 
 
 
-## SH Distribution Shim (if applicable)
-Single-homed backend variants use rail-optimized distribution (rails 0-7) as a
-structural shim. DIET has no per-server SH distribution; this approximates the
-intent. Document deviation in RA notes.
+## SH Distribution Note (if applicable)
+Single-homed scale-out variants use same-switch grouped-per-leaf distribution.
+Servers are allocated in contiguous blocks per leaf (first N/2 → leaf A, rest → leaf B).
 
 ## XOC Composition Note (if applicable)
 XOC variants are modeled as a single scaled DIET plan with the combined server

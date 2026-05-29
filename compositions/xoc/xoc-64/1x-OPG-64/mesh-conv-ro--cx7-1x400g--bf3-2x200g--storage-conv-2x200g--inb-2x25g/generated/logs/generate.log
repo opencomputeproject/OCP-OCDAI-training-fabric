@@ -3,22 +3,22 @@
 🧬 loaded config '/etc/netbox/config/logging.py'
 🧬 loaded config '/etc/netbox/config/plugins.py'
 
-Topology Plan: Training XOC-64 1x OPG-64 Mesh Converged RO Air 2srv
-  ID: 156
+Topology Plan: Training XOC-64 1x OPG-64 Mesh Converged RO
+  ID: 10
   Status: draft
   Server Classes: 5
-  Switch Classes: 4
+  Switch Classes: 3
 
 ✓ Recalculated switch quantities
-  - inb_mgmt_leaf: calculated=2 override=2 effective=2
-  - oob_leaf: calculated=1 override=2 effective=2
+  - inb_mgmt_leaf: calculated=1 override=None effective=1
+  - oob_leaf: calculated=1 override=None effective=1
 
 === GENERATING OBJECTS ===
 
 ✓ Generation complete!
 
 Created:
-  Devices: 25
+  Devices: 21
   Interfaces: 130
   Cables: 128
 
@@ -26,34 +26,34 @@ Created:
   Status: planned
 
   Tagged with: hedgehog-generated
-  Custom field: hedgehog_plan_id=156
+  Custom field: hedgehog_plan_id=10
 
 💡 Next steps:
   - View devices in NetBox UI
   - Filter by tag: hedgehog-generated
-  - Or custom field: hedgehog_plan_id=156
+  - Or custom field: hedgehog_plan_id=10
   - Check cable connections
 🧬 loaded config '/etc/netbox/config/configuration.py'
 🧬 loaded config '/etc/netbox/config/extra.py'
 🧬 loaded config '/etc/netbox/config/logging.py'
 🧬 loaded config '/etc/netbox/config/plugins.py'
 
-[OK] Export complete: /tmp/ra_pipeline/training_xoc64_1xopg64_mesh_conv_ro_air_2srv/netbox/plan_inventory.json
-  plan_id:    156
-  sha256:     6357b339e5c79131a85a9489ee6270b90cb1ac3489f30430aa8a0d7cfa1c7270
-  bytes:      278323
-  lines:      11344
-  devices:    25
-  modules:    148
-  interfaces: 467
+[OK] Export complete: /tmp/ra_pipeline/training_xoc64_1xopg64_mesh_conv_ro/netbox/plan_inventory.json
+  plan_id:    10
+  sha256:     7b338d7cacd0ab8279f02ecdca928969b38a1c17c960ef3bb0e4a054751de567
+  bytes:      315309
+  lines:      12750
+  devices:    21
+  modules:    259
+  interfaces: 481
   cables:     128
 🧬 loaded config '/etc/netbox/config/configuration.py'
 🧬 loaded config '/etc/netbox/config/extra.py'
 🧬 loaded config '/etc/netbox/config/logging.py'
 🧬 loaded config '/etc/netbox/config/plugins.py'
 
-[OK] Export complete: /tmp/ra_pipeline/training_xoc64_1xopg64_mesh_conv_ro_air_2srv/netbox/interface_connections.csv
-  plan_id:    156
-  sha256:     de62c67cb7df72ddee49ec785bcda39407731119b027e7f84895c19a49bd79df
-  bytes:      11555
+[OK] Export complete: /tmp/ra_pipeline/training_xoc64_1xopg64_mesh_conv_ro/netbox/interface_connections.csv
+  plan_id:    10
+  sha256:     eef5e1805709c9de103fbfde221fe2c8af39b986bd9a9f7c504dc867a0853658
+  bytes:      12398
   rows:       128
