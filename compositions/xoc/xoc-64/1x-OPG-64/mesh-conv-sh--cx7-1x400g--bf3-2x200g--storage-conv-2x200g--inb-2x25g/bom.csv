@@ -1,0 +1,23 @@
+section,module_type_model,module_type_description,hedgehog_class,manufacturer,quantity,cage_type,medium,connector,standard,reach_class,wavelength_nm,host_lane_count,host_serdes_gbps_per_lane,optical_lane_pattern,gearbox_present,cable_assembly_type,breakout_topology,is_cable_assembly
+server,OCP-Compliant xPU Server,,compute_xpu,Generic,8,,,,,,,,,,,,,false
+server,Hedgehog Controller x86,,hh_controller,Generic,1,,,,,,,,,,,,,false
+server,Hedgehog Gateway x86,,hh_gateway,Generic,2,,,,,,,,,,,,,false
+server,OCP-Compliant Metadata Server,,metadata_srv,Generic,3,,,,,,,,,,,,,false
+server,OCP-Compliant Storage Server,,storage_srv,Generic,3,,,,,,,,,,,,,false
+switch,celestica-ds2000,,inb_mgmt_leaf,Celestica,1,,,,,,,,,,,,,false
+switch,Celestica DS1000,,oob_leaf,Celestica,1,,,,,,,,,,,,,false
+switch,celestica-ds5000,,soc_storage_scale_out_leaf,Celestica,2,,,,,,,,,,,,,false
+nic,BMC Management Port,,,Generic,17,,,,,,,,,,Unknown,,,false
+nic,Generic Dual-Port 200G NIC,,,Generic,6,,,,,,,,,,Unknown,,,false
+nic,Generic Dual-Port 25GbE NIC,,,Generic,17,,,,,,,,,,Unknown,,,false
+nic,Generic xPU Scale-Out 8x400G NIC,,,NVIDIA,8,,,,,,,,,,Unknown,,,false
+nic,Generic xPU SoC/Storage 2x200G NIC,,,NVIDIA,8,,,,,,,,,,Unknown,,,false
+server_transceiver,OSFP-400G-DR4,,,Generic,64,OSFP,SMF,MPO-12,400GBASE-DR4,DR,1310,4,100,DR4,false,none,1x,false
+server_transceiver,QSFP112-200GBASE-SR2,200G QSFP112 SR2 (MPO-12) — generic placeholder; replace with vendor SKU when qualified,,Generic,28,QSFP112,MMF,MPO-12,200GBASE-SR2,SR,850,2,100,SR2,false,none,1x,false
+server_transceiver,RJ45-1000BASE-T,1G copper RJ45 transceiver/PHY placeholder,,Generic,17,RJ45,Copper,RJ45,1000BASE-T,Copper,,1,1,,false,none,1x,false
+server_transceiver,SFP28-25GBASE-SR,25G SFP28 SR optic (LC),,Generic,17,SFP28,MMF,LC,25GBASE-SR,SR,850,1,25,SR,false,none,1x,false
+switch_transceiver,R4113-A9220-VR,800G OSFP112 2xVR4 (2xMPO12),,Celestica,11,OSFP,MMF,Dual MPO-12,800GBASE-2xVR4,VR,850,8,100,VR4,false,none,2x400g,false
+switch_transceiver,OSFP-400G-DR4,,,Generic,32,OSFP,SMF,MPO-12,400GBASE-DR4,DR,1310,4,100,DR4,false,none,1x,false
+switch_transceiver,RJ45-1000BASE-T,1G copper RJ45 transceiver/PHY placeholder,,Generic,17,RJ45,Copper,RJ45,1000BASE-T,Copper,,1,1,,false,none,1x,false
+switch_transceiver,SFP28-25GBASE-SR,25G SFP28 SR optic (LC),,Generic,17,SFP28,MMF,LC,25GBASE-SR,SR,850,1,25,SR,false,none,1x,false
+# suppressed_switch_cable_assembly_count,0
