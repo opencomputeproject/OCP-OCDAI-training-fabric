@@ -1,0 +1,6 @@
+🧬 loaded config '/etc/netbox/config/configuration.py'
+🧬 loaded config '/etc/netbox/config/extra.py'
+🧬 loaded config '/etc/netbox/config/logging.py'
+🧬 loaded config '/etc/netbox/config/plugins.py'
+Reference mode: ensure
+Applied case 'training_xoc512_1xopg512_dual_plane' -> plan 'Training XOC-512 1x OPG-512 Dual Plane'
