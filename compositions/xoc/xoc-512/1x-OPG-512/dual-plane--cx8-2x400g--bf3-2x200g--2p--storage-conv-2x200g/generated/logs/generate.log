@@ -1,0 +1,63 @@
+🧬 loaded config '/etc/netbox/config/configuration.py'
+🧬 loaded config '/etc/netbox/config/extra.py'
+🧬 loaded config '/etc/netbox/config/logging.py'
+🧬 loaded config '/etc/netbox/config/plugins.py'
+
+Topology Plan: Training XOC-512 1x OPG-512 Dual Plane
+  ID: 13
+  Status: draft
+  Server Classes: 1
+  Switch Classes: 6
+
+✓ Recalculated switch quantities
+  - be-plane-a-leaf: calculated=8 override=None effective=8
+  - be-plane-b-leaf: calculated=8 override=None effective=8
+  - fe-leaf: calculated=2 override=None effective=2
+  - be-plane-a-spine: calculated=4 override=None effective=4
+  - be-plane-b-spine: calculated=4 override=None effective=4
+  - fe-spine: calculated=1 override=None effective=1
+
+=== GENERATING OBJECTS ===
+
+✓ Generation complete!
+
+Created:
+  Devices: 91
+  Interfaces: 2304
+  Cables: 1728
+
+  Site: Xoc512 Dual Plane
+  Status: planned
+
+  Tagged with: hedgehog-generated
+  Custom field: hedgehog_plan_id=13
+
+💡 Next steps:
+  - View devices in NetBox UI
+  - Filter by tag: hedgehog-generated
+  - Or custom field: hedgehog_plan_id=13
+  - Check cable connections
+🧬 loaded config '/etc/netbox/config/configuration.py'
+🧬 loaded config '/etc/netbox/config/extra.py'
+🧬 loaded config '/etc/netbox/config/logging.py'
+🧬 loaded config '/etc/netbox/config/plugins.py'
+
+[OK] Export complete: /tmp/ra_pipeline/training_xoc512_1xopg512_dual_plane/netbox/plan_inventory.json
+  plan_id:    13
+  sha256:     97d9abf31ede508d11104cf14b6bcd96af15daf4dd20f48b38a965dfe93db3cd
+  bytes:      3539319
+  lines:      144067
+  devices:    91
+  modules:    3424
+  interfaces: 4086
+  cables:     1728
+🧬 loaded config '/etc/netbox/config/configuration.py'
+🧬 loaded config '/etc/netbox/config/extra.py'
+🧬 loaded config '/etc/netbox/config/logging.py'
+🧬 loaded config '/etc/netbox/config/plugins.py'
+
+[OK] Export complete: /tmp/ra_pipeline/training_xoc512_1xopg512_dual_plane/netbox/interface_connections.csv
+  plan_id:    13
+  sha256:     2282784891b7b7c5f51c1a8b7f8e2f6bddaf6ddd3d6fb4e85bd095782fac0b88
+  bytes:      143482
+  rows:       1728
