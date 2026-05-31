@@ -1,0 +1,62 @@
+🧬 loaded config '/etc/netbox/config/configuration.py'
+🧬 loaded config '/etc/netbox/config/extra.py'
+🧬 loaded config '/etc/netbox/config/logging.py'
+🧬 loaded config '/etc/netbox/config/plugins.py'
+✓ Created site: Xoc256 Clos Sh Air 2Srv (xoc256-clos-sh-air-2srv)
+
+Topology Plan: Training XOC-256 2x OPG-128 Clos SH
+  ID: 16
+  Status: draft
+  Server Classes: 1
+  Switch Classes: 4
+
+✓ Recalculated switch quantities
+  - be-leaf: calculated=4 override=None effective=4
+  - fe-leaf: calculated=2 override=None effective=2
+  - be-spine: calculated=2 override=None effective=2
+  - fe-spine: calculated=1 override=None effective=1
+
+=== GENERATING OBJECTS ===
+
+✓ Generation complete!
+
+Created:
+  Devices: 41
+  Interfaces: 704
+  Cables: 512
+
+  Site: Xoc256 Clos Sh Air 2Srv
+  Status: planned
+
+  Tagged with: hedgehog-generated
+  Custom field: hedgehog_plan_id=16
+
+💡 Next steps:
+  - View devices in NetBox UI
+  - Filter by tag: hedgehog-generated
+  - Or custom field: hedgehog_plan_id=16
+  - Check cable connections
+🧬 loaded config '/etc/netbox/config/configuration.py'
+🧬 loaded config '/etc/netbox/config/extra.py'
+🧬 loaded config '/etc/netbox/config/logging.py'
+🧬 loaded config '/etc/netbox/config/plugins.py'
+
+[OK] Export complete: /tmp/ra_pipeline/training_xoc256_2xopg128_clos_sh/netbox/plan_inventory.json
+  plan_id:    16
+  sha256:     8b0583988956aa0fd789ffa1555bbe72917ae5afb0221d834e3649007e47f92a
+  bytes:      1075817
+  lines:      44751
+  devices:    41
+  modules:    1136
+  interfaces: 1234
+  cables:     512
+🧬 loaded config '/etc/netbox/config/configuration.py'
+🧬 loaded config '/etc/netbox/config/extra.py'
+🧬 loaded config '/etc/netbox/config/logging.py'
+🧬 loaded config '/etc/netbox/config/plugins.py'
+
+[OK] Export complete: /tmp/ra_pipeline/training_xoc256_2xopg128_clos_sh/netbox/interface_connections.csv
+  plan_id:    16
+  sha256:     835cde720fae14d12ffeced4260590f7beb9b01f47fc001e86322cc37bf79ba4
+  bytes:      36232
+  rows:       512
