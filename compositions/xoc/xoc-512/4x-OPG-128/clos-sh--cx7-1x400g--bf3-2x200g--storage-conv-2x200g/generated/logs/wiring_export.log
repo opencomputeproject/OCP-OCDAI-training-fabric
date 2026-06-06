@@ -1,0 +1,23 @@
+🧬 loaded config '/etc/netbox/config/configuration.py'
+🧬 loaded config '/etc/netbox/config/extra.py'
+🧬 loaded config '/etc/netbox/config/logging.py'
+🧬 loaded config '/etc/netbox/config/plugins.py'
+Exporting wiring YAML for plan: Training XOC-512 4x OPG-128 Clos SH (ID: 18)
+
+[OK] Export complete: /tmp/ra_pipeline/training_xoc512_4xopg128_clos_sh/wiring_tmp/wiring-backend.yaml
+  plan_id:    18
+  fabric:     backend
+  timestamp:  2026-06-06T00:12:15.899363+00:00
+  sha256:     ddc3e21daae4d3f541956cf1e161adf700fc27f3fd7095245b0321c45250153b
+  bytes:      192026
+  lines:      9348
+  documents:  622
+
+[OK] Export complete: /tmp/ra_pipeline/training_xoc512_4xopg128_clos_sh/wiring_tmp/wiring-frontend.yaml
+  plan_id:    18
+  fabric:     frontend
+  timestamp:  2026-06-06T00:12:33.914576+00:00
+  sha256:     59f31e7605784629140a1db268ee3f120332e2aff8b2f2ec93a13af4924c709f
+  bytes:      52265
+  lines:      2651
+  documents:  200

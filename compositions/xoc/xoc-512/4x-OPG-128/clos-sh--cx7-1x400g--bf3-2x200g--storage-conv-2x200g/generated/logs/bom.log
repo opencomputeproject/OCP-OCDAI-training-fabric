@@ -1,0 +1,11 @@
+🧬 loaded config '/etc/netbox/config/configuration.py'
+🧬 loaded config '/etc/netbox/config/extra.py'
+🧬 loaded config '/etc/netbox/config/logging.py'
+🧬 loaded config '/etc/netbox/config/plugins.py'
+
+[OK] BOM export complete: /tmp/ra_pipeline/training_xoc512_4xopg128_clos_sh/bom.csv
+  plan_id:    18
+  line_items: 4
+  suppressed: 0
+  sha256:     db685036dbce50be042adfbb717c5d3f044c421a06366b8f7d7434a5489b1c67
+  bytes:      1209
