@@ -1,0 +1,6 @@
+🧬 loaded config '/etc/netbox/config/configuration.py'
+🧬 loaded config '/etc/netbox/config/extra.py'
+🧬 loaded config '/etc/netbox/config/logging.py'
+🧬 loaded config '/etc/netbox/config/plugins.py'
+Reference mode: ensure
+Applied case 'training_xoc128_2xopg64_mesh_conv_sh' -> plan 'Training XOC-128 2x OPG-64 Mesh Converged SH'

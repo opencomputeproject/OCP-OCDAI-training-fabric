@@ -1,0 +1,598 @@
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: VLANNamespace
+metadata:
+  name: default
+  namespace: default
+spec:
+  ranges:
+  - from: 1000
+    to: 2999
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: IPv4Namespace
+metadata:
+  name: default
+  namespace: default
+spec:
+  subnets:
+  - 10.0.0.0/16
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Switch
+metadata:
+  name: soc-storage-leaf-a-01
+  namespace: default
+spec:
+  role: server-leaf
+  profile: celestica-ds5000
+  boot:
+    mac: 02:2f:c0:14:c7:95
+  portBreakouts:
+    E1/26: 1x800G
+    E1/28: 1x800G
+    E1/30: 1x800G
+    E1/32: 1x800G
+    E1/34: 1x800G
+    E1/36: 1x800G
+    E1/38: 1x800G
+    E1/39: 1x800G
+    E1/40: 1x800G
+    E1/41: 1x800G
+    E1/42: 1x800G
+    E1/43: 1x800G
+    E1/44: 1x800G
+    E1/45: 1x800G
+    E1/46: 1x800G
+    E1/47: 1x800G
+    E1/48: 1x800G
+    E1/49: 1x800G
+    E1/50: 1x800G
+    E1/51: 1x800G
+    E1/52: 1x800G
+    E1/53: 1x800G
+    E1/54: 1x800G
+    E1/55: 1x800G
+    E1/56: 1x800G
+    E1/57: 1x800G
+    E1/58: 1x800G
+    E1/59: 1x800G
+    E1/60: 1x800G
+    E1/61: 1x800G
+    E1/62: 1x800G
+    E1/63: 1x800G
+    E1/27: 4x200G
+    E1/29: 4x200G
+    E1/31: 4x200G
+    E1/33: 4x200G
+    E1/35: 4x200G
+    E1/37: 4x200G
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Switch
+metadata:
+  name: soc-storage-leaf-a-02
+  namespace: default
+spec:
+  role: server-leaf
+  profile: celestica-ds5000
+  boot:
+    mac: 02:db:84:f4:90:b1
+  portBreakouts:
+    E1/26: 1x800G
+    E1/28: 1x800G
+    E1/30: 1x800G
+    E1/32: 1x800G
+    E1/34: 1x800G
+    E1/36: 1x800G
+    E1/38: 1x800G
+    E1/39: 1x800G
+    E1/40: 1x800G
+    E1/41: 1x800G
+    E1/42: 1x800G
+    E1/43: 1x800G
+    E1/44: 1x800G
+    E1/45: 1x800G
+    E1/46: 1x800G
+    E1/47: 1x800G
+    E1/48: 1x800G
+    E1/49: 1x800G
+    E1/50: 1x800G
+    E1/51: 1x800G
+    E1/52: 1x800G
+    E1/53: 1x800G
+    E1/54: 1x800G
+    E1/55: 1x800G
+    E1/56: 1x800G
+    E1/57: 1x800G
+    E1/58: 1x800G
+    E1/59: 1x800G
+    E1/60: 1x800G
+    E1/61: 1x800G
+    E1/62: 1x800G
+    E1/63: 1x800G
+    E1/27: 4x200G
+    E1/29: 4x200G
+    E1/31: 4x200G
+    E1/33: 4x200G
+    E1/35: 4x200G
+    E1/37: 4x200G
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: compute-xpu-a-001
+  namespace: default
+spec: {}
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: compute-xpu-a-002
+  namespace: default
+spec: {}
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: compute-xpu-a-003
+  namespace: default
+spec: {}
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: compute-xpu-a-004
+  namespace: default
+spec: {}
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: compute-xpu-a-005
+  namespace: default
+spec: {}
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: compute-xpu-a-006
+  namespace: default
+spec: {}
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: compute-xpu-a-007
+  namespace: default
+spec: {}
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: compute-xpu-a-008
+  namespace: default
+spec: {}
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: metadata-srv-a-001
+  namespace: default
+spec: {}
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: metadata-srv-a-002
+  namespace: default
+spec: {}
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: metadata-srv-a-003
+  namespace: default
+spec: {}
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: storage-srv-a-001
+  namespace: default
+spec: {}
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: storage-srv-a-002
+  namespace: default
+spec: {}
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: storage-srv-a-003
+  namespace: default
+spec: {}
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-xpu-a-001-soc-storage-ss0--unbundled--soc-storage-leaf
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-xpu-a-001/soc_storage-ss0
+      switch:
+        port: soc-storage-leaf-a-01/E1/27/1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-xpu-a-001-soc-storage-ss1--unbundled--soc-storage-leaf
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-xpu-a-001/soc_storage-ss1
+      switch:
+        port: soc-storage-leaf-a-02/E1/27/1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-xpu-a-002-soc-storage-ss0--unbundled--soc-storage-leaf
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-xpu-a-002/soc_storage-ss0
+      switch:
+        port: soc-storage-leaf-a-01/E1/27/2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-xpu-a-002-soc-storage-ss1--unbundled--soc-storage-leaf
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-xpu-a-002/soc_storage-ss1
+      switch:
+        port: soc-storage-leaf-a-02/E1/27/2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-xpu-a-003-soc-storage-ss0--unbundled--soc-storage-leaf
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-xpu-a-003/soc_storage-ss0
+      switch:
+        port: soc-storage-leaf-a-01/E1/27/3
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-xpu-a-003-soc-storage-ss1--unbundled--soc-storage-leaf
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-xpu-a-003/soc_storage-ss1
+      switch:
+        port: soc-storage-leaf-a-02/E1/27/3
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-xpu-a-004-soc-storage-ss0--unbundled--soc-storage-leaf
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-xpu-a-004/soc_storage-ss0
+      switch:
+        port: soc-storage-leaf-a-01/E1/27/4
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-xpu-a-004-soc-storage-ss1--unbundled--soc-storage-leaf
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-xpu-a-004/soc_storage-ss1
+      switch:
+        port: soc-storage-leaf-a-02/E1/27/4
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-xpu-a-005-soc-storage-ss0--unbundled--soc-storage-leaf
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-xpu-a-005/soc_storage-ss0
+      switch:
+        port: soc-storage-leaf-a-01/E1/29/1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-xpu-a-005-soc-storage-ss1--unbundled--soc-storage-leaf
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-xpu-a-005/soc_storage-ss1
+      switch:
+        port: soc-storage-leaf-a-02/E1/29/1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-xpu-a-006-soc-storage-ss0--unbundled--soc-storage-leaf
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-xpu-a-006/soc_storage-ss0
+      switch:
+        port: soc-storage-leaf-a-01/E1/29/2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-xpu-a-006-soc-storage-ss1--unbundled--soc-storage-leaf
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-xpu-a-006/soc_storage-ss1
+      switch:
+        port: soc-storage-leaf-a-02/E1/29/2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-xpu-a-007-soc-storage-ss0--unbundled--soc-storage-leaf
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-xpu-a-007/soc_storage-ss0
+      switch:
+        port: soc-storage-leaf-a-01/E1/29/3
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-xpu-a-007-soc-storage-ss1--unbundled--soc-storage-leaf
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-xpu-a-007/soc_storage-ss1
+      switch:
+        port: soc-storage-leaf-a-02/E1/29/3
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-xpu-a-008-soc-storage-ss0--unbundled--soc-storage-leaf
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-xpu-a-008/soc_storage-ss0
+      switch:
+        port: soc-storage-leaf-a-01/E1/29/4
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-xpu-a-008-soc-storage-ss1--unbundled--soc-storage-leaf
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-xpu-a-008/soc_storage-ss1
+      switch:
+        port: soc-storage-leaf-a-02/E1/29/4
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: mesh-soc-storage-leaf-a-01-soc-storage-leaf-a-02
+  namespace: default
+spec:
+  mesh:
+    links:
+    - leaf1:
+        port: soc-storage-leaf-a-01/E1/26
+      leaf2:
+        port: soc-storage-leaf-a-02/E1/26
+    - leaf1:
+        port: soc-storage-leaf-a-01/E1/28
+      leaf2:
+        port: soc-storage-leaf-a-02/E1/28
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: metadata-srv-a-001-soc-storage-port0--unbundled--soc-storage-le
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: metadata-srv-a-001/soc_storage-port0
+      switch:
+        port: soc-storage-leaf-a-01/E1/31/1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: metadata-srv-a-001-soc-storage-port1--unbundled--soc-storage-le
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: metadata-srv-a-001/soc_storage-port1
+      switch:
+        port: soc-storage-leaf-a-02/E1/31/1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: metadata-srv-a-002-soc-storage-port0--unbundled--soc-storage-le
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: metadata-srv-a-002/soc_storage-port0
+      switch:
+        port: soc-storage-leaf-a-01/E1/31/2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: metadata-srv-a-002-soc-storage-port1--unbundled--soc-storage-le
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: metadata-srv-a-002/soc_storage-port1
+      switch:
+        port: soc-storage-leaf-a-02/E1/31/2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: metadata-srv-a-003-soc-storage-port0--unbundled--soc-storage-le
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: metadata-srv-a-003/soc_storage-port0
+      switch:
+        port: soc-storage-leaf-a-01/E1/31/3
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: metadata-srv-a-003-soc-storage-port1--unbundled--soc-storage-le
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: metadata-srv-a-003/soc_storage-port1
+      switch:
+        port: soc-storage-leaf-a-02/E1/31/3
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: storage-srv-a-001-soc-storage-port0--unbundled--soc-storage-lea
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: storage-srv-a-001/soc_storage-port0
+      switch:
+        port: soc-storage-leaf-a-01/E1/31/4
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: storage-srv-a-001-soc-storage-port1--unbundled--soc-storage-lea
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: storage-srv-a-001/soc_storage-port1
+      switch:
+        port: soc-storage-leaf-a-02/E1/31/4
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: storage-srv-a-002-soc-storage-port0--unbundled--soc-storage-lea
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: storage-srv-a-002/soc_storage-port0
+      switch:
+        port: soc-storage-leaf-a-01/E1/33/1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: storage-srv-a-002-soc-storage-port1--unbundled--soc-storage-lea
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: storage-srv-a-002/soc_storage-port1
+      switch:
+        port: soc-storage-leaf-a-02/E1/33/1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: storage-srv-a-003-soc-storage-port0--unbundled--soc-storage-lea
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: storage-srv-a-003/soc_storage-port0
+      switch:
+        port: soc-storage-leaf-a-01/E1/33/2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: storage-srv-a-003-soc-storage-port1--unbundled--soc-storage-lea
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: storage-srv-a-003/soc_storage-port1
+      switch:
+        port: soc-storage-leaf-a-02/E1/33/2

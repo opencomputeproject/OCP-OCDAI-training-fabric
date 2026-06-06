@@ -1,0 +1,1044 @@
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: VLANNamespace
+metadata:
+  name: default
+  namespace: default
+spec:
+  ranges:
+  - from: 1000
+    to: 2999
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: IPv4Namespace
+metadata:
+  name: default
+  namespace: default
+spec:
+  subnets:
+  - 10.0.0.0/16
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Switch
+metadata:
+  name: scale-out-leaf-b-01
+  namespace: default
+spec:
+  role: server-leaf
+  profile: celestica-ds5000
+  boot:
+    mac: 02:0a:86:14:af:f3
+  portBreakouts:
+    E1/26: 1x800G
+    E1/28: 1x800G
+    E1/30: 1x800G
+    E1/32: 1x800G
+    E1/34: 1x800G
+    E1/36: 1x800G
+    E1/38: 1x800G
+    E1/39: 1x800G
+    E1/40: 1x800G
+    E1/41: 1x800G
+    E1/42: 1x800G
+    E1/43: 1x800G
+    E1/44: 1x800G
+    E1/45: 1x800G
+    E1/46: 1x800G
+    E1/47: 1x800G
+    E1/48: 1x800G
+    E1/49: 1x800G
+    E1/50: 1x800G
+    E1/51: 1x800G
+    E1/52: 1x800G
+    E1/53: 1x800G
+    E1/54: 1x800G
+    E1/55: 1x800G
+    E1/56: 1x800G
+    E1/57: 1x800G
+    E1/58: 1x800G
+    E1/59: 1x800G
+    E1/60: 1x800G
+    E1/61: 1x800G
+    E1/62: 1x800G
+    E1/63: 1x800G
+    E1/1: 2x400G
+    E1/2: 2x400G
+    E1/3: 2x400G
+    E1/4: 2x400G
+    E1/5: 2x400G
+    E1/6: 2x400G
+    E1/7: 2x400G
+    E1/8: 2x400G
+    E1/9: 2x400G
+    E1/10: 2x400G
+    E1/11: 2x400G
+    E1/12: 2x400G
+    E1/13: 2x400G
+    E1/14: 2x400G
+    E1/15: 2x400G
+    E1/16: 2x400G
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Switch
+metadata:
+  name: scale-out-leaf-b-02
+  namespace: default
+spec:
+  role: server-leaf
+  profile: celestica-ds5000
+  boot:
+    mac: 02:76:d5:bd:67:56
+  portBreakouts:
+    E1/26: 1x800G
+    E1/28: 1x800G
+    E1/30: 1x800G
+    E1/32: 1x800G
+    E1/34: 1x800G
+    E1/36: 1x800G
+    E1/38: 1x800G
+    E1/39: 1x800G
+    E1/40: 1x800G
+    E1/41: 1x800G
+    E1/42: 1x800G
+    E1/43: 1x800G
+    E1/44: 1x800G
+    E1/45: 1x800G
+    E1/46: 1x800G
+    E1/47: 1x800G
+    E1/48: 1x800G
+    E1/49: 1x800G
+    E1/50: 1x800G
+    E1/51: 1x800G
+    E1/52: 1x800G
+    E1/53: 1x800G
+    E1/54: 1x800G
+    E1/55: 1x800G
+    E1/56: 1x800G
+    E1/57: 1x800G
+    E1/58: 1x800G
+    E1/59: 1x800G
+    E1/60: 1x800G
+    E1/61: 1x800G
+    E1/62: 1x800G
+    E1/63: 1x800G
+    E1/1: 2x400G
+    E1/2: 2x400G
+    E1/3: 2x400G
+    E1/4: 2x400G
+    E1/5: 2x400G
+    E1/6: 2x400G
+    E1/7: 2x400G
+    E1/8: 2x400G
+    E1/9: 2x400G
+    E1/10: 2x400G
+    E1/11: 2x400G
+    E1/12: 2x400G
+    E1/13: 2x400G
+    E1/14: 2x400G
+    E1/15: 2x400G
+    E1/16: 2x400G
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: compute-xpu-b-001
+  namespace: default
+spec: {}
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: compute-xpu-b-002
+  namespace: default
+spec: {}
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: compute-xpu-b-003
+  namespace: default
+spec: {}
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: compute-xpu-b-004
+  namespace: default
+spec: {}
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: compute-xpu-b-005
+  namespace: default
+spec: {}
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: compute-xpu-b-006
+  namespace: default
+spec: {}
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: compute-xpu-b-007
+  namespace: default
+spec: {}
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: compute-xpu-b-008
+  namespace: default
+spec: {}
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-xpu-b-001-scale-out-so0--unbundled--scale-out-leaf-b-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-xpu-b-001/scale_out-so0
+      switch:
+        port: scale-out-leaf-b-01/E1/1/1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-xpu-b-001-scale-out-so1--unbundled--scale-out-leaf-b-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-xpu-b-001/scale_out-so1
+      switch:
+        port: scale-out-leaf-b-01/E1/1/2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-xpu-b-001-scale-out-so2--unbundled--scale-out-leaf-b-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-xpu-b-001/scale_out-so2
+      switch:
+        port: scale-out-leaf-b-01/E1/2/1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-xpu-b-001-scale-out-so3--unbundled--scale-out-leaf-b-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-xpu-b-001/scale_out-so3
+      switch:
+        port: scale-out-leaf-b-01/E1/2/2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-xpu-b-001-scale-out-so4--unbundled--scale-out-leaf-b-02
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-xpu-b-001/scale_out-so4
+      switch:
+        port: scale-out-leaf-b-02/E1/1/1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-xpu-b-001-scale-out-so5--unbundled--scale-out-leaf-b-02
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-xpu-b-001/scale_out-so5
+      switch:
+        port: scale-out-leaf-b-02/E1/1/2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-xpu-b-001-scale-out-so6--unbundled--scale-out-leaf-b-02
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-xpu-b-001/scale_out-so6
+      switch:
+        port: scale-out-leaf-b-02/E1/2/1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-xpu-b-001-scale-out-so7--unbundled--scale-out-leaf-b-02
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-xpu-b-001/scale_out-so7
+      switch:
+        port: scale-out-leaf-b-02/E1/2/2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-xpu-b-002-scale-out-so0--unbundled--scale-out-leaf-b-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-xpu-b-002/scale_out-so0
+      switch:
+        port: scale-out-leaf-b-01/E1/3/1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-xpu-b-002-scale-out-so1--unbundled--scale-out-leaf-b-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-xpu-b-002/scale_out-so1
+      switch:
+        port: scale-out-leaf-b-01/E1/3/2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-xpu-b-002-scale-out-so2--unbundled--scale-out-leaf-b-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-xpu-b-002/scale_out-so2
+      switch:
+        port: scale-out-leaf-b-01/E1/4/1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-xpu-b-002-scale-out-so3--unbundled--scale-out-leaf-b-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-xpu-b-002/scale_out-so3
+      switch:
+        port: scale-out-leaf-b-01/E1/4/2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-xpu-b-002-scale-out-so4--unbundled--scale-out-leaf-b-02
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-xpu-b-002/scale_out-so4
+      switch:
+        port: scale-out-leaf-b-02/E1/3/1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-xpu-b-002-scale-out-so5--unbundled--scale-out-leaf-b-02
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-xpu-b-002/scale_out-so5
+      switch:
+        port: scale-out-leaf-b-02/E1/3/2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-xpu-b-002-scale-out-so6--unbundled--scale-out-leaf-b-02
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-xpu-b-002/scale_out-so6
+      switch:
+        port: scale-out-leaf-b-02/E1/4/1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-xpu-b-002-scale-out-so7--unbundled--scale-out-leaf-b-02
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-xpu-b-002/scale_out-so7
+      switch:
+        port: scale-out-leaf-b-02/E1/4/2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-xpu-b-003-scale-out-so0--unbundled--scale-out-leaf-b-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-xpu-b-003/scale_out-so0
+      switch:
+        port: scale-out-leaf-b-01/E1/5/1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-xpu-b-003-scale-out-so1--unbundled--scale-out-leaf-b-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-xpu-b-003/scale_out-so1
+      switch:
+        port: scale-out-leaf-b-01/E1/5/2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-xpu-b-003-scale-out-so2--unbundled--scale-out-leaf-b-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-xpu-b-003/scale_out-so2
+      switch:
+        port: scale-out-leaf-b-01/E1/6/1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-xpu-b-003-scale-out-so3--unbundled--scale-out-leaf-b-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-xpu-b-003/scale_out-so3
+      switch:
+        port: scale-out-leaf-b-01/E1/6/2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-xpu-b-003-scale-out-so4--unbundled--scale-out-leaf-b-02
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-xpu-b-003/scale_out-so4
+      switch:
+        port: scale-out-leaf-b-02/E1/5/1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-xpu-b-003-scale-out-so5--unbundled--scale-out-leaf-b-02
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-xpu-b-003/scale_out-so5
+      switch:
+        port: scale-out-leaf-b-02/E1/5/2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-xpu-b-003-scale-out-so6--unbundled--scale-out-leaf-b-02
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-xpu-b-003/scale_out-so6
+      switch:
+        port: scale-out-leaf-b-02/E1/6/1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-xpu-b-003-scale-out-so7--unbundled--scale-out-leaf-b-02
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-xpu-b-003/scale_out-so7
+      switch:
+        port: scale-out-leaf-b-02/E1/6/2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-xpu-b-004-scale-out-so0--unbundled--scale-out-leaf-b-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-xpu-b-004/scale_out-so0
+      switch:
+        port: scale-out-leaf-b-01/E1/7/1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-xpu-b-004-scale-out-so1--unbundled--scale-out-leaf-b-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-xpu-b-004/scale_out-so1
+      switch:
+        port: scale-out-leaf-b-01/E1/7/2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-xpu-b-004-scale-out-so2--unbundled--scale-out-leaf-b-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-xpu-b-004/scale_out-so2
+      switch:
+        port: scale-out-leaf-b-01/E1/8/1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-xpu-b-004-scale-out-so3--unbundled--scale-out-leaf-b-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-xpu-b-004/scale_out-so3
+      switch:
+        port: scale-out-leaf-b-01/E1/8/2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-xpu-b-004-scale-out-so4--unbundled--scale-out-leaf-b-02
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-xpu-b-004/scale_out-so4
+      switch:
+        port: scale-out-leaf-b-02/E1/7/1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-xpu-b-004-scale-out-so5--unbundled--scale-out-leaf-b-02
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-xpu-b-004/scale_out-so5
+      switch:
+        port: scale-out-leaf-b-02/E1/7/2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-xpu-b-004-scale-out-so6--unbundled--scale-out-leaf-b-02
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-xpu-b-004/scale_out-so6
+      switch:
+        port: scale-out-leaf-b-02/E1/8/1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-xpu-b-004-scale-out-so7--unbundled--scale-out-leaf-b-02
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-xpu-b-004/scale_out-so7
+      switch:
+        port: scale-out-leaf-b-02/E1/8/2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-xpu-b-005-scale-out-so0--unbundled--scale-out-leaf-b-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-xpu-b-005/scale_out-so0
+      switch:
+        port: scale-out-leaf-b-01/E1/9/1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-xpu-b-005-scale-out-so1--unbundled--scale-out-leaf-b-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-xpu-b-005/scale_out-so1
+      switch:
+        port: scale-out-leaf-b-01/E1/9/2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-xpu-b-005-scale-out-so2--unbundled--scale-out-leaf-b-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-xpu-b-005/scale_out-so2
+      switch:
+        port: scale-out-leaf-b-01/E1/10/1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-xpu-b-005-scale-out-so3--unbundled--scale-out-leaf-b-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-xpu-b-005/scale_out-so3
+      switch:
+        port: scale-out-leaf-b-01/E1/10/2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-xpu-b-005-scale-out-so4--unbundled--scale-out-leaf-b-02
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-xpu-b-005/scale_out-so4
+      switch:
+        port: scale-out-leaf-b-02/E1/9/1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-xpu-b-005-scale-out-so5--unbundled--scale-out-leaf-b-02
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-xpu-b-005/scale_out-so5
+      switch:
+        port: scale-out-leaf-b-02/E1/9/2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-xpu-b-005-scale-out-so6--unbundled--scale-out-leaf-b-02
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-xpu-b-005/scale_out-so6
+      switch:
+        port: scale-out-leaf-b-02/E1/10/1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-xpu-b-005-scale-out-so7--unbundled--scale-out-leaf-b-02
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-xpu-b-005/scale_out-so7
+      switch:
+        port: scale-out-leaf-b-02/E1/10/2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-xpu-b-006-scale-out-so0--unbundled--scale-out-leaf-b-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-xpu-b-006/scale_out-so0
+      switch:
+        port: scale-out-leaf-b-01/E1/11/1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-xpu-b-006-scale-out-so1--unbundled--scale-out-leaf-b-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-xpu-b-006/scale_out-so1
+      switch:
+        port: scale-out-leaf-b-01/E1/11/2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-xpu-b-006-scale-out-so2--unbundled--scale-out-leaf-b-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-xpu-b-006/scale_out-so2
+      switch:
+        port: scale-out-leaf-b-01/E1/12/1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-xpu-b-006-scale-out-so3--unbundled--scale-out-leaf-b-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-xpu-b-006/scale_out-so3
+      switch:
+        port: scale-out-leaf-b-01/E1/12/2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-xpu-b-006-scale-out-so4--unbundled--scale-out-leaf-b-02
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-xpu-b-006/scale_out-so4
+      switch:
+        port: scale-out-leaf-b-02/E1/11/1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-xpu-b-006-scale-out-so5--unbundled--scale-out-leaf-b-02
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-xpu-b-006/scale_out-so5
+      switch:
+        port: scale-out-leaf-b-02/E1/11/2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-xpu-b-006-scale-out-so6--unbundled--scale-out-leaf-b-02
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-xpu-b-006/scale_out-so6
+      switch:
+        port: scale-out-leaf-b-02/E1/12/1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-xpu-b-006-scale-out-so7--unbundled--scale-out-leaf-b-02
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-xpu-b-006/scale_out-so7
+      switch:
+        port: scale-out-leaf-b-02/E1/12/2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-xpu-b-007-scale-out-so0--unbundled--scale-out-leaf-b-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-xpu-b-007/scale_out-so0
+      switch:
+        port: scale-out-leaf-b-01/E1/13/1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-xpu-b-007-scale-out-so1--unbundled--scale-out-leaf-b-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-xpu-b-007/scale_out-so1
+      switch:
+        port: scale-out-leaf-b-01/E1/13/2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-xpu-b-007-scale-out-so2--unbundled--scale-out-leaf-b-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-xpu-b-007/scale_out-so2
+      switch:
+        port: scale-out-leaf-b-01/E1/14/1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-xpu-b-007-scale-out-so3--unbundled--scale-out-leaf-b-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-xpu-b-007/scale_out-so3
+      switch:
+        port: scale-out-leaf-b-01/E1/14/2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-xpu-b-007-scale-out-so4--unbundled--scale-out-leaf-b-02
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-xpu-b-007/scale_out-so4
+      switch:
+        port: scale-out-leaf-b-02/E1/13/1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-xpu-b-007-scale-out-so5--unbundled--scale-out-leaf-b-02
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-xpu-b-007/scale_out-so5
+      switch:
+        port: scale-out-leaf-b-02/E1/13/2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-xpu-b-007-scale-out-so6--unbundled--scale-out-leaf-b-02
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-xpu-b-007/scale_out-so6
+      switch:
+        port: scale-out-leaf-b-02/E1/14/1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-xpu-b-007-scale-out-so7--unbundled--scale-out-leaf-b-02
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-xpu-b-007/scale_out-so7
+      switch:
+        port: scale-out-leaf-b-02/E1/14/2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-xpu-b-008-scale-out-so0--unbundled--scale-out-leaf-b-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-xpu-b-008/scale_out-so0
+      switch:
+        port: scale-out-leaf-b-01/E1/15/1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-xpu-b-008-scale-out-so1--unbundled--scale-out-leaf-b-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-xpu-b-008/scale_out-so1
+      switch:
+        port: scale-out-leaf-b-01/E1/15/2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-xpu-b-008-scale-out-so2--unbundled--scale-out-leaf-b-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-xpu-b-008/scale_out-so2
+      switch:
+        port: scale-out-leaf-b-01/E1/16/1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-xpu-b-008-scale-out-so3--unbundled--scale-out-leaf-b-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-xpu-b-008/scale_out-so3
+      switch:
+        port: scale-out-leaf-b-01/E1/16/2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-xpu-b-008-scale-out-so4--unbundled--scale-out-leaf-b-02
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-xpu-b-008/scale_out-so4
+      switch:
+        port: scale-out-leaf-b-02/E1/15/1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-xpu-b-008-scale-out-so5--unbundled--scale-out-leaf-b-02
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-xpu-b-008/scale_out-so5
+      switch:
+        port: scale-out-leaf-b-02/E1/15/2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-xpu-b-008-scale-out-so6--unbundled--scale-out-leaf-b-02
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-xpu-b-008/scale_out-so6
+      switch:
+        port: scale-out-leaf-b-02/E1/16/1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-xpu-b-008-scale-out-so7--unbundled--scale-out-leaf-b-02
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-xpu-b-008/scale_out-so7
+      switch:
+        port: scale-out-leaf-b-02/E1/16/2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: mesh-scale-out-leaf-b-01-scale-out-leaf-b-02
+  namespace: default
+spec:
+  mesh:
+    links:
+    - leaf1:
+        port: scale-out-leaf-b-01/E1/26
+      leaf2:
+        port: scale-out-leaf-b-02/E1/26
+    - leaf1:
+        port: scale-out-leaf-b-01/E1/28
+      leaf2:
+        port: scale-out-leaf-b-02/E1/28

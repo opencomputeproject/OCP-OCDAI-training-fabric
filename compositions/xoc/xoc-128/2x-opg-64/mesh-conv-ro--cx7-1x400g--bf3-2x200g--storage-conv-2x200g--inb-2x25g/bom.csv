@@ -1,0 +1,23 @@
+section,module_type_model,module_type_description,hedgehog_class,manufacturer,quantity,cage_type,medium,connector,standard,reach_class,wavelength_nm,host_lane_count,host_serdes_gbps_per_lane,optical_lane_pattern,gearbox_present,cable_assembly_type,breakout_topology,is_cable_assembly
+server,OCP-Compliant xPU Server,,compute_xpu_a,Generic,8,,,,,,,,,,,,,false
+server,OCP-Compliant xPU Server,,compute_xpu_b,Generic,8,,,,,,,,,,,,,false
+server,Hedgehog Controller x86,,hh_controller,Generic,2,,,,,,,,,,,,,false
+server,Hedgehog Gateway x86,,hh_gateway,Generic,4,,,,,,,,,,,,,false
+server,OCP-Compliant Metadata Server,,metadata_srv_a,Generic,3,,,,,,,,,,,,,false
+server,OCP-Compliant Metadata Server,,metadata_srv_b,Generic,3,,,,,,,,,,,,,false
+server,OCP-Compliant Storage Server,,storage_srv_a,Generic,3,,,,,,,,,,,,,false
+server,OCP-Compliant Storage Server,,storage_srv_b,Generic,3,,,,,,,,,,,,,false
+switch,celestica-ds2000,,inb_mgmt_leaf,Celestica,2,,,,,,,,,,,,,false
+switch,Celestica DS1000,,oob_leaf,Celestica,2,,,,,,,,,,,,,false
+switch,celestica-ds5000,,scale_out_leaf_a,Celestica,2,,,,,,,,,,,,,false
+switch,celestica-ds5000,,scale_out_leaf_b,Celestica,2,,,,,,,,,,,,,false
+switch,celestica-ds5000,,soc_storage_leaf_a,Celestica,2,,,,,,,,,,,,,false
+switch,celestica-ds5000,,soc_storage_leaf_b,Celestica,2,,,,,,,,,,,,,false
+nic,BMC Management Port,,,Generic,34,,,,,,,,,,Unknown,,,false
+nic,Generic Dual-Port 200G NIC,,,Generic,12,,,,,,,,,,Unknown,,,false
+nic,Generic Dual-Port 25GbE NIC,,,Generic,34,,,,,,,,,,Unknown,,,false
+nic,Generic xPU Scale-Out 8x400G NIC,,,NVIDIA,16,,,,,,,,,,Unknown,,,false
+nic,Generic xPU SoC/Storage 2x200G NIC,,,NVIDIA,16,,,,,,,,,,Unknown,,,false
+server_transceiver,OSFP-200G-DR4,,,Generic,56,OSFP,SMF,MPO-12,200GBASE-DR4,DR,1310,4,50,DR4,false,none,1x,false
+server_transceiver,OSFP-400G-DR4,,,Generic,128,OSFP,SMF,MPO-12,400GBASE-DR4,DR,1310,4,100,DR4,false,none,1x,false
+# suppressed_switch_cable_assembly_count,0
