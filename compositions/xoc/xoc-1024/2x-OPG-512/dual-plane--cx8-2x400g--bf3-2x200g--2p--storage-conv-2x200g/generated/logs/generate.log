@@ -1,0 +1,64 @@
+🧬 loaded config '/etc/netbox/config/configuration.py'
+🧬 loaded config '/etc/netbox/config/extra.py'
+🧬 loaded config '/etc/netbox/config/logging.py'
+🧬 loaded config '/etc/netbox/config/plugins.py'
+✓ Created site: Xoc1024 Dual Plane (xoc1024-dual-plane)
+
+Topology Plan: Training XOC-1024 2x OPG-512 Dual Plane
+  ID: 19
+  Status: draft
+  Server Classes: 1
+  Switch Classes: 6
+
+✓ Recalculated switch quantities
+  - be-plane-a-leaf: calculated=16 override=None effective=16
+  - be-plane-b-leaf: calculated=16 override=None effective=16
+  - fe-leaf: calculated=2 override=None effective=2
+  - be-plane-a-spine: calculated=8 override=None effective=8
+  - be-plane-b-spine: calculated=8 override=None effective=8
+  - fe-spine: calculated=1 override=None effective=1
+
+=== GENERATING OBJECTS ===
+
+✓ Generation complete!
+
+Created:
+  Devices: 179
+  Interfaces: 4480
+  Cables: 3392
+
+  Site: Xoc1024 Dual Plane
+  Status: planned
+
+  Tagged with: hedgehog-generated
+  Custom field: hedgehog_plan_id=19
+
+💡 Next steps:
+  - View devices in NetBox UI
+  - Filter by tag: hedgehog-generated
+  - Or custom field: hedgehog_plan_id=19
+  - Check cable connections
+🧬 loaded config '/etc/netbox/config/configuration.py'
+🧬 loaded config '/etc/netbox/config/extra.py'
+🧬 loaded config '/etc/netbox/config/logging.py'
+🧬 loaded config '/etc/netbox/config/plugins.py'
+
+[OK] Export complete: /tmp/ra_pipeline/training_xoc1024_2xopg512_dual_plane/netbox/plan_inventory.json
+  plan_id:    19
+  sha256:     27fc8b52de243245336a4467cd61a51a18b455d4407d4c6175dfd439c1f61388
+  bytes:      6956746
+  lines:      282035
+  devices:    179
+  modules:    6720
+  interfaces: 7974
+  cables:     3392
+🧬 loaded config '/etc/netbox/config/configuration.py'
+🧬 loaded config '/etc/netbox/config/extra.py'
+🧬 loaded config '/etc/netbox/config/logging.py'
+🧬 loaded config '/etc/netbox/config/plugins.py'
+
+[OK] Export complete: /tmp/ra_pipeline/training_xoc1024_2xopg512_dual_plane/netbox/interface_connections.csv
+  plan_id:    19
+  sha256:     68bd21f85906bf1579be089322d37f94cc653fed2663b11a1d2f9f7dffa8ff46
+  bytes:      282642
+  rows:       3392
