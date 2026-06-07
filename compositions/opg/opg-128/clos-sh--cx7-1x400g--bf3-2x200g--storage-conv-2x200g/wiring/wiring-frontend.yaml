@@ -378,7 +378,7 @@ spec: {}
 apiVersion: wiring.githedgehog.com/v1beta1
 kind: Connection
 metadata:
-  name: compute-001-fe-p0-unbundled-fe-leaf-01
+  name: compute-001-fe-p0--unbundled--fe-leaf-01
   namespace: default
 spec:
   unbundled:
@@ -391,7 +391,7 @@ spec:
 apiVersion: wiring.githedgehog.com/v1beta1
 kind: Connection
 metadata:
-  name: compute-001-fe-p1-unbundled-fe-leaf-02
+  name: compute-001-fe-p1--unbundled--fe-leaf-02
   namespace: default
 spec:
   unbundled:
@@ -404,7 +404,7 @@ spec:
 apiVersion: wiring.githedgehog.com/v1beta1
 kind: Connection
 metadata:
-  name: compute-002-fe-p0-unbundled-fe-leaf-01
+  name: compute-002-fe-p0--unbundled--fe-leaf-01
   namespace: default
 spec:
   unbundled:
@@ -417,7 +417,7 @@ spec:
 apiVersion: wiring.githedgehog.com/v1beta1
 kind: Connection
 metadata:
-  name: compute-002-fe-p1-unbundled-fe-leaf-02
+  name: compute-002-fe-p1--unbundled--fe-leaf-02
   namespace: default
 spec:
   unbundled:
@@ -430,7 +430,7 @@ spec:
 apiVersion: wiring.githedgehog.com/v1beta1
 kind: Connection
 metadata:
-  name: compute-003-fe-p0-unbundled-fe-leaf-01
+  name: compute-003-fe-p0--unbundled--fe-leaf-01
   namespace: default
 spec:
   unbundled:
@@ -443,7 +443,7 @@ spec:
 apiVersion: wiring.githedgehog.com/v1beta1
 kind: Connection
 metadata:
-  name: compute-003-fe-p1-unbundled-fe-leaf-02
+  name: compute-003-fe-p1--unbundled--fe-leaf-02
   namespace: default
 spec:
   unbundled:
@@ -456,7 +456,7 @@ spec:
 apiVersion: wiring.githedgehog.com/v1beta1
 kind: Connection
 metadata:
-  name: compute-004-fe-p0-unbundled-fe-leaf-01
+  name: compute-004-fe-p0--unbundled--fe-leaf-01
   namespace: default
 spec:
   unbundled:
@@ -469,7 +469,7 @@ spec:
 apiVersion: wiring.githedgehog.com/v1beta1
 kind: Connection
 metadata:
-  name: compute-004-fe-p1-unbundled-fe-leaf-02
+  name: compute-004-fe-p1--unbundled--fe-leaf-02
   namespace: default
 spec:
   unbundled:
@@ -482,7 +482,7 @@ spec:
 apiVersion: wiring.githedgehog.com/v1beta1
 kind: Connection
 metadata:
-  name: compute-005-fe-p0-unbundled-fe-leaf-01
+  name: compute-005-fe-p0--unbundled--fe-leaf-01
   namespace: default
 spec:
   unbundled:
@@ -495,7 +495,7 @@ spec:
 apiVersion: wiring.githedgehog.com/v1beta1
 kind: Connection
 metadata:
-  name: compute-005-fe-p1-unbundled-fe-leaf-02
+  name: compute-005-fe-p1--unbundled--fe-leaf-02
   namespace: default
 spec:
   unbundled:
@@ -508,7 +508,7 @@ spec:
 apiVersion: wiring.githedgehog.com/v1beta1
 kind: Connection
 metadata:
-  name: compute-006-fe-p0-unbundled-fe-leaf-01
+  name: compute-006-fe-p0--unbundled--fe-leaf-01
   namespace: default
 spec:
   unbundled:
@@ -521,7 +521,7 @@ spec:
 apiVersion: wiring.githedgehog.com/v1beta1
 kind: Connection
 metadata:
-  name: compute-006-fe-p1-unbundled-fe-leaf-02
+  name: compute-006-fe-p1--unbundled--fe-leaf-02
   namespace: default
 spec:
   unbundled:
@@ -534,7 +534,7 @@ spec:
 apiVersion: wiring.githedgehog.com/v1beta1
 kind: Connection
 metadata:
-  name: compute-007-fe-p0-unbundled-fe-leaf-01
+  name: compute-007-fe-p0--unbundled--fe-leaf-01
   namespace: default
 spec:
   unbundled:
@@ -547,7 +547,7 @@ spec:
 apiVersion: wiring.githedgehog.com/v1beta1
 kind: Connection
 metadata:
-  name: compute-007-fe-p1-unbundled-fe-leaf-02
+  name: compute-007-fe-p1--unbundled--fe-leaf-02
   namespace: default
 spec:
   unbundled:
@@ -560,7 +560,7 @@ spec:
 apiVersion: wiring.githedgehog.com/v1beta1
 kind: Connection
 metadata:
-  name: compute-008-fe-p0-unbundled-fe-leaf-01
+  name: compute-008-fe-p0--unbundled--fe-leaf-01
   namespace: default
 spec:
   unbundled:
@@ -573,7 +573,7 @@ spec:
 apiVersion: wiring.githedgehog.com/v1beta1
 kind: Connection
 metadata:
-  name: compute-008-fe-p1-unbundled-fe-leaf-02
+  name: compute-008-fe-p1--unbundled--fe-leaf-02
   namespace: default
 spec:
   unbundled:
@@ -586,7 +586,7 @@ spec:
 apiVersion: wiring.githedgehog.com/v1beta1
 kind: Connection
 metadata:
-  name: compute-009-fe-p0-unbundled-fe-leaf-01
+  name: compute-009-fe-p0--unbundled--fe-leaf-01
   namespace: default
 spec:
   unbundled:
@@ -599,7 +599,7 @@ spec:
 apiVersion: wiring.githedgehog.com/v1beta1
 kind: Connection
 metadata:
-  name: compute-009-fe-p1-unbundled-fe-leaf-02
+  name: compute-009-fe-p1--unbundled--fe-leaf-02
   namespace: default
 spec:
   unbundled:
@@ -612,7 +612,7 @@ spec:
 apiVersion: wiring.githedgehog.com/v1beta1
 kind: Connection
 metadata:
-  name: compute-010-fe-p0-unbundled-fe-leaf-01
+  name: compute-010-fe-p0--unbundled--fe-leaf-01
   namespace: default
 spec:
   unbundled:
@@ -625,7 +625,7 @@ spec:
 apiVersion: wiring.githedgehog.com/v1beta1
 kind: Connection
 metadata:
-  name: compute-010-fe-p1-unbundled-fe-leaf-02
+  name: compute-010-fe-p1--unbundled--fe-leaf-02
   namespace: default
 spec:
   unbundled:
@@ -638,7 +638,7 @@ spec:
 apiVersion: wiring.githedgehog.com/v1beta1
 kind: Connection
 metadata:
-  name: compute-011-fe-p0-unbundled-fe-leaf-01
+  name: compute-011-fe-p0--unbundled--fe-leaf-01
   namespace: default
 spec:
   unbundled:
@@ -651,7 +651,7 @@ spec:
 apiVersion: wiring.githedgehog.com/v1beta1
 kind: Connection
 metadata:
-  name: compute-011-fe-p1-unbundled-fe-leaf-02
+  name: compute-011-fe-p1--unbundled--fe-leaf-02
   namespace: default
 spec:
   unbundled:
@@ -664,7 +664,7 @@ spec:
 apiVersion: wiring.githedgehog.com/v1beta1
 kind: Connection
 metadata:
-  name: compute-012-fe-p0-unbundled-fe-leaf-01
+  name: compute-012-fe-p0--unbundled--fe-leaf-01
   namespace: default
 spec:
   unbundled:
@@ -677,7 +677,7 @@ spec:
 apiVersion: wiring.githedgehog.com/v1beta1
 kind: Connection
 metadata:
-  name: compute-012-fe-p1-unbundled-fe-leaf-02
+  name: compute-012-fe-p1--unbundled--fe-leaf-02
   namespace: default
 spec:
   unbundled:
@@ -690,7 +690,7 @@ spec:
 apiVersion: wiring.githedgehog.com/v1beta1
 kind: Connection
 metadata:
-  name: compute-013-fe-p0-unbundled-fe-leaf-01
+  name: compute-013-fe-p0--unbundled--fe-leaf-01
   namespace: default
 spec:
   unbundled:
@@ -703,7 +703,7 @@ spec:
 apiVersion: wiring.githedgehog.com/v1beta1
 kind: Connection
 metadata:
-  name: compute-013-fe-p1-unbundled-fe-leaf-02
+  name: compute-013-fe-p1--unbundled--fe-leaf-02
   namespace: default
 spec:
   unbundled:
@@ -716,7 +716,7 @@ spec:
 apiVersion: wiring.githedgehog.com/v1beta1
 kind: Connection
 metadata:
-  name: compute-014-fe-p0-unbundled-fe-leaf-01
+  name: compute-014-fe-p0--unbundled--fe-leaf-01
   namespace: default
 spec:
   unbundled:
@@ -729,7 +729,7 @@ spec:
 apiVersion: wiring.githedgehog.com/v1beta1
 kind: Connection
 metadata:
-  name: compute-014-fe-p1-unbundled-fe-leaf-02
+  name: compute-014-fe-p1--unbundled--fe-leaf-02
   namespace: default
 spec:
   unbundled:
@@ -742,7 +742,7 @@ spec:
 apiVersion: wiring.githedgehog.com/v1beta1
 kind: Connection
 metadata:
-  name: compute-015-fe-p0-unbundled-fe-leaf-01
+  name: compute-015-fe-p0--unbundled--fe-leaf-01
   namespace: default
 spec:
   unbundled:
@@ -755,7 +755,7 @@ spec:
 apiVersion: wiring.githedgehog.com/v1beta1
 kind: Connection
 metadata:
-  name: compute-015-fe-p1-unbundled-fe-leaf-02
+  name: compute-015-fe-p1--unbundled--fe-leaf-02
   namespace: default
 spec:
   unbundled:
@@ -768,7 +768,7 @@ spec:
 apiVersion: wiring.githedgehog.com/v1beta1
 kind: Connection
 metadata:
-  name: compute-016-fe-p0-unbundled-fe-leaf-01
+  name: compute-016-fe-p0--unbundled--fe-leaf-01
   namespace: default
 spec:
   unbundled:
@@ -781,7 +781,7 @@ spec:
 apiVersion: wiring.githedgehog.com/v1beta1
 kind: Connection
 metadata:
-  name: compute-016-fe-p1-unbundled-fe-leaf-02
+  name: compute-016-fe-p1--unbundled--fe-leaf-02
   namespace: default
 spec:
   unbundled:

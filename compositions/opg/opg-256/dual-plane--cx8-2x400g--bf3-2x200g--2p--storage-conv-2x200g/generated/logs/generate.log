@@ -1,0 +1,64 @@
+🧬 loaded config '/etc/netbox/config/configuration.py'
+🧬 loaded config '/etc/netbox/config/extra.py'
+🧬 loaded config '/etc/netbox/config/logging.py'
+🧬 loaded config '/etc/netbox/config/plugins.py'
+✓ Created site: Opg256 Dual Plane (opg256-dual-plane)
+
+Topology Plan: Training OPG-256 Dual Plane
+  ID: 33
+  Status: draft
+  Server Classes: 1
+  Switch Classes: 6
+
+✓ Recalculated switch quantities
+  - be-plane-a-leaf: calculated=4 override=None effective=4
+  - be-plane-b-leaf: calculated=4 override=None effective=4
+  - fe-leaf: calculated=2 override=None effective=2
+  - be-plane-a-spine: calculated=2 override=None effective=2
+  - be-plane-b-spine: calculated=2 override=None effective=2
+  - fe-spine: calculated=1 override=None effective=1
+
+=== GENERATING OBJECTS ===
+
+✓ Generation complete!
+
+Created:
+  Devices: 47
+  Interfaces: 1216
+  Cables: 896
+
+  Site: Opg256 Dual Plane
+  Status: planned
+
+  Tagged with: hedgehog-generated
+  Custom field: hedgehog_plan_id=33
+
+💡 Next steps:
+  - View devices in NetBox UI
+  - Filter by tag: hedgehog-generated
+  - Or custom field: hedgehog_plan_id=33
+  - Check cable connections
+🧬 loaded config '/etc/netbox/config/configuration.py'
+🧬 loaded config '/etc/netbox/config/extra.py'
+🧬 loaded config '/etc/netbox/config/logging.py'
+🧬 loaded config '/etc/netbox/config/plugins.py'
+
+[OK] Export complete: /tmp/ra_pipeline/training_opg256_dual_plane/netbox/plan_inventory.json
+  plan_id:    33
+  sha256:     3ed8c749c3133c03840a194253d7b243f0e954e8df4320e97a5e02103590a3b5
+  bytes:      1855514
+  lines:      75083
+  devices:    47
+  modules:    1776
+  interfaces: 2142
+  cables:     896
+🧬 loaded config '/etc/netbox/config/configuration.py'
+🧬 loaded config '/etc/netbox/config/extra.py'
+🧬 loaded config '/etc/netbox/config/logging.py'
+🧬 loaded config '/etc/netbox/config/plugins.py'
+
+[OK] Export complete: /tmp/ra_pipeline/training_opg256_dual_plane/netbox/interface_connections.csv
+  plan_id:    33
+  sha256:     00217166a05ea1ce3ff9de4a7ecab7cf0e8c6724bfdfe40f274bc1540ea30b87
+  bytes:      74798
+  rows:       896

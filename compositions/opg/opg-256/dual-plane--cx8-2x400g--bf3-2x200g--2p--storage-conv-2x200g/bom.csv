@@ -1,0 +1,13 @@
+section,module_type_model,module_type_description,hedgehog_class,manufacturer,quantity,cage_type,medium,connector,standard,reach_class,wavelength_nm,host_lane_count,host_serdes_gbps_per_lane,optical_lane_pattern,gearbox_present,cable_assembly_type,breakout_topology,is_cable_assembly
+server,OPG-256 Compute Server Dual Plane,,compute,Generic,32,,,,,,,,,,,,,false
+switch,celestica-ds5000,,be-plane-a-leaf,Celestica,4,,,,,,,,,,,,,false
+switch,celestica-ds5000,,be-plane-a-spine,Celestica,2,,,,,,,,,,,,,false
+switch,celestica-ds5000,,be-plane-b-leaf,Celestica,4,,,,,,,,,,,,,false
+switch,celestica-ds5000,,be-plane-b-spine,Celestica,2,,,,,,,,,,,,,false
+switch,celestica-ds5000,,fe-leaf,Celestica,2,,,,,,,,,,,,,false
+switch,celestica-ds5000,,fe-spine,Celestica,1,,,,,,,,,,,,,false
+nic,BlueField-3 2x200G,,,NVIDIA,32,,,,,,,,,,Unknown,,,false
+nic,ConnectX-8 Dual-Port 400G,,,NVIDIA,256,,,,,,,,,,Unknown,,,false
+server_transceiver,QSFP112-200GBASE-SR2,200G QSFP112 SR2 (MPO-12) — generic placeholder; replace with vendor SKU when qualified,,Generic,576,QSFP112,MMF,MPO-12,200GBASE-SR2,SR,850,2,100,SR2,false,none,1x,false
+switch_transceiver,QSFP112-200GBASE-SR2,200G QSFP112 SR2 (MPO-12) — generic placeholder; replace with vendor SKU when qualified,,Generic,912,QSFP112,MMF,MPO-12,200GBASE-SR2,SR,850,2,100,SR2,false,none,1x,false
+# suppressed_switch_cable_assembly_count,0

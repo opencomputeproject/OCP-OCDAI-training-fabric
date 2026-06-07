@@ -1,0 +1,1 @@
+total=17non_null_transceiver_fk=17
