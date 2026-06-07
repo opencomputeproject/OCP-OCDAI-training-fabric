@@ -2,10 +2,10 @@
 🧬 loaded config '/etc/netbox/config/extra.py'
 🧬 loaded config '/etc/netbox/config/logging.py'
 🧬 loaded config '/etc/netbox/config/plugins.py'
-✓ Created site: Opg64 Clos Ro Air (opg64-clos-ro-air)
+✓ Created site: Opg64 Clos Ro (opg64-clos-ro)
 
-Topology Plan: Training OPG-64 Clos RO Air 2srv
-  ID: 48
+Topology Plan: Training OPG-64 Clos RO
+  ID: 36
   Status: draft
   Server Classes: 1
   Switch Classes: 4
@@ -25,38 +25,38 @@ Created:
   Interfaces: 272
   Cables: 176
 
-  Site: Opg64 Clos Ro Air
+  Site: Opg64 Clos Ro
   Status: planned
 
   Tagged with: hedgehog-generated
-  Custom field: hedgehog_plan_id=48
+  Custom field: hedgehog_plan_id=36
 
 💡 Next steps:
   - View devices in NetBox UI
   - Filter by tag: hedgehog-generated
-  - Or custom field: hedgehog_plan_id=48
+  - Or custom field: hedgehog_plan_id=36
   - Check cable connections
 🧬 loaded config '/etc/netbox/config/configuration.py'
 🧬 loaded config '/etc/netbox/config/extra.py'
 🧬 loaded config '/etc/netbox/config/logging.py'
 🧬 loaded config '/etc/netbox/config/plugins.py'
 
-[OK] Export complete: /tmp/ra_pipeline/training_opg64_clos_ro_air_2srv/netbox/plan_inventory.json
-  plan_id:    48
-  sha256:     3073bd57d193b860cd65b82c60562c4db189c6ff5c86edb49918239af5c2d8fc
-  bytes:      300118
-  lines:      12489
+[OK] Export complete: /tmp/ra_pipeline/training_opg64_clos_ro/netbox/plan_inventory.json
+  plan_id:    36
+  sha256:     1d80e725e21dd12dae4788d87cdc4869c9d0593689adc59e2eed40de8a357bdf
+  bytes:      390715
+  lines:      16135
   devices:    13
-  modules:    72
-  interfaces: 480
+  modules:    380
+  interfaces: 490
   cables:     176
 🧬 loaded config '/etc/netbox/config/configuration.py'
 🧬 loaded config '/etc/netbox/config/extra.py'
 🧬 loaded config '/etc/netbox/config/logging.py'
 🧬 loaded config '/etc/netbox/config/plugins.py'
 
-[OK] Export complete: /tmp/ra_pipeline/training_opg64_clos_ro_air_2srv/netbox/interface_connections.csv
-  plan_id:    48
-  sha256:     ffe7573b25460737a610dc2b49b330a8e12b514428ab1baa3e96c7d7581e1f94
+[OK] Export complete: /tmp/ra_pipeline/training_opg64_clos_ro/netbox/interface_connections.csv
+  plan_id:    36
+  sha256:     937cc4a5e53c50d2f1dcb27672b6a1f01fb9f24668e6cb84f837eaf5996275ca
   bytes:      12975
   rows:       176
