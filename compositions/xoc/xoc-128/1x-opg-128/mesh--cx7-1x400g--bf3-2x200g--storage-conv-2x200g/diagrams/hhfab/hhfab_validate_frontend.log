@@ -1,9 +1,9 @@
-21:55:55 INF Hedgehog Fabricator version=v0.45.5 workdir=/tmp/diet600-frontend.TADnGm
-21:55:55 INF Wiring hydrated successfully mode=if-not-present
-21:55:55 INF Fabricator config and wiring are valid
-21:55:55 INF Hedgehog Fabricator version=v0.45.5 workdir=/tmp/diet600-frontend.TADnGm
-21:55:55 INF Wiring hydrated successfully mode=if-not-present
-21:55:56 INF Generated draw.io diagram file=../../home/ubuntu/opencomputeproject/OCP-OCDAI-training-fabric/compositions/xoc/xoc-128/1x-opg-128/mesh--cx7-1x400g--bf3-2x200g--storage-conv-2x200g/diagrams/hhfab/frontend.drawio style=hedgehog
+23:32:42 INF Hedgehog Fabricator version=v0.45.5 workdir=/tmp/diet600-mesh32-frontend.8JDSwZ
+23:32:42 INF Wiring hydrated successfully mode=if-not-present
+23:32:42 INF Fabricator config and wiring are valid
+23:32:43 INF Hedgehog Fabricator version=v0.45.5 workdir=/tmp/diet600-mesh32-frontend.8JDSwZ
+23:32:43 INF Wiring hydrated successfully mode=if-not-present
+23:32:43 INF Generated draw.io diagram file=../../home/ubuntu/opencomputeproject/OCP-OCDAI-training-fabric/compositions/xoc/xoc-128/1x-opg-128/mesh--cx7-1x400g--bf3-2x200g--storage-conv-2x200g/diagrams/hhfab/frontend.drawio style=hedgehog
 To use this diagram:
 1. Open with https://app.diagrams.net/ or the desktop Draw.io application
 2. You can edit the diagram and export to PNG, SVG, PDF or other formats

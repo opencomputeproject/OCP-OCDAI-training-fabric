@@ -2,7 +2,8 @@
 
 This XOC-128 reference architecture contains 16 compute servers (128 GPUs).
 Its frontend and backend fabrics are independent two-switch Celestica DS5000
-meshes; no spine tier is present.
+meshes; no spine tier is present. Each mesh pair has 32 parallel 800G links,
+using ports 33–64 on both leaves.
 
 ## Per-server connectivity
 
@@ -14,7 +15,7 @@ meshes; no spine tier is present.
 ## Generated assets
 
 - `topology-map.yaml` — DIET topology-plan input.
-- `connectivity-map.csv` — generated interface and cable mapping (164 cables).
+- `connectivity-map.csv` — generated interface and cable mapping (224 cables).
 - `netbox_inventory.json` — generated plan-scoped NetBox inventory (20 devices).
 - `wiring/` — Hedgehog Wiring CRD exports for backend and frontend.
 - `diagrams/hhfab/` — Draw.io diagrams and `hhfab validate` logs for each fabric.
