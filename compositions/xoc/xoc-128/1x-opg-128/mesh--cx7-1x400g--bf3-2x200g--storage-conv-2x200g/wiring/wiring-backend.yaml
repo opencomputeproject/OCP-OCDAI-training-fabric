@@ -1,0 +1,1904 @@
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: VLANNamespace
+metadata:
+  name: default
+  namespace: default
+spec:
+  ranges:
+  - from: 1000
+    to: 2999
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: IPv4Namespace
+metadata:
+  name: default
+  namespace: default
+spec:
+  subnets:
+  - 10.0.0.0/16
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Switch
+metadata:
+  name: be-rail-leaf-01
+  namespace: default
+spec:
+  role: server-leaf
+  profile: celestica-ds5000
+  boot:
+    mac: 02:b7:5b:62:6f:00
+  portBreakouts:
+    E1/1: 2x400G
+    E1/2: 2x400G
+    E1/3: 2x400G
+    E1/4: 2x400G
+    E1/5: 2x400G
+    E1/6: 2x400G
+    E1/7: 2x400G
+    E1/8: 2x400G
+    E1/9: 2x400G
+    E1/10: 2x400G
+    E1/11: 2x400G
+    E1/12: 2x400G
+    E1/13: 2x400G
+    E1/14: 2x400G
+    E1/15: 2x400G
+    E1/16: 2x400G
+    E1/17: 2x400G
+    E1/18: 2x400G
+    E1/19: 2x400G
+    E1/20: 2x400G
+    E1/21: 2x400G
+    E1/22: 2x400G
+    E1/23: 2x400G
+    E1/24: 2x400G
+    E1/25: 2x400G
+    E1/26: 2x400G
+    E1/27: 2x400G
+    E1/28: 2x400G
+    E1/29: 2x400G
+    E1/30: 2x400G
+    E1/31: 2x400G
+    E1/32: 2x400G
+    E1/33: 1x800G
+    E1/34: 1x800G
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Switch
+metadata:
+  name: be-rail-leaf-02
+  namespace: default
+spec:
+  role: server-leaf
+  profile: celestica-ds5000
+  boot:
+    mac: 02:5d:4e:09:d4:55
+  portBreakouts:
+    E1/1: 2x400G
+    E1/2: 2x400G
+    E1/3: 2x400G
+    E1/4: 2x400G
+    E1/5: 2x400G
+    E1/6: 2x400G
+    E1/7: 2x400G
+    E1/8: 2x400G
+    E1/9: 2x400G
+    E1/10: 2x400G
+    E1/11: 2x400G
+    E1/12: 2x400G
+    E1/13: 2x400G
+    E1/14: 2x400G
+    E1/15: 2x400G
+    E1/16: 2x400G
+    E1/17: 2x400G
+    E1/18: 2x400G
+    E1/19: 2x400G
+    E1/20: 2x400G
+    E1/21: 2x400G
+    E1/22: 2x400G
+    E1/23: 2x400G
+    E1/24: 2x400G
+    E1/25: 2x400G
+    E1/26: 2x400G
+    E1/27: 2x400G
+    E1/28: 2x400G
+    E1/29: 2x400G
+    E1/30: 2x400G
+    E1/31: 2x400G
+    E1/32: 2x400G
+    E1/33: 1x800G
+    E1/34: 1x800G
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: compute-001
+  namespace: default
+spec: {}
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: compute-002
+  namespace: default
+spec: {}
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: compute-003
+  namespace: default
+spec: {}
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: compute-004
+  namespace: default
+spec: {}
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: compute-005
+  namespace: default
+spec: {}
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: compute-006
+  namespace: default
+spec: {}
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: compute-007
+  namespace: default
+spec: {}
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: compute-008
+  namespace: default
+spec: {}
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: compute-009
+  namespace: default
+spec: {}
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: compute-010
+  namespace: default
+spec: {}
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: compute-011
+  namespace: default
+spec: {}
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: compute-012
+  namespace: default
+spec: {}
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: compute-013
+  namespace: default
+spec: {}
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: compute-014
+  namespace: default
+spec: {}
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: compute-015
+  namespace: default
+spec: {}
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: compute-016
+  namespace: default
+spec: {}
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-001-be0-port0--unbundled--be-rail-leaf-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-001/be0-port0
+      switch:
+        port: be-rail-leaf-01/E1/1/1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-001-be1-port0--unbundled--be-rail-leaf-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-001/be1-port0
+      switch:
+        port: be-rail-leaf-01/E1/1/2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-001-be2-port0--unbundled--be-rail-leaf-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-001/be2-port0
+      switch:
+        port: be-rail-leaf-01/E1/2/1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-001-be3-port0--unbundled--be-rail-leaf-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-001/be3-port0
+      switch:
+        port: be-rail-leaf-01/E1/2/2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-001-be4-port0--unbundled--be-rail-leaf-02
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-001/be4-port0
+      switch:
+        port: be-rail-leaf-02/E1/1/1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-001-be5-port0--unbundled--be-rail-leaf-02
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-001/be5-port0
+      switch:
+        port: be-rail-leaf-02/E1/1/2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-001-be6-port0--unbundled--be-rail-leaf-02
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-001/be6-port0
+      switch:
+        port: be-rail-leaf-02/E1/2/1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-001-be7-port0--unbundled--be-rail-leaf-02
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-001/be7-port0
+      switch:
+        port: be-rail-leaf-02/E1/2/2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-002-be0-port0--unbundled--be-rail-leaf-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-002/be0-port0
+      switch:
+        port: be-rail-leaf-01/E1/3/1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-002-be1-port0--unbundled--be-rail-leaf-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-002/be1-port0
+      switch:
+        port: be-rail-leaf-01/E1/3/2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-002-be2-port0--unbundled--be-rail-leaf-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-002/be2-port0
+      switch:
+        port: be-rail-leaf-01/E1/4/1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-002-be3-port0--unbundled--be-rail-leaf-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-002/be3-port0
+      switch:
+        port: be-rail-leaf-01/E1/4/2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-002-be4-port0--unbundled--be-rail-leaf-02
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-002/be4-port0
+      switch:
+        port: be-rail-leaf-02/E1/3/1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-002-be5-port0--unbundled--be-rail-leaf-02
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-002/be5-port0
+      switch:
+        port: be-rail-leaf-02/E1/3/2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-002-be6-port0--unbundled--be-rail-leaf-02
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-002/be6-port0
+      switch:
+        port: be-rail-leaf-02/E1/4/1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-002-be7-port0--unbundled--be-rail-leaf-02
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-002/be7-port0
+      switch:
+        port: be-rail-leaf-02/E1/4/2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-003-be0-port0--unbundled--be-rail-leaf-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-003/be0-port0
+      switch:
+        port: be-rail-leaf-01/E1/5/1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-003-be1-port0--unbundled--be-rail-leaf-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-003/be1-port0
+      switch:
+        port: be-rail-leaf-01/E1/5/2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-003-be2-port0--unbundled--be-rail-leaf-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-003/be2-port0
+      switch:
+        port: be-rail-leaf-01/E1/6/1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-003-be3-port0--unbundled--be-rail-leaf-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-003/be3-port0
+      switch:
+        port: be-rail-leaf-01/E1/6/2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-003-be4-port0--unbundled--be-rail-leaf-02
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-003/be4-port0
+      switch:
+        port: be-rail-leaf-02/E1/5/1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-003-be5-port0--unbundled--be-rail-leaf-02
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-003/be5-port0
+      switch:
+        port: be-rail-leaf-02/E1/5/2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-003-be6-port0--unbundled--be-rail-leaf-02
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-003/be6-port0
+      switch:
+        port: be-rail-leaf-02/E1/6/1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-003-be7-port0--unbundled--be-rail-leaf-02
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-003/be7-port0
+      switch:
+        port: be-rail-leaf-02/E1/6/2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-004-be0-port0--unbundled--be-rail-leaf-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-004/be0-port0
+      switch:
+        port: be-rail-leaf-01/E1/7/1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-004-be1-port0--unbundled--be-rail-leaf-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-004/be1-port0
+      switch:
+        port: be-rail-leaf-01/E1/7/2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-004-be2-port0--unbundled--be-rail-leaf-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-004/be2-port0
+      switch:
+        port: be-rail-leaf-01/E1/8/1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-004-be3-port0--unbundled--be-rail-leaf-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-004/be3-port0
+      switch:
+        port: be-rail-leaf-01/E1/8/2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-004-be4-port0--unbundled--be-rail-leaf-02
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-004/be4-port0
+      switch:
+        port: be-rail-leaf-02/E1/7/1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-004-be5-port0--unbundled--be-rail-leaf-02
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-004/be5-port0
+      switch:
+        port: be-rail-leaf-02/E1/7/2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-004-be6-port0--unbundled--be-rail-leaf-02
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-004/be6-port0
+      switch:
+        port: be-rail-leaf-02/E1/8/1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-004-be7-port0--unbundled--be-rail-leaf-02
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-004/be7-port0
+      switch:
+        port: be-rail-leaf-02/E1/8/2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-005-be0-port0--unbundled--be-rail-leaf-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-005/be0-port0
+      switch:
+        port: be-rail-leaf-01/E1/9/1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-005-be1-port0--unbundled--be-rail-leaf-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-005/be1-port0
+      switch:
+        port: be-rail-leaf-01/E1/9/2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-005-be2-port0--unbundled--be-rail-leaf-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-005/be2-port0
+      switch:
+        port: be-rail-leaf-01/E1/10/1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-005-be3-port0--unbundled--be-rail-leaf-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-005/be3-port0
+      switch:
+        port: be-rail-leaf-01/E1/10/2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-005-be4-port0--unbundled--be-rail-leaf-02
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-005/be4-port0
+      switch:
+        port: be-rail-leaf-02/E1/9/1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-005-be5-port0--unbundled--be-rail-leaf-02
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-005/be5-port0
+      switch:
+        port: be-rail-leaf-02/E1/9/2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-005-be6-port0--unbundled--be-rail-leaf-02
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-005/be6-port0
+      switch:
+        port: be-rail-leaf-02/E1/10/1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-005-be7-port0--unbundled--be-rail-leaf-02
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-005/be7-port0
+      switch:
+        port: be-rail-leaf-02/E1/10/2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-006-be0-port0--unbundled--be-rail-leaf-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-006/be0-port0
+      switch:
+        port: be-rail-leaf-01/E1/11/1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-006-be1-port0--unbundled--be-rail-leaf-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-006/be1-port0
+      switch:
+        port: be-rail-leaf-01/E1/11/2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-006-be2-port0--unbundled--be-rail-leaf-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-006/be2-port0
+      switch:
+        port: be-rail-leaf-01/E1/12/1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-006-be3-port0--unbundled--be-rail-leaf-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-006/be3-port0
+      switch:
+        port: be-rail-leaf-01/E1/12/2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-006-be4-port0--unbundled--be-rail-leaf-02
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-006/be4-port0
+      switch:
+        port: be-rail-leaf-02/E1/11/1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-006-be5-port0--unbundled--be-rail-leaf-02
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-006/be5-port0
+      switch:
+        port: be-rail-leaf-02/E1/11/2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-006-be6-port0--unbundled--be-rail-leaf-02
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-006/be6-port0
+      switch:
+        port: be-rail-leaf-02/E1/12/1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-006-be7-port0--unbundled--be-rail-leaf-02
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-006/be7-port0
+      switch:
+        port: be-rail-leaf-02/E1/12/2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-007-be0-port0--unbundled--be-rail-leaf-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-007/be0-port0
+      switch:
+        port: be-rail-leaf-01/E1/13/1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-007-be1-port0--unbundled--be-rail-leaf-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-007/be1-port0
+      switch:
+        port: be-rail-leaf-01/E1/13/2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-007-be2-port0--unbundled--be-rail-leaf-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-007/be2-port0
+      switch:
+        port: be-rail-leaf-01/E1/14/1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-007-be3-port0--unbundled--be-rail-leaf-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-007/be3-port0
+      switch:
+        port: be-rail-leaf-01/E1/14/2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-007-be4-port0--unbundled--be-rail-leaf-02
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-007/be4-port0
+      switch:
+        port: be-rail-leaf-02/E1/13/1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-007-be5-port0--unbundled--be-rail-leaf-02
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-007/be5-port0
+      switch:
+        port: be-rail-leaf-02/E1/13/2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-007-be6-port0--unbundled--be-rail-leaf-02
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-007/be6-port0
+      switch:
+        port: be-rail-leaf-02/E1/14/1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-007-be7-port0--unbundled--be-rail-leaf-02
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-007/be7-port0
+      switch:
+        port: be-rail-leaf-02/E1/14/2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-008-be0-port0--unbundled--be-rail-leaf-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-008/be0-port0
+      switch:
+        port: be-rail-leaf-01/E1/15/1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-008-be1-port0--unbundled--be-rail-leaf-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-008/be1-port0
+      switch:
+        port: be-rail-leaf-01/E1/15/2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-008-be2-port0--unbundled--be-rail-leaf-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-008/be2-port0
+      switch:
+        port: be-rail-leaf-01/E1/16/1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-008-be3-port0--unbundled--be-rail-leaf-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-008/be3-port0
+      switch:
+        port: be-rail-leaf-01/E1/16/2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-008-be4-port0--unbundled--be-rail-leaf-02
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-008/be4-port0
+      switch:
+        port: be-rail-leaf-02/E1/15/1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-008-be5-port0--unbundled--be-rail-leaf-02
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-008/be5-port0
+      switch:
+        port: be-rail-leaf-02/E1/15/2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-008-be6-port0--unbundled--be-rail-leaf-02
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-008/be6-port0
+      switch:
+        port: be-rail-leaf-02/E1/16/1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-008-be7-port0--unbundled--be-rail-leaf-02
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-008/be7-port0
+      switch:
+        port: be-rail-leaf-02/E1/16/2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-009-be0-port0--unbundled--be-rail-leaf-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-009/be0-port0
+      switch:
+        port: be-rail-leaf-01/E1/17/1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-009-be1-port0--unbundled--be-rail-leaf-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-009/be1-port0
+      switch:
+        port: be-rail-leaf-01/E1/17/2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-009-be2-port0--unbundled--be-rail-leaf-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-009/be2-port0
+      switch:
+        port: be-rail-leaf-01/E1/18/1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-009-be3-port0--unbundled--be-rail-leaf-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-009/be3-port0
+      switch:
+        port: be-rail-leaf-01/E1/18/2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-009-be4-port0--unbundled--be-rail-leaf-02
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-009/be4-port0
+      switch:
+        port: be-rail-leaf-02/E1/17/1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-009-be5-port0--unbundled--be-rail-leaf-02
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-009/be5-port0
+      switch:
+        port: be-rail-leaf-02/E1/17/2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-009-be6-port0--unbundled--be-rail-leaf-02
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-009/be6-port0
+      switch:
+        port: be-rail-leaf-02/E1/18/1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-009-be7-port0--unbundled--be-rail-leaf-02
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-009/be7-port0
+      switch:
+        port: be-rail-leaf-02/E1/18/2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-010-be0-port0--unbundled--be-rail-leaf-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-010/be0-port0
+      switch:
+        port: be-rail-leaf-01/E1/19/1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-010-be1-port0--unbundled--be-rail-leaf-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-010/be1-port0
+      switch:
+        port: be-rail-leaf-01/E1/19/2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-010-be2-port0--unbundled--be-rail-leaf-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-010/be2-port0
+      switch:
+        port: be-rail-leaf-01/E1/20/1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-010-be3-port0--unbundled--be-rail-leaf-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-010/be3-port0
+      switch:
+        port: be-rail-leaf-01/E1/20/2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-010-be4-port0--unbundled--be-rail-leaf-02
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-010/be4-port0
+      switch:
+        port: be-rail-leaf-02/E1/19/1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-010-be5-port0--unbundled--be-rail-leaf-02
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-010/be5-port0
+      switch:
+        port: be-rail-leaf-02/E1/19/2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-010-be6-port0--unbundled--be-rail-leaf-02
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-010/be6-port0
+      switch:
+        port: be-rail-leaf-02/E1/20/1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-010-be7-port0--unbundled--be-rail-leaf-02
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-010/be7-port0
+      switch:
+        port: be-rail-leaf-02/E1/20/2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-011-be0-port0--unbundled--be-rail-leaf-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-011/be0-port0
+      switch:
+        port: be-rail-leaf-01/E1/21/1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-011-be1-port0--unbundled--be-rail-leaf-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-011/be1-port0
+      switch:
+        port: be-rail-leaf-01/E1/21/2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-011-be2-port0--unbundled--be-rail-leaf-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-011/be2-port0
+      switch:
+        port: be-rail-leaf-01/E1/22/1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-011-be3-port0--unbundled--be-rail-leaf-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-011/be3-port0
+      switch:
+        port: be-rail-leaf-01/E1/22/2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-011-be4-port0--unbundled--be-rail-leaf-02
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-011/be4-port0
+      switch:
+        port: be-rail-leaf-02/E1/21/1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-011-be5-port0--unbundled--be-rail-leaf-02
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-011/be5-port0
+      switch:
+        port: be-rail-leaf-02/E1/21/2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-011-be6-port0--unbundled--be-rail-leaf-02
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-011/be6-port0
+      switch:
+        port: be-rail-leaf-02/E1/22/1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-011-be7-port0--unbundled--be-rail-leaf-02
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-011/be7-port0
+      switch:
+        port: be-rail-leaf-02/E1/22/2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-012-be0-port0--unbundled--be-rail-leaf-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-012/be0-port0
+      switch:
+        port: be-rail-leaf-01/E1/23/1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-012-be1-port0--unbundled--be-rail-leaf-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-012/be1-port0
+      switch:
+        port: be-rail-leaf-01/E1/23/2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-012-be2-port0--unbundled--be-rail-leaf-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-012/be2-port0
+      switch:
+        port: be-rail-leaf-01/E1/24/1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-012-be3-port0--unbundled--be-rail-leaf-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-012/be3-port0
+      switch:
+        port: be-rail-leaf-01/E1/24/2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-012-be4-port0--unbundled--be-rail-leaf-02
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-012/be4-port0
+      switch:
+        port: be-rail-leaf-02/E1/23/1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-012-be5-port0--unbundled--be-rail-leaf-02
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-012/be5-port0
+      switch:
+        port: be-rail-leaf-02/E1/23/2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-012-be6-port0--unbundled--be-rail-leaf-02
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-012/be6-port0
+      switch:
+        port: be-rail-leaf-02/E1/24/1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-012-be7-port0--unbundled--be-rail-leaf-02
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-012/be7-port0
+      switch:
+        port: be-rail-leaf-02/E1/24/2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-013-be0-port0--unbundled--be-rail-leaf-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-013/be0-port0
+      switch:
+        port: be-rail-leaf-01/E1/25/1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-013-be1-port0--unbundled--be-rail-leaf-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-013/be1-port0
+      switch:
+        port: be-rail-leaf-01/E1/25/2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-013-be2-port0--unbundled--be-rail-leaf-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-013/be2-port0
+      switch:
+        port: be-rail-leaf-01/E1/26/1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-013-be3-port0--unbundled--be-rail-leaf-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-013/be3-port0
+      switch:
+        port: be-rail-leaf-01/E1/26/2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-013-be4-port0--unbundled--be-rail-leaf-02
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-013/be4-port0
+      switch:
+        port: be-rail-leaf-02/E1/25/1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-013-be5-port0--unbundled--be-rail-leaf-02
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-013/be5-port0
+      switch:
+        port: be-rail-leaf-02/E1/25/2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-013-be6-port0--unbundled--be-rail-leaf-02
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-013/be6-port0
+      switch:
+        port: be-rail-leaf-02/E1/26/1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-013-be7-port0--unbundled--be-rail-leaf-02
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-013/be7-port0
+      switch:
+        port: be-rail-leaf-02/E1/26/2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-014-be0-port0--unbundled--be-rail-leaf-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-014/be0-port0
+      switch:
+        port: be-rail-leaf-01/E1/27/1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-014-be1-port0--unbundled--be-rail-leaf-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-014/be1-port0
+      switch:
+        port: be-rail-leaf-01/E1/27/2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-014-be2-port0--unbundled--be-rail-leaf-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-014/be2-port0
+      switch:
+        port: be-rail-leaf-01/E1/28/1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-014-be3-port0--unbundled--be-rail-leaf-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-014/be3-port0
+      switch:
+        port: be-rail-leaf-01/E1/28/2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-014-be4-port0--unbundled--be-rail-leaf-02
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-014/be4-port0
+      switch:
+        port: be-rail-leaf-02/E1/27/1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-014-be5-port0--unbundled--be-rail-leaf-02
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-014/be5-port0
+      switch:
+        port: be-rail-leaf-02/E1/27/2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-014-be6-port0--unbundled--be-rail-leaf-02
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-014/be6-port0
+      switch:
+        port: be-rail-leaf-02/E1/28/1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-014-be7-port0--unbundled--be-rail-leaf-02
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-014/be7-port0
+      switch:
+        port: be-rail-leaf-02/E1/28/2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-015-be0-port0--unbundled--be-rail-leaf-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-015/be0-port0
+      switch:
+        port: be-rail-leaf-01/E1/29/1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-015-be1-port0--unbundled--be-rail-leaf-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-015/be1-port0
+      switch:
+        port: be-rail-leaf-01/E1/29/2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-015-be2-port0--unbundled--be-rail-leaf-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-015/be2-port0
+      switch:
+        port: be-rail-leaf-01/E1/30/1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-015-be3-port0--unbundled--be-rail-leaf-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-015/be3-port0
+      switch:
+        port: be-rail-leaf-01/E1/30/2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-015-be4-port0--unbundled--be-rail-leaf-02
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-015/be4-port0
+      switch:
+        port: be-rail-leaf-02/E1/29/1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-015-be5-port0--unbundled--be-rail-leaf-02
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-015/be5-port0
+      switch:
+        port: be-rail-leaf-02/E1/29/2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-015-be6-port0--unbundled--be-rail-leaf-02
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-015/be6-port0
+      switch:
+        port: be-rail-leaf-02/E1/30/1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-015-be7-port0--unbundled--be-rail-leaf-02
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-015/be7-port0
+      switch:
+        port: be-rail-leaf-02/E1/30/2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-016-be0-port0--unbundled--be-rail-leaf-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-016/be0-port0
+      switch:
+        port: be-rail-leaf-01/E1/31/1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-016-be1-port0--unbundled--be-rail-leaf-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-016/be1-port0
+      switch:
+        port: be-rail-leaf-01/E1/31/2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-016-be2-port0--unbundled--be-rail-leaf-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-016/be2-port0
+      switch:
+        port: be-rail-leaf-01/E1/32/1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-016-be3-port0--unbundled--be-rail-leaf-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-016/be3-port0
+      switch:
+        port: be-rail-leaf-01/E1/32/2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-016-be4-port0--unbundled--be-rail-leaf-02
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-016/be4-port0
+      switch:
+        port: be-rail-leaf-02/E1/31/1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-016-be5-port0--unbundled--be-rail-leaf-02
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-016/be5-port0
+      switch:
+        port: be-rail-leaf-02/E1/31/2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-016-be6-port0--unbundled--be-rail-leaf-02
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-016/be6-port0
+      switch:
+        port: be-rail-leaf-02/E1/32/1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-016-be7-port0--unbundled--be-rail-leaf-02
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-016/be7-port0
+      switch:
+        port: be-rail-leaf-02/E1/32/2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: mesh-be-rail-leaf-01-be-rail-leaf-02
+  namespace: default
+spec:
+  mesh:
+    links:
+    - leaf1:
+        port: be-rail-leaf-01/E1/33
+      leaf2:
+        port: be-rail-leaf-02/E1/33
+    - leaf1:
+        port: be-rail-leaf-01/E1/34
+      leaf2:
+        port: be-rail-leaf-02/E1/34
