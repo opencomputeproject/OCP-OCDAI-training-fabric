@@ -30,39 +30,69 @@ spec:
     mac: 02:95:fa:72:6a:56
   portBreakouts:
     E1/1: 4x200G
+    E1/2: 4x200G
     E1/3: 4x200G
+    E1/4: 4x200G
     E1/5: 4x200G
+    E1/6: 4x200G
     E1/7: 4x200G
+    E1/8: 4x200G
     E1/9: 4x200G
+    E1/10: 4x200G
     E1/11: 4x200G
+    E1/12: 4x200G
     E1/13: 4x200G
+    E1/14: 4x200G
     E1/15: 4x200G
+    E1/16: 4x200G
     E1/17: 4x200G
+    E1/18: 4x200G
     E1/19: 4x200G
+    E1/20: 4x200G
     E1/21: 4x200G
+    E1/22: 4x200G
     E1/23: 4x200G
+    E1/24: 4x200G
     E1/25: 4x200G
+    E1/26: 4x200G
     E1/27: 4x200G
+    E1/28: 4x200G
     E1/29: 4x200G
+    E1/30: 4x200G
     E1/31: 4x200G
-    E1/33: 4x200G
-    E1/35: 4x200G
-    E1/37: 4x200G
-    E1/39: 4x200G
-    E1/41: 4x200G
-    E1/43: 4x200G
-    E1/45: 4x200G
-    E1/47: 4x200G
-    E1/49: 4x200G
-    E1/51: 4x200G
-    E1/53: 4x200G
-    E1/55: 4x200G
-    E1/57: 4x200G
-    E1/59: 4x200G
-    E1/61: 4x200G
-    E1/63: 4x200G
-    E1/2: 1x800G
-    E1/4: 1x800G
+    E1/32: 4x200G
+    E1/33: 1x800G
+    E1/34: 1x800G
+    E1/35: 1x800G
+    E1/36: 1x800G
+    E1/37: 1x800G
+    E1/38: 1x800G
+    E1/39: 1x800G
+    E1/40: 1x800G
+    E1/41: 1x800G
+    E1/42: 1x800G
+    E1/43: 1x800G
+    E1/44: 1x800G
+    E1/45: 1x800G
+    E1/46: 1x800G
+    E1/47: 1x800G
+    E1/48: 1x800G
+    E1/49: 1x800G
+    E1/50: 1x800G
+    E1/51: 1x800G
+    E1/52: 1x800G
+    E1/53: 1x800G
+    E1/54: 1x800G
+    E1/55: 1x800G
+    E1/56: 1x800G
+    E1/57: 1x800G
+    E1/58: 1x800G
+    E1/59: 1x800G
+    E1/60: 1x800G
+    E1/61: 1x800G
+    E1/62: 1x800G
+    E1/63: 1x800G
+    E1/64: 1x800G
 ---
 apiVersion: wiring.githedgehog.com/v1beta1
 kind: Switch
@@ -76,39 +106,69 @@ spec:
     mac: 02:c2:05:8e:66:6c
   portBreakouts:
     E1/1: 4x200G
+    E1/2: 4x200G
     E1/3: 4x200G
+    E1/4: 4x200G
     E1/5: 4x200G
+    E1/6: 4x200G
     E1/7: 4x200G
+    E1/8: 4x200G
     E1/9: 4x200G
+    E1/10: 4x200G
     E1/11: 4x200G
+    E1/12: 4x200G
     E1/13: 4x200G
+    E1/14: 4x200G
     E1/15: 4x200G
+    E1/16: 4x200G
     E1/17: 4x200G
+    E1/18: 4x200G
     E1/19: 4x200G
+    E1/20: 4x200G
     E1/21: 4x200G
+    E1/22: 4x200G
     E1/23: 4x200G
+    E1/24: 4x200G
     E1/25: 4x200G
+    E1/26: 4x200G
     E1/27: 4x200G
+    E1/28: 4x200G
     E1/29: 4x200G
+    E1/30: 4x200G
     E1/31: 4x200G
-    E1/33: 4x200G
-    E1/35: 4x200G
-    E1/37: 4x200G
-    E1/39: 4x200G
-    E1/41: 4x200G
-    E1/43: 4x200G
-    E1/45: 4x200G
-    E1/47: 4x200G
-    E1/49: 4x200G
-    E1/51: 4x200G
-    E1/53: 4x200G
-    E1/55: 4x200G
-    E1/57: 4x200G
-    E1/59: 4x200G
-    E1/61: 4x200G
-    E1/63: 4x200G
-    E1/2: 1x800G
-    E1/4: 1x800G
+    E1/32: 4x200G
+    E1/33: 1x800G
+    E1/34: 1x800G
+    E1/35: 1x800G
+    E1/36: 1x800G
+    E1/37: 1x800G
+    E1/38: 1x800G
+    E1/39: 1x800G
+    E1/40: 1x800G
+    E1/41: 1x800G
+    E1/42: 1x800G
+    E1/43: 1x800G
+    E1/44: 1x800G
+    E1/45: 1x800G
+    E1/46: 1x800G
+    E1/47: 1x800G
+    E1/48: 1x800G
+    E1/49: 1x800G
+    E1/50: 1x800G
+    E1/51: 1x800G
+    E1/52: 1x800G
+    E1/53: 1x800G
+    E1/54: 1x800G
+    E1/55: 1x800G
+    E1/56: 1x800G
+    E1/57: 1x800G
+    E1/58: 1x800G
+    E1/59: 1x800G
+    E1/60: 1x800G
+    E1/61: 1x800G
+    E1/62: 1x800G
+    E1/63: 1x800G
+    E1/64: 1x800G
 ---
 apiVersion: wiring.githedgehog.com/v1beta1
 kind: Server
@@ -337,7 +397,7 @@ spec:
       server:
         port: compute-005/fe-p0
       switch:
-        port: fe-leaf-01/E1/3/1
+        port: fe-leaf-01/E1/2/1
 ---
 apiVersion: wiring.githedgehog.com/v1beta1
 kind: Connection
@@ -350,7 +410,7 @@ spec:
       server:
         port: compute-005/fe-p1
       switch:
-        port: fe-leaf-02/E1/3/1
+        port: fe-leaf-02/E1/2/1
 ---
 apiVersion: wiring.githedgehog.com/v1beta1
 kind: Connection
@@ -363,7 +423,7 @@ spec:
       server:
         port: compute-006/fe-p0
       switch:
-        port: fe-leaf-01/E1/3/2
+        port: fe-leaf-01/E1/2/2
 ---
 apiVersion: wiring.githedgehog.com/v1beta1
 kind: Connection
@@ -376,7 +436,7 @@ spec:
       server:
         port: compute-006/fe-p1
       switch:
-        port: fe-leaf-02/E1/3/2
+        port: fe-leaf-02/E1/2/2
 ---
 apiVersion: wiring.githedgehog.com/v1beta1
 kind: Connection
@@ -389,7 +449,7 @@ spec:
       server:
         port: compute-007/fe-p0
       switch:
-        port: fe-leaf-01/E1/3/3
+        port: fe-leaf-01/E1/2/3
 ---
 apiVersion: wiring.githedgehog.com/v1beta1
 kind: Connection
@@ -402,7 +462,7 @@ spec:
       server:
         port: compute-007/fe-p1
       switch:
-        port: fe-leaf-02/E1/3/3
+        port: fe-leaf-02/E1/2/3
 ---
 apiVersion: wiring.githedgehog.com/v1beta1
 kind: Connection
@@ -415,7 +475,7 @@ spec:
       server:
         port: compute-008/fe-p0
       switch:
-        port: fe-leaf-01/E1/3/4
+        port: fe-leaf-01/E1/2/4
 ---
 apiVersion: wiring.githedgehog.com/v1beta1
 kind: Connection
@@ -428,7 +488,7 @@ spec:
       server:
         port: compute-008/fe-p1
       switch:
-        port: fe-leaf-02/E1/3/4
+        port: fe-leaf-02/E1/2/4
 ---
 apiVersion: wiring.githedgehog.com/v1beta1
 kind: Connection
@@ -441,7 +501,7 @@ spec:
       server:
         port: compute-009/fe-p0
       switch:
-        port: fe-leaf-01/E1/5/1
+        port: fe-leaf-01/E1/3/1
 ---
 apiVersion: wiring.githedgehog.com/v1beta1
 kind: Connection
@@ -454,7 +514,7 @@ spec:
       server:
         port: compute-009/fe-p1
       switch:
-        port: fe-leaf-02/E1/5/1
+        port: fe-leaf-02/E1/3/1
 ---
 apiVersion: wiring.githedgehog.com/v1beta1
 kind: Connection
@@ -467,7 +527,7 @@ spec:
       server:
         port: compute-010/fe-p0
       switch:
-        port: fe-leaf-01/E1/5/2
+        port: fe-leaf-01/E1/3/2
 ---
 apiVersion: wiring.githedgehog.com/v1beta1
 kind: Connection
@@ -480,7 +540,7 @@ spec:
       server:
         port: compute-010/fe-p1
       switch:
-        port: fe-leaf-02/E1/5/2
+        port: fe-leaf-02/E1/3/2
 ---
 apiVersion: wiring.githedgehog.com/v1beta1
 kind: Connection
@@ -493,7 +553,7 @@ spec:
       server:
         port: compute-011/fe-p0
       switch:
-        port: fe-leaf-01/E1/5/3
+        port: fe-leaf-01/E1/3/3
 ---
 apiVersion: wiring.githedgehog.com/v1beta1
 kind: Connection
@@ -506,7 +566,7 @@ spec:
       server:
         port: compute-011/fe-p1
       switch:
-        port: fe-leaf-02/E1/5/3
+        port: fe-leaf-02/E1/3/3
 ---
 apiVersion: wiring.githedgehog.com/v1beta1
 kind: Connection
@@ -519,7 +579,7 @@ spec:
       server:
         port: compute-012/fe-p0
       switch:
-        port: fe-leaf-01/E1/5/4
+        port: fe-leaf-01/E1/3/4
 ---
 apiVersion: wiring.githedgehog.com/v1beta1
 kind: Connection
@@ -532,7 +592,7 @@ spec:
       server:
         port: compute-012/fe-p1
       switch:
-        port: fe-leaf-02/E1/5/4
+        port: fe-leaf-02/E1/3/4
 ---
 apiVersion: wiring.githedgehog.com/v1beta1
 kind: Connection
@@ -545,7 +605,7 @@ spec:
       server:
         port: compute-013/fe-p0
       switch:
-        port: fe-leaf-01/E1/7/1
+        port: fe-leaf-01/E1/4/1
 ---
 apiVersion: wiring.githedgehog.com/v1beta1
 kind: Connection
@@ -558,7 +618,7 @@ spec:
       server:
         port: compute-013/fe-p1
       switch:
-        port: fe-leaf-02/E1/7/1
+        port: fe-leaf-02/E1/4/1
 ---
 apiVersion: wiring.githedgehog.com/v1beta1
 kind: Connection
@@ -571,7 +631,7 @@ spec:
       server:
         port: compute-014/fe-p0
       switch:
-        port: fe-leaf-01/E1/7/2
+        port: fe-leaf-01/E1/4/2
 ---
 apiVersion: wiring.githedgehog.com/v1beta1
 kind: Connection
@@ -584,7 +644,7 @@ spec:
       server:
         port: compute-014/fe-p1
       switch:
-        port: fe-leaf-02/E1/7/2
+        port: fe-leaf-02/E1/4/2
 ---
 apiVersion: wiring.githedgehog.com/v1beta1
 kind: Connection
@@ -597,7 +657,7 @@ spec:
       server:
         port: compute-015/fe-p0
       switch:
-        port: fe-leaf-01/E1/7/3
+        port: fe-leaf-01/E1/4/3
 ---
 apiVersion: wiring.githedgehog.com/v1beta1
 kind: Connection
@@ -610,7 +670,7 @@ spec:
       server:
         port: compute-015/fe-p1
       switch:
-        port: fe-leaf-02/E1/7/3
+        port: fe-leaf-02/E1/4/3
 ---
 apiVersion: wiring.githedgehog.com/v1beta1
 kind: Connection
@@ -623,7 +683,7 @@ spec:
       server:
         port: compute-016/fe-p0
       switch:
-        port: fe-leaf-01/E1/7/4
+        port: fe-leaf-01/E1/4/4
 ---
 apiVersion: wiring.githedgehog.com/v1beta1
 kind: Connection
@@ -636,7 +696,7 @@ spec:
       server:
         port: compute-016/fe-p1
       switch:
-        port: fe-leaf-02/E1/7/4
+        port: fe-leaf-02/E1/4/4
 ---
 apiVersion: wiring.githedgehog.com/v1beta1
 kind: Connection
@@ -647,10 +707,130 @@ spec:
   mesh:
     links:
     - leaf1:
-        port: fe-leaf-01/E1/2
+        port: fe-leaf-01/E1/33
       leaf2:
-        port: fe-leaf-02/E1/2
+        port: fe-leaf-02/E1/33
     - leaf1:
-        port: fe-leaf-01/E1/4
+        port: fe-leaf-01/E1/34
       leaf2:
-        port: fe-leaf-02/E1/4
+        port: fe-leaf-02/E1/34
+    - leaf1:
+        port: fe-leaf-01/E1/35
+      leaf2:
+        port: fe-leaf-02/E1/35
+    - leaf1:
+        port: fe-leaf-01/E1/36
+      leaf2:
+        port: fe-leaf-02/E1/36
+    - leaf1:
+        port: fe-leaf-01/E1/37
+      leaf2:
+        port: fe-leaf-02/E1/37
+    - leaf1:
+        port: fe-leaf-01/E1/38
+      leaf2:
+        port: fe-leaf-02/E1/38
+    - leaf1:
+        port: fe-leaf-01/E1/39
+      leaf2:
+        port: fe-leaf-02/E1/39
+    - leaf1:
+        port: fe-leaf-01/E1/40
+      leaf2:
+        port: fe-leaf-02/E1/40
+    - leaf1:
+        port: fe-leaf-01/E1/41
+      leaf2:
+        port: fe-leaf-02/E1/41
+    - leaf1:
+        port: fe-leaf-01/E1/42
+      leaf2:
+        port: fe-leaf-02/E1/42
+    - leaf1:
+        port: fe-leaf-01/E1/43
+      leaf2:
+        port: fe-leaf-02/E1/43
+    - leaf1:
+        port: fe-leaf-01/E1/44
+      leaf2:
+        port: fe-leaf-02/E1/44
+    - leaf1:
+        port: fe-leaf-01/E1/45
+      leaf2:
+        port: fe-leaf-02/E1/45
+    - leaf1:
+        port: fe-leaf-01/E1/46
+      leaf2:
+        port: fe-leaf-02/E1/46
+    - leaf1:
+        port: fe-leaf-01/E1/47
+      leaf2:
+        port: fe-leaf-02/E1/47
+    - leaf1:
+        port: fe-leaf-01/E1/48
+      leaf2:
+        port: fe-leaf-02/E1/48
+    - leaf1:
+        port: fe-leaf-01/E1/49
+      leaf2:
+        port: fe-leaf-02/E1/49
+    - leaf1:
+        port: fe-leaf-01/E1/50
+      leaf2:
+        port: fe-leaf-02/E1/50
+    - leaf1:
+        port: fe-leaf-01/E1/51
+      leaf2:
+        port: fe-leaf-02/E1/51
+    - leaf1:
+        port: fe-leaf-01/E1/52
+      leaf2:
+        port: fe-leaf-02/E1/52
+    - leaf1:
+        port: fe-leaf-01/E1/53
+      leaf2:
+        port: fe-leaf-02/E1/53
+    - leaf1:
+        port: fe-leaf-01/E1/54
+      leaf2:
+        port: fe-leaf-02/E1/54
+    - leaf1:
+        port: fe-leaf-01/E1/55
+      leaf2:
+        port: fe-leaf-02/E1/55
+    - leaf1:
+        port: fe-leaf-01/E1/56
+      leaf2:
+        port: fe-leaf-02/E1/56
+    - leaf1:
+        port: fe-leaf-01/E1/57
+      leaf2:
+        port: fe-leaf-02/E1/57
+    - leaf1:
+        port: fe-leaf-01/E1/58
+      leaf2:
+        port: fe-leaf-02/E1/58
+    - leaf1:
+        port: fe-leaf-01/E1/59
+      leaf2:
+        port: fe-leaf-02/E1/59
+    - leaf1:
+        port: fe-leaf-01/E1/60
+      leaf2:
+        port: fe-leaf-02/E1/60
+    - leaf1:
+        port: fe-leaf-01/E1/61
+      leaf2:
+        port: fe-leaf-02/E1/61
+    - leaf1:
+        port: fe-leaf-01/E1/62
+      leaf2:
+        port: fe-leaf-02/E1/62
+    - leaf1:
+        port: fe-leaf-01/E1/63
+      leaf2:
+        port: fe-leaf-02/E1/63
+    - leaf1:
+        port: fe-leaf-01/E1/64
+      leaf2:
+        port: fe-leaf-02/E1/64
