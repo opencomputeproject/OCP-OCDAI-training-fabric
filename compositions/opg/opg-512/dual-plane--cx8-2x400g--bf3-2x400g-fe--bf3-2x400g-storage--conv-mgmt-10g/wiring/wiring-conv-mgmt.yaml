@@ -1,0 +1,3367 @@
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: VLANNamespace
+metadata:
+  name: default
+  namespace: default
+spec:
+  ranges:
+  - from: 1000
+    to: 2999
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: IPv4Namespace
+metadata:
+  name: default
+  namespace: default
+spec:
+  subnets:
+  - 10.0.0.0/16
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Switch
+metadata:
+  name: conv-mgmt-leaf-01
+  namespace: default
+spec:
+  role: server-leaf
+  profile: celestica-ds2000
+  boot:
+    mac: 02:be:3c:fb:6d:61
+  portBreakouts:
+    E1/49: 1x100G
+    E1/50: 1x100G
+    E1/51: 1x100G
+    E1/52: 1x100G
+  portSpeeds:
+    E1/1: 10G
+    E1/2: 10G
+    E1/3: 10G
+    E1/4: 10G
+    E1/5: 10G
+    E1/6: 10G
+    E1/7: 10G
+    E1/8: 10G
+    E1/9: 10G
+    E1/10: 10G
+    E1/11: 10G
+    E1/12: 10G
+    E1/13: 10G
+    E1/14: 10G
+    E1/15: 10G
+    E1/16: 10G
+    E1/17: 10G
+    E1/18: 10G
+    E1/19: 10G
+    E1/20: 10G
+    E1/21: 10G
+    E1/22: 10G
+    E1/23: 10G
+    E1/24: 10G
+    E1/25: 10G
+    E1/26: 10G
+    E1/27: 10G
+    E1/28: 10G
+    E1/29: 10G
+    E1/30: 10G
+    E1/31: 10G
+    E1/32: 10G
+    E1/33: 10G
+    E1/34: 10G
+    E1/35: 10G
+    E1/36: 10G
+    E1/37: 10G
+    E1/38: 10G
+    E1/39: 10G
+    E1/40: 10G
+    E1/41: 10G
+    E1/42: 10G
+    E1/43: 10G
+    E1/44: 10G
+    E1/45: 10G
+    E1/46: 10G
+    E1/47: 10G
+    E1/48: 10G
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Switch
+metadata:
+  name: conv-mgmt-leaf-02
+  namespace: default
+spec:
+  role: server-leaf
+  profile: celestica-ds2000
+  boot:
+    mac: 02:5b:55:29:5c:83
+  portBreakouts:
+    E1/49: 1x100G
+    E1/50: 1x100G
+    E1/51: 1x100G
+    E1/52: 1x100G
+  portSpeeds:
+    E1/1: 10G
+    E1/2: 10G
+    E1/3: 10G
+    E1/4: 10G
+    E1/5: 10G
+    E1/6: 10G
+    E1/7: 10G
+    E1/8: 10G
+    E1/9: 10G
+    E1/10: 10G
+    E1/11: 10G
+    E1/12: 10G
+    E1/13: 10G
+    E1/14: 10G
+    E1/15: 10G
+    E1/16: 10G
+    E1/17: 10G
+    E1/18: 10G
+    E1/19: 10G
+    E1/20: 10G
+    E1/21: 10G
+    E1/22: 10G
+    E1/23: 10G
+    E1/24: 10G
+    E1/25: 10G
+    E1/26: 10G
+    E1/27: 10G
+    E1/28: 10G
+    E1/29: 10G
+    E1/30: 10G
+    E1/31: 10G
+    E1/32: 10G
+    E1/33: 10G
+    E1/34: 10G
+    E1/35: 10G
+    E1/36: 10G
+    E1/37: 10G
+    E1/38: 10G
+    E1/39: 10G
+    E1/40: 10G
+    E1/41: 10G
+    E1/42: 10G
+    E1/43: 10G
+    E1/44: 10G
+    E1/45: 10G
+    E1/46: 10G
+    E1/47: 10G
+    E1/48: 10G
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Switch
+metadata:
+  name: conv-mgmt-leaf-03
+  namespace: default
+spec:
+  role: server-leaf
+  profile: celestica-ds2000
+  boot:
+    mac: 02:af:df:a6:cd:6b
+  portBreakouts:
+    E1/49: 1x100G
+    E1/50: 1x100G
+    E1/51: 1x100G
+    E1/52: 1x100G
+  portSpeeds:
+    E1/1: 10G
+    E1/2: 10G
+    E1/3: 10G
+    E1/4: 10G
+    E1/5: 10G
+    E1/6: 10G
+    E1/7: 10G
+    E1/8: 10G
+    E1/9: 10G
+    E1/10: 10G
+    E1/11: 10G
+    E1/12: 10G
+    E1/13: 10G
+    E1/14: 10G
+    E1/15: 10G
+    E1/16: 10G
+    E1/17: 10G
+    E1/18: 10G
+    E1/19: 10G
+    E1/20: 10G
+    E1/21: 10G
+    E1/22: 10G
+    E1/23: 10G
+    E1/24: 10G
+    E1/25: 10G
+    E1/26: 10G
+    E1/27: 10G
+    E1/28: 10G
+    E1/29: 10G
+    E1/30: 10G
+    E1/31: 10G
+    E1/32: 10G
+    E1/33: 10G
+    E1/34: 10G
+    E1/35: 10G
+    E1/36: 10G
+    E1/37: 10G
+    E1/38: 10G
+    E1/39: 10G
+    E1/40: 10G
+    E1/41: 10G
+    E1/42: 10G
+    E1/43: 10G
+    E1/44: 10G
+    E1/45: 10G
+    E1/46: 10G
+    E1/47: 10G
+    E1/48: 10G
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Switch
+metadata:
+  name: conv-mgmt-leaf-04
+  namespace: default
+spec:
+  role: server-leaf
+  profile: celestica-ds2000
+  boot:
+    mac: 02:5e:a7:e4:c0:c0
+  portBreakouts:
+    E1/49: 1x100G
+    E1/50: 1x100G
+    E1/51: 1x100G
+    E1/52: 1x100G
+  portSpeeds:
+    E1/1: 10G
+    E1/2: 10G
+    E1/3: 10G
+    E1/4: 10G
+    E1/5: 10G
+    E1/6: 10G
+    E1/7: 10G
+    E1/8: 10G
+    E1/9: 10G
+    E1/10: 10G
+    E1/11: 10G
+    E1/12: 10G
+    E1/13: 10G
+    E1/14: 10G
+    E1/15: 10G
+    E1/16: 10G
+    E1/17: 10G
+    E1/18: 10G
+    E1/19: 10G
+    E1/20: 10G
+    E1/21: 10G
+    E1/22: 10G
+    E1/23: 10G
+    E1/24: 10G
+    E1/25: 10G
+    E1/26: 10G
+    E1/27: 10G
+    E1/28: 10G
+    E1/29: 10G
+    E1/30: 10G
+    E1/31: 10G
+    E1/32: 10G
+    E1/33: 10G
+    E1/34: 10G
+    E1/35: 10G
+    E1/36: 10G
+    E1/37: 10G
+    E1/38: 10G
+    E1/39: 10G
+    E1/40: 10G
+    E1/41: 10G
+    E1/42: 10G
+    E1/43: 10G
+    E1/44: 10G
+    E1/45: 10G
+    E1/46: 10G
+    E1/47: 10G
+    E1/48: 10G
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Switch
+metadata:
+  name: conv-mgmt-spine-01
+  namespace: default
+spec:
+  role: spine
+  profile: celestica-ds3000
+  boot:
+    mac: 02:56:77:d3:3f:be
+  portBreakouts:
+    E1/1: 1x100G
+    E1/2: 1x100G
+    E1/3: 1x100G
+    E1/4: 1x100G
+    E1/5: 1x100G
+    E1/6: 1x100G
+    E1/7: 1x100G
+    E1/8: 1x100G
+    E1/9: 1x100G
+    E1/10: 1x100G
+    E1/11: 1x100G
+    E1/12: 1x100G
+    E1/13: 1x100G
+    E1/14: 1x100G
+    E1/15: 1x100G
+    E1/16: 1x100G
+    E1/17: 1x100G
+    E1/18: 1x100G
+    E1/19: 1x100G
+    E1/20: 1x100G
+    E1/21: 1x100G
+    E1/22: 1x100G
+    E1/23: 1x100G
+    E1/24: 1x100G
+    E1/25: 1x100G
+    E1/26: 1x100G
+    E1/27: 1x100G
+    E1/28: 1x100G
+    E1/29: 1x100G
+    E1/30: 1x100G
+    E1/31: 1x100G
+    E1/32: 1x100G
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: compute-001
+  namespace: default
+spec: {}
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: compute-002
+  namespace: default
+spec: {}
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: compute-003
+  namespace: default
+spec: {}
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: compute-004
+  namespace: default
+spec: {}
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: compute-005
+  namespace: default
+spec: {}
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: compute-006
+  namespace: default
+spec: {}
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: compute-007
+  namespace: default
+spec: {}
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: compute-008
+  namespace: default
+spec: {}
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: compute-009
+  namespace: default
+spec: {}
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: compute-010
+  namespace: default
+spec: {}
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: compute-011
+  namespace: default
+spec: {}
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: compute-012
+  namespace: default
+spec: {}
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: compute-013
+  namespace: default
+spec: {}
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: compute-014
+  namespace: default
+spec: {}
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: compute-015
+  namespace: default
+spec: {}
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: compute-016
+  namespace: default
+spec: {}
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: compute-017
+  namespace: default
+spec: {}
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: compute-018
+  namespace: default
+spec: {}
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: compute-019
+  namespace: default
+spec: {}
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: compute-020
+  namespace: default
+spec: {}
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: compute-021
+  namespace: default
+spec: {}
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: compute-022
+  namespace: default
+spec: {}
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: compute-023
+  namespace: default
+spec: {}
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: compute-024
+  namespace: default
+spec: {}
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: compute-025
+  namespace: default
+spec: {}
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: compute-026
+  namespace: default
+spec: {}
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: compute-027
+  namespace: default
+spec: {}
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: compute-028
+  namespace: default
+spec: {}
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: compute-029
+  namespace: default
+spec: {}
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: compute-030
+  namespace: default
+spec: {}
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: compute-031
+  namespace: default
+spec: {}
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: compute-032
+  namespace: default
+spec: {}
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: compute-033
+  namespace: default
+spec: {}
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: compute-034
+  namespace: default
+spec: {}
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: compute-035
+  namespace: default
+spec: {}
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: compute-036
+  namespace: default
+spec: {}
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: compute-037
+  namespace: default
+spec: {}
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: compute-038
+  namespace: default
+spec: {}
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: compute-039
+  namespace: default
+spec: {}
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: compute-040
+  namespace: default
+spec: {}
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: compute-041
+  namespace: default
+spec: {}
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: compute-042
+  namespace: default
+spec: {}
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: compute-043
+  namespace: default
+spec: {}
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: compute-044
+  namespace: default
+spec: {}
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: compute-045
+  namespace: default
+spec: {}
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: compute-046
+  namespace: default
+spec: {}
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: compute-047
+  namespace: default
+spec: {}
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: compute-048
+  namespace: default
+spec: {}
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: compute-049
+  namespace: default
+spec: {}
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: compute-050
+  namespace: default
+spec: {}
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: compute-051
+  namespace: default
+spec: {}
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: compute-052
+  namespace: default
+spec: {}
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: compute-053
+  namespace: default
+spec: {}
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: compute-054
+  namespace: default
+spec: {}
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: compute-055
+  namespace: default
+spec: {}
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: compute-056
+  namespace: default
+spec: {}
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: compute-057
+  namespace: default
+spec: {}
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: compute-058
+  namespace: default
+spec: {}
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: compute-059
+  namespace: default
+spec: {}
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: compute-060
+  namespace: default
+spec: {}
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: compute-061
+  namespace: default
+spec: {}
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: compute-062
+  namespace: default
+spec: {}
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: compute-063
+  namespace: default
+spec: {}
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: compute-064
+  namespace: default
+spec: {}
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-001-bmc-bmc0--unbundled--conv-mgmt-leaf-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-001/bmc-bmc0
+      switch:
+        port: conv-mgmt-leaf-01/E1/1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-001-x550-port0--unbundled--conv-mgmt-leaf-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-001/x550-port0
+      switch:
+        port: conv-mgmt-leaf-01/E1/2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-001-x550-port1--unbundled--conv-mgmt-leaf-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-001/x550-port1
+      switch:
+        port: conv-mgmt-leaf-01/E1/3
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-002-bmc-bmc0--unbundled--conv-mgmt-leaf-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-002/bmc-bmc0
+      switch:
+        port: conv-mgmt-leaf-01/E1/4
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-002-x550-port0--unbundled--conv-mgmt-leaf-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-002/x550-port0
+      switch:
+        port: conv-mgmt-leaf-01/E1/5
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-002-x550-port1--unbundled--conv-mgmt-leaf-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-002/x550-port1
+      switch:
+        port: conv-mgmt-leaf-01/E1/6
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-003-bmc-bmc0--unbundled--conv-mgmt-leaf-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-003/bmc-bmc0
+      switch:
+        port: conv-mgmt-leaf-01/E1/7
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-003-x550-port0--unbundled--conv-mgmt-leaf-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-003/x550-port0
+      switch:
+        port: conv-mgmt-leaf-01/E1/8
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-003-x550-port1--unbundled--conv-mgmt-leaf-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-003/x550-port1
+      switch:
+        port: conv-mgmt-leaf-01/E1/9
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-004-bmc-bmc0--unbundled--conv-mgmt-leaf-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-004/bmc-bmc0
+      switch:
+        port: conv-mgmt-leaf-01/E1/10
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-004-x550-port0--unbundled--conv-mgmt-leaf-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-004/x550-port0
+      switch:
+        port: conv-mgmt-leaf-01/E1/11
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-004-x550-port1--unbundled--conv-mgmt-leaf-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-004/x550-port1
+      switch:
+        port: conv-mgmt-leaf-01/E1/12
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-005-bmc-bmc0--unbundled--conv-mgmt-leaf-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-005/bmc-bmc0
+      switch:
+        port: conv-mgmt-leaf-01/E1/13
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-005-x550-port0--unbundled--conv-mgmt-leaf-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-005/x550-port0
+      switch:
+        port: conv-mgmt-leaf-01/E1/14
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-005-x550-port1--unbundled--conv-mgmt-leaf-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-005/x550-port1
+      switch:
+        port: conv-mgmt-leaf-01/E1/15
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-006-bmc-bmc0--unbundled--conv-mgmt-leaf-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-006/bmc-bmc0
+      switch:
+        port: conv-mgmt-leaf-01/E1/16
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-006-x550-port0--unbundled--conv-mgmt-leaf-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-006/x550-port0
+      switch:
+        port: conv-mgmt-leaf-01/E1/17
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-006-x550-port1--unbundled--conv-mgmt-leaf-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-006/x550-port1
+      switch:
+        port: conv-mgmt-leaf-01/E1/18
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-007-bmc-bmc0--unbundled--conv-mgmt-leaf-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-007/bmc-bmc0
+      switch:
+        port: conv-mgmt-leaf-01/E1/19
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-007-x550-port0--unbundled--conv-mgmt-leaf-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-007/x550-port0
+      switch:
+        port: conv-mgmt-leaf-01/E1/20
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-007-x550-port1--unbundled--conv-mgmt-leaf-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-007/x550-port1
+      switch:
+        port: conv-mgmt-leaf-01/E1/21
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-008-bmc-bmc0--unbundled--conv-mgmt-leaf-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-008/bmc-bmc0
+      switch:
+        port: conv-mgmt-leaf-01/E1/22
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-008-x550-port0--unbundled--conv-mgmt-leaf-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-008/x550-port0
+      switch:
+        port: conv-mgmt-leaf-01/E1/23
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-008-x550-port1--unbundled--conv-mgmt-leaf-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-008/x550-port1
+      switch:
+        port: conv-mgmt-leaf-01/E1/24
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-009-bmc-bmc0--unbundled--conv-mgmt-leaf-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-009/bmc-bmc0
+      switch:
+        port: conv-mgmt-leaf-01/E1/25
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-009-x550-port0--unbundled--conv-mgmt-leaf-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-009/x550-port0
+      switch:
+        port: conv-mgmt-leaf-01/E1/26
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-009-x550-port1--unbundled--conv-mgmt-leaf-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-009/x550-port1
+      switch:
+        port: conv-mgmt-leaf-01/E1/27
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-010-bmc-bmc0--unbundled--conv-mgmt-leaf-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-010/bmc-bmc0
+      switch:
+        port: conv-mgmt-leaf-01/E1/28
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-010-x550-port0--unbundled--conv-mgmt-leaf-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-010/x550-port0
+      switch:
+        port: conv-mgmt-leaf-01/E1/29
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-010-x550-port1--unbundled--conv-mgmt-leaf-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-010/x550-port1
+      switch:
+        port: conv-mgmt-leaf-01/E1/30
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-011-bmc-bmc0--unbundled--conv-mgmt-leaf-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-011/bmc-bmc0
+      switch:
+        port: conv-mgmt-leaf-01/E1/31
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-011-x550-port0--unbundled--conv-mgmt-leaf-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-011/x550-port0
+      switch:
+        port: conv-mgmt-leaf-01/E1/32
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-011-x550-port1--unbundled--conv-mgmt-leaf-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-011/x550-port1
+      switch:
+        port: conv-mgmt-leaf-01/E1/33
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-012-bmc-bmc0--unbundled--conv-mgmt-leaf-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-012/bmc-bmc0
+      switch:
+        port: conv-mgmt-leaf-01/E1/34
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-012-x550-port0--unbundled--conv-mgmt-leaf-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-012/x550-port0
+      switch:
+        port: conv-mgmt-leaf-01/E1/35
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-012-x550-port1--unbundled--conv-mgmt-leaf-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-012/x550-port1
+      switch:
+        port: conv-mgmt-leaf-01/E1/36
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-013-bmc-bmc0--unbundled--conv-mgmt-leaf-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-013/bmc-bmc0
+      switch:
+        port: conv-mgmt-leaf-01/E1/37
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-013-x550-port0--unbundled--conv-mgmt-leaf-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-013/x550-port0
+      switch:
+        port: conv-mgmt-leaf-01/E1/38
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-013-x550-port1--unbundled--conv-mgmt-leaf-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-013/x550-port1
+      switch:
+        port: conv-mgmt-leaf-01/E1/39
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-014-bmc-bmc0--unbundled--conv-mgmt-leaf-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-014/bmc-bmc0
+      switch:
+        port: conv-mgmt-leaf-01/E1/40
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-014-x550-port0--unbundled--conv-mgmt-leaf-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-014/x550-port0
+      switch:
+        port: conv-mgmt-leaf-01/E1/41
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-014-x550-port1--unbundled--conv-mgmt-leaf-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-014/x550-port1
+      switch:
+        port: conv-mgmt-leaf-01/E1/42
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-015-bmc-bmc0--unbundled--conv-mgmt-leaf-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-015/bmc-bmc0
+      switch:
+        port: conv-mgmt-leaf-01/E1/43
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-015-x550-port0--unbundled--conv-mgmt-leaf-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-015/x550-port0
+      switch:
+        port: conv-mgmt-leaf-01/E1/44
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-015-x550-port1--unbundled--conv-mgmt-leaf-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-015/x550-port1
+      switch:
+        port: conv-mgmt-leaf-01/E1/45
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-016-bmc-bmc0--unbundled--conv-mgmt-leaf-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-016/bmc-bmc0
+      switch:
+        port: conv-mgmt-leaf-01/E1/46
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-016-x550-port0--unbundled--conv-mgmt-leaf-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-016/x550-port0
+      switch:
+        port: conv-mgmt-leaf-01/E1/47
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-016-x550-port1--unbundled--conv-mgmt-leaf-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-016/x550-port1
+      switch:
+        port: conv-mgmt-leaf-01/E1/48
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-017-bmc-bmc0--unbundled--conv-mgmt-leaf-02
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-017/bmc-bmc0
+      switch:
+        port: conv-mgmt-leaf-02/E1/1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-017-x550-port0--unbundled--conv-mgmt-leaf-02
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-017/x550-port0
+      switch:
+        port: conv-mgmt-leaf-02/E1/2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-017-x550-port1--unbundled--conv-mgmt-leaf-02
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-017/x550-port1
+      switch:
+        port: conv-mgmt-leaf-02/E1/3
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-018-bmc-bmc0--unbundled--conv-mgmt-leaf-02
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-018/bmc-bmc0
+      switch:
+        port: conv-mgmt-leaf-02/E1/4
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-018-x550-port0--unbundled--conv-mgmt-leaf-02
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-018/x550-port0
+      switch:
+        port: conv-mgmt-leaf-02/E1/5
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-018-x550-port1--unbundled--conv-mgmt-leaf-02
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-018/x550-port1
+      switch:
+        port: conv-mgmt-leaf-02/E1/6
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-019-bmc-bmc0--unbundled--conv-mgmt-leaf-02
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-019/bmc-bmc0
+      switch:
+        port: conv-mgmt-leaf-02/E1/7
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-019-x550-port0--unbundled--conv-mgmt-leaf-02
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-019/x550-port0
+      switch:
+        port: conv-mgmt-leaf-02/E1/8
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-019-x550-port1--unbundled--conv-mgmt-leaf-02
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-019/x550-port1
+      switch:
+        port: conv-mgmt-leaf-02/E1/9
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-020-bmc-bmc0--unbundled--conv-mgmt-leaf-02
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-020/bmc-bmc0
+      switch:
+        port: conv-mgmt-leaf-02/E1/10
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-020-x550-port0--unbundled--conv-mgmt-leaf-02
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-020/x550-port0
+      switch:
+        port: conv-mgmt-leaf-02/E1/11
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-020-x550-port1--unbundled--conv-mgmt-leaf-02
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-020/x550-port1
+      switch:
+        port: conv-mgmt-leaf-02/E1/12
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-021-bmc-bmc0--unbundled--conv-mgmt-leaf-02
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-021/bmc-bmc0
+      switch:
+        port: conv-mgmt-leaf-02/E1/13
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-021-x550-port0--unbundled--conv-mgmt-leaf-02
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-021/x550-port0
+      switch:
+        port: conv-mgmt-leaf-02/E1/14
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-021-x550-port1--unbundled--conv-mgmt-leaf-02
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-021/x550-port1
+      switch:
+        port: conv-mgmt-leaf-02/E1/15
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-022-bmc-bmc0--unbundled--conv-mgmt-leaf-02
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-022/bmc-bmc0
+      switch:
+        port: conv-mgmt-leaf-02/E1/16
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-022-x550-port0--unbundled--conv-mgmt-leaf-02
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-022/x550-port0
+      switch:
+        port: conv-mgmt-leaf-02/E1/17
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-022-x550-port1--unbundled--conv-mgmt-leaf-02
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-022/x550-port1
+      switch:
+        port: conv-mgmt-leaf-02/E1/18
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-023-bmc-bmc0--unbundled--conv-mgmt-leaf-02
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-023/bmc-bmc0
+      switch:
+        port: conv-mgmt-leaf-02/E1/19
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-023-x550-port0--unbundled--conv-mgmt-leaf-02
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-023/x550-port0
+      switch:
+        port: conv-mgmt-leaf-02/E1/20
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-023-x550-port1--unbundled--conv-mgmt-leaf-02
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-023/x550-port1
+      switch:
+        port: conv-mgmt-leaf-02/E1/21
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-024-bmc-bmc0--unbundled--conv-mgmt-leaf-02
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-024/bmc-bmc0
+      switch:
+        port: conv-mgmt-leaf-02/E1/22
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-024-x550-port0--unbundled--conv-mgmt-leaf-02
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-024/x550-port0
+      switch:
+        port: conv-mgmt-leaf-02/E1/23
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-024-x550-port1--unbundled--conv-mgmt-leaf-02
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-024/x550-port1
+      switch:
+        port: conv-mgmt-leaf-02/E1/24
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-025-bmc-bmc0--unbundled--conv-mgmt-leaf-02
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-025/bmc-bmc0
+      switch:
+        port: conv-mgmt-leaf-02/E1/25
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-025-x550-port0--unbundled--conv-mgmt-leaf-02
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-025/x550-port0
+      switch:
+        port: conv-mgmt-leaf-02/E1/26
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-025-x550-port1--unbundled--conv-mgmt-leaf-02
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-025/x550-port1
+      switch:
+        port: conv-mgmt-leaf-02/E1/27
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-026-bmc-bmc0--unbundled--conv-mgmt-leaf-02
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-026/bmc-bmc0
+      switch:
+        port: conv-mgmt-leaf-02/E1/28
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-026-x550-port0--unbundled--conv-mgmt-leaf-02
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-026/x550-port0
+      switch:
+        port: conv-mgmt-leaf-02/E1/29
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-026-x550-port1--unbundled--conv-mgmt-leaf-02
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-026/x550-port1
+      switch:
+        port: conv-mgmt-leaf-02/E1/30
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-027-bmc-bmc0--unbundled--conv-mgmt-leaf-02
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-027/bmc-bmc0
+      switch:
+        port: conv-mgmt-leaf-02/E1/31
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-027-x550-port0--unbundled--conv-mgmt-leaf-02
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-027/x550-port0
+      switch:
+        port: conv-mgmt-leaf-02/E1/32
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-027-x550-port1--unbundled--conv-mgmt-leaf-02
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-027/x550-port1
+      switch:
+        port: conv-mgmt-leaf-02/E1/33
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-028-bmc-bmc0--unbundled--conv-mgmt-leaf-02
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-028/bmc-bmc0
+      switch:
+        port: conv-mgmt-leaf-02/E1/34
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-028-x550-port0--unbundled--conv-mgmt-leaf-02
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-028/x550-port0
+      switch:
+        port: conv-mgmt-leaf-02/E1/35
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-028-x550-port1--unbundled--conv-mgmt-leaf-02
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-028/x550-port1
+      switch:
+        port: conv-mgmt-leaf-02/E1/36
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-029-bmc-bmc0--unbundled--conv-mgmt-leaf-02
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-029/bmc-bmc0
+      switch:
+        port: conv-mgmt-leaf-02/E1/37
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-029-x550-port0--unbundled--conv-mgmt-leaf-02
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-029/x550-port0
+      switch:
+        port: conv-mgmt-leaf-02/E1/38
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-029-x550-port1--unbundled--conv-mgmt-leaf-02
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-029/x550-port1
+      switch:
+        port: conv-mgmt-leaf-02/E1/39
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-030-bmc-bmc0--unbundled--conv-mgmt-leaf-02
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-030/bmc-bmc0
+      switch:
+        port: conv-mgmt-leaf-02/E1/40
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-030-x550-port0--unbundled--conv-mgmt-leaf-02
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-030/x550-port0
+      switch:
+        port: conv-mgmt-leaf-02/E1/41
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-030-x550-port1--unbundled--conv-mgmt-leaf-02
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-030/x550-port1
+      switch:
+        port: conv-mgmt-leaf-02/E1/42
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-031-bmc-bmc0--unbundled--conv-mgmt-leaf-02
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-031/bmc-bmc0
+      switch:
+        port: conv-mgmt-leaf-02/E1/43
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-031-x550-port0--unbundled--conv-mgmt-leaf-02
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-031/x550-port0
+      switch:
+        port: conv-mgmt-leaf-02/E1/44
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-031-x550-port1--unbundled--conv-mgmt-leaf-02
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-031/x550-port1
+      switch:
+        port: conv-mgmt-leaf-02/E1/45
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-032-bmc-bmc0--unbundled--conv-mgmt-leaf-02
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-032/bmc-bmc0
+      switch:
+        port: conv-mgmt-leaf-02/E1/46
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-032-x550-port0--unbundled--conv-mgmt-leaf-02
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-032/x550-port0
+      switch:
+        port: conv-mgmt-leaf-02/E1/47
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-032-x550-port1--unbundled--conv-mgmt-leaf-02
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-032/x550-port1
+      switch:
+        port: conv-mgmt-leaf-02/E1/48
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-033-bmc-bmc0--unbundled--conv-mgmt-leaf-03
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-033/bmc-bmc0
+      switch:
+        port: conv-mgmt-leaf-03/E1/1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-033-x550-port0--unbundled--conv-mgmt-leaf-03
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-033/x550-port0
+      switch:
+        port: conv-mgmt-leaf-03/E1/2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-033-x550-port1--unbundled--conv-mgmt-leaf-03
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-033/x550-port1
+      switch:
+        port: conv-mgmt-leaf-03/E1/3
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-034-bmc-bmc0--unbundled--conv-mgmt-leaf-03
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-034/bmc-bmc0
+      switch:
+        port: conv-mgmt-leaf-03/E1/4
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-034-x550-port0--unbundled--conv-mgmt-leaf-03
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-034/x550-port0
+      switch:
+        port: conv-mgmt-leaf-03/E1/5
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-034-x550-port1--unbundled--conv-mgmt-leaf-03
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-034/x550-port1
+      switch:
+        port: conv-mgmt-leaf-03/E1/6
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-035-bmc-bmc0--unbundled--conv-mgmt-leaf-03
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-035/bmc-bmc0
+      switch:
+        port: conv-mgmt-leaf-03/E1/7
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-035-x550-port0--unbundled--conv-mgmt-leaf-03
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-035/x550-port0
+      switch:
+        port: conv-mgmt-leaf-03/E1/8
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-035-x550-port1--unbundled--conv-mgmt-leaf-03
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-035/x550-port1
+      switch:
+        port: conv-mgmt-leaf-03/E1/9
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-036-bmc-bmc0--unbundled--conv-mgmt-leaf-03
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-036/bmc-bmc0
+      switch:
+        port: conv-mgmt-leaf-03/E1/10
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-036-x550-port0--unbundled--conv-mgmt-leaf-03
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-036/x550-port0
+      switch:
+        port: conv-mgmt-leaf-03/E1/11
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-036-x550-port1--unbundled--conv-mgmt-leaf-03
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-036/x550-port1
+      switch:
+        port: conv-mgmt-leaf-03/E1/12
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-037-bmc-bmc0--unbundled--conv-mgmt-leaf-03
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-037/bmc-bmc0
+      switch:
+        port: conv-mgmt-leaf-03/E1/13
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-037-x550-port0--unbundled--conv-mgmt-leaf-03
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-037/x550-port0
+      switch:
+        port: conv-mgmt-leaf-03/E1/14
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-037-x550-port1--unbundled--conv-mgmt-leaf-03
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-037/x550-port1
+      switch:
+        port: conv-mgmt-leaf-03/E1/15
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-038-bmc-bmc0--unbundled--conv-mgmt-leaf-03
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-038/bmc-bmc0
+      switch:
+        port: conv-mgmt-leaf-03/E1/16
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-038-x550-port0--unbundled--conv-mgmt-leaf-03
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-038/x550-port0
+      switch:
+        port: conv-mgmt-leaf-03/E1/17
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-038-x550-port1--unbundled--conv-mgmt-leaf-03
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-038/x550-port1
+      switch:
+        port: conv-mgmt-leaf-03/E1/18
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-039-bmc-bmc0--unbundled--conv-mgmt-leaf-03
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-039/bmc-bmc0
+      switch:
+        port: conv-mgmt-leaf-03/E1/19
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-039-x550-port0--unbundled--conv-mgmt-leaf-03
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-039/x550-port0
+      switch:
+        port: conv-mgmt-leaf-03/E1/20
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-039-x550-port1--unbundled--conv-mgmt-leaf-03
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-039/x550-port1
+      switch:
+        port: conv-mgmt-leaf-03/E1/21
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-040-bmc-bmc0--unbundled--conv-mgmt-leaf-03
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-040/bmc-bmc0
+      switch:
+        port: conv-mgmt-leaf-03/E1/22
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-040-x550-port0--unbundled--conv-mgmt-leaf-03
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-040/x550-port0
+      switch:
+        port: conv-mgmt-leaf-03/E1/23
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-040-x550-port1--unbundled--conv-mgmt-leaf-03
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-040/x550-port1
+      switch:
+        port: conv-mgmt-leaf-03/E1/24
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-041-bmc-bmc0--unbundled--conv-mgmt-leaf-03
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-041/bmc-bmc0
+      switch:
+        port: conv-mgmt-leaf-03/E1/25
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-041-x550-port0--unbundled--conv-mgmt-leaf-03
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-041/x550-port0
+      switch:
+        port: conv-mgmt-leaf-03/E1/26
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-041-x550-port1--unbundled--conv-mgmt-leaf-03
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-041/x550-port1
+      switch:
+        port: conv-mgmt-leaf-03/E1/27
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-042-bmc-bmc0--unbundled--conv-mgmt-leaf-03
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-042/bmc-bmc0
+      switch:
+        port: conv-mgmt-leaf-03/E1/28
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-042-x550-port0--unbundled--conv-mgmt-leaf-03
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-042/x550-port0
+      switch:
+        port: conv-mgmt-leaf-03/E1/29
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-042-x550-port1--unbundled--conv-mgmt-leaf-03
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-042/x550-port1
+      switch:
+        port: conv-mgmt-leaf-03/E1/30
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-043-bmc-bmc0--unbundled--conv-mgmt-leaf-03
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-043/bmc-bmc0
+      switch:
+        port: conv-mgmt-leaf-03/E1/31
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-043-x550-port0--unbundled--conv-mgmt-leaf-03
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-043/x550-port0
+      switch:
+        port: conv-mgmt-leaf-03/E1/32
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-043-x550-port1--unbundled--conv-mgmt-leaf-03
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-043/x550-port1
+      switch:
+        port: conv-mgmt-leaf-03/E1/33
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-044-bmc-bmc0--unbundled--conv-mgmt-leaf-03
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-044/bmc-bmc0
+      switch:
+        port: conv-mgmt-leaf-03/E1/34
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-044-x550-port0--unbundled--conv-mgmt-leaf-03
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-044/x550-port0
+      switch:
+        port: conv-mgmt-leaf-03/E1/35
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-044-x550-port1--unbundled--conv-mgmt-leaf-03
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-044/x550-port1
+      switch:
+        port: conv-mgmt-leaf-03/E1/36
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-045-bmc-bmc0--unbundled--conv-mgmt-leaf-03
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-045/bmc-bmc0
+      switch:
+        port: conv-mgmt-leaf-03/E1/37
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-045-x550-port0--unbundled--conv-mgmt-leaf-03
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-045/x550-port0
+      switch:
+        port: conv-mgmt-leaf-03/E1/38
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-045-x550-port1--unbundled--conv-mgmt-leaf-03
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-045/x550-port1
+      switch:
+        port: conv-mgmt-leaf-03/E1/39
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-046-bmc-bmc0--unbundled--conv-mgmt-leaf-03
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-046/bmc-bmc0
+      switch:
+        port: conv-mgmt-leaf-03/E1/40
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-046-x550-port0--unbundled--conv-mgmt-leaf-03
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-046/x550-port0
+      switch:
+        port: conv-mgmt-leaf-03/E1/41
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-046-x550-port1--unbundled--conv-mgmt-leaf-03
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-046/x550-port1
+      switch:
+        port: conv-mgmt-leaf-03/E1/42
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-047-bmc-bmc0--unbundled--conv-mgmt-leaf-03
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-047/bmc-bmc0
+      switch:
+        port: conv-mgmt-leaf-03/E1/43
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-047-x550-port0--unbundled--conv-mgmt-leaf-03
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-047/x550-port0
+      switch:
+        port: conv-mgmt-leaf-03/E1/44
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-047-x550-port1--unbundled--conv-mgmt-leaf-03
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-047/x550-port1
+      switch:
+        port: conv-mgmt-leaf-03/E1/45
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-048-bmc-bmc0--unbundled--conv-mgmt-leaf-03
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-048/bmc-bmc0
+      switch:
+        port: conv-mgmt-leaf-03/E1/46
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-048-x550-port0--unbundled--conv-mgmt-leaf-03
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-048/x550-port0
+      switch:
+        port: conv-mgmt-leaf-03/E1/47
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-048-x550-port1--unbundled--conv-mgmt-leaf-03
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-048/x550-port1
+      switch:
+        port: conv-mgmt-leaf-03/E1/48
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-049-bmc-bmc0--unbundled--conv-mgmt-leaf-04
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-049/bmc-bmc0
+      switch:
+        port: conv-mgmt-leaf-04/E1/1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-049-x550-port0--unbundled--conv-mgmt-leaf-04
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-049/x550-port0
+      switch:
+        port: conv-mgmt-leaf-04/E1/2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-049-x550-port1--unbundled--conv-mgmt-leaf-04
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-049/x550-port1
+      switch:
+        port: conv-mgmt-leaf-04/E1/3
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-050-bmc-bmc0--unbundled--conv-mgmt-leaf-04
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-050/bmc-bmc0
+      switch:
+        port: conv-mgmt-leaf-04/E1/4
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-050-x550-port0--unbundled--conv-mgmt-leaf-04
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-050/x550-port0
+      switch:
+        port: conv-mgmt-leaf-04/E1/5
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-050-x550-port1--unbundled--conv-mgmt-leaf-04
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-050/x550-port1
+      switch:
+        port: conv-mgmt-leaf-04/E1/6
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-051-bmc-bmc0--unbundled--conv-mgmt-leaf-04
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-051/bmc-bmc0
+      switch:
+        port: conv-mgmt-leaf-04/E1/7
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-051-x550-port0--unbundled--conv-mgmt-leaf-04
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-051/x550-port0
+      switch:
+        port: conv-mgmt-leaf-04/E1/8
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-051-x550-port1--unbundled--conv-mgmt-leaf-04
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-051/x550-port1
+      switch:
+        port: conv-mgmt-leaf-04/E1/9
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-052-bmc-bmc0--unbundled--conv-mgmt-leaf-04
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-052/bmc-bmc0
+      switch:
+        port: conv-mgmt-leaf-04/E1/10
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-052-x550-port0--unbundled--conv-mgmt-leaf-04
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-052/x550-port0
+      switch:
+        port: conv-mgmt-leaf-04/E1/11
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-052-x550-port1--unbundled--conv-mgmt-leaf-04
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-052/x550-port1
+      switch:
+        port: conv-mgmt-leaf-04/E1/12
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-053-bmc-bmc0--unbundled--conv-mgmt-leaf-04
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-053/bmc-bmc0
+      switch:
+        port: conv-mgmt-leaf-04/E1/13
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-053-x550-port0--unbundled--conv-mgmt-leaf-04
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-053/x550-port0
+      switch:
+        port: conv-mgmt-leaf-04/E1/14
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-053-x550-port1--unbundled--conv-mgmt-leaf-04
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-053/x550-port1
+      switch:
+        port: conv-mgmt-leaf-04/E1/15
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-054-bmc-bmc0--unbundled--conv-mgmt-leaf-04
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-054/bmc-bmc0
+      switch:
+        port: conv-mgmt-leaf-04/E1/16
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-054-x550-port0--unbundled--conv-mgmt-leaf-04
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-054/x550-port0
+      switch:
+        port: conv-mgmt-leaf-04/E1/17
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-054-x550-port1--unbundled--conv-mgmt-leaf-04
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-054/x550-port1
+      switch:
+        port: conv-mgmt-leaf-04/E1/18
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-055-bmc-bmc0--unbundled--conv-mgmt-leaf-04
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-055/bmc-bmc0
+      switch:
+        port: conv-mgmt-leaf-04/E1/19
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-055-x550-port0--unbundled--conv-mgmt-leaf-04
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-055/x550-port0
+      switch:
+        port: conv-mgmt-leaf-04/E1/20
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-055-x550-port1--unbundled--conv-mgmt-leaf-04
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-055/x550-port1
+      switch:
+        port: conv-mgmt-leaf-04/E1/21
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-056-bmc-bmc0--unbundled--conv-mgmt-leaf-04
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-056/bmc-bmc0
+      switch:
+        port: conv-mgmt-leaf-04/E1/22
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-056-x550-port0--unbundled--conv-mgmt-leaf-04
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-056/x550-port0
+      switch:
+        port: conv-mgmt-leaf-04/E1/23
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-056-x550-port1--unbundled--conv-mgmt-leaf-04
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-056/x550-port1
+      switch:
+        port: conv-mgmt-leaf-04/E1/24
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-057-bmc-bmc0--unbundled--conv-mgmt-leaf-04
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-057/bmc-bmc0
+      switch:
+        port: conv-mgmt-leaf-04/E1/25
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-057-x550-port0--unbundled--conv-mgmt-leaf-04
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-057/x550-port0
+      switch:
+        port: conv-mgmt-leaf-04/E1/26
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-057-x550-port1--unbundled--conv-mgmt-leaf-04
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-057/x550-port1
+      switch:
+        port: conv-mgmt-leaf-04/E1/27
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-058-bmc-bmc0--unbundled--conv-mgmt-leaf-04
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-058/bmc-bmc0
+      switch:
+        port: conv-mgmt-leaf-04/E1/28
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-058-x550-port0--unbundled--conv-mgmt-leaf-04
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-058/x550-port0
+      switch:
+        port: conv-mgmt-leaf-04/E1/29
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-058-x550-port1--unbundled--conv-mgmt-leaf-04
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-058/x550-port1
+      switch:
+        port: conv-mgmt-leaf-04/E1/30
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-059-bmc-bmc0--unbundled--conv-mgmt-leaf-04
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-059/bmc-bmc0
+      switch:
+        port: conv-mgmt-leaf-04/E1/31
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-059-x550-port0--unbundled--conv-mgmt-leaf-04
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-059/x550-port0
+      switch:
+        port: conv-mgmt-leaf-04/E1/32
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-059-x550-port1--unbundled--conv-mgmt-leaf-04
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-059/x550-port1
+      switch:
+        port: conv-mgmt-leaf-04/E1/33
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-060-bmc-bmc0--unbundled--conv-mgmt-leaf-04
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-060/bmc-bmc0
+      switch:
+        port: conv-mgmt-leaf-04/E1/34
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-060-x550-port0--unbundled--conv-mgmt-leaf-04
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-060/x550-port0
+      switch:
+        port: conv-mgmt-leaf-04/E1/35
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-060-x550-port1--unbundled--conv-mgmt-leaf-04
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-060/x550-port1
+      switch:
+        port: conv-mgmt-leaf-04/E1/36
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-061-bmc-bmc0--unbundled--conv-mgmt-leaf-04
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-061/bmc-bmc0
+      switch:
+        port: conv-mgmt-leaf-04/E1/37
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-061-x550-port0--unbundled--conv-mgmt-leaf-04
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-061/x550-port0
+      switch:
+        port: conv-mgmt-leaf-04/E1/38
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-061-x550-port1--unbundled--conv-mgmt-leaf-04
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-061/x550-port1
+      switch:
+        port: conv-mgmt-leaf-04/E1/39
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-062-bmc-bmc0--unbundled--conv-mgmt-leaf-04
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-062/bmc-bmc0
+      switch:
+        port: conv-mgmt-leaf-04/E1/40
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-062-x550-port0--unbundled--conv-mgmt-leaf-04
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-062/x550-port0
+      switch:
+        port: conv-mgmt-leaf-04/E1/41
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-062-x550-port1--unbundled--conv-mgmt-leaf-04
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-062/x550-port1
+      switch:
+        port: conv-mgmt-leaf-04/E1/42
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-063-bmc-bmc0--unbundled--conv-mgmt-leaf-04
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-063/bmc-bmc0
+      switch:
+        port: conv-mgmt-leaf-04/E1/43
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-063-x550-port0--unbundled--conv-mgmt-leaf-04
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-063/x550-port0
+      switch:
+        port: conv-mgmt-leaf-04/E1/44
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-063-x550-port1--unbundled--conv-mgmt-leaf-04
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-063/x550-port1
+      switch:
+        port: conv-mgmt-leaf-04/E1/45
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-064-bmc-bmc0--unbundled--conv-mgmt-leaf-04
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-064/bmc-bmc0
+      switch:
+        port: conv-mgmt-leaf-04/E1/46
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-064-x550-port0--unbundled--conv-mgmt-leaf-04
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-064/x550-port0
+      switch:
+        port: conv-mgmt-leaf-04/E1/47
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-064-x550-port1--unbundled--conv-mgmt-leaf-04
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-064/x550-port1
+      switch:
+        port: conv-mgmt-leaf-04/E1/48
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: conv-mgmt-spine-01-fabric-conv-mgmt-leaf-01
+  namespace: default
+spec:
+  fabric:
+    links:
+    - leaf:
+        port: conv-mgmt-leaf-01/E1/49
+      spine:
+        port: conv-mgmt-spine-01/E1/1
+    - leaf:
+        port: conv-mgmt-leaf-01/E1/50
+      spine:
+        port: conv-mgmt-spine-01/E1/2
+    - leaf:
+        port: conv-mgmt-leaf-01/E1/51
+      spine:
+        port: conv-mgmt-spine-01/E1/3
+    - leaf:
+        port: conv-mgmt-leaf-01/E1/52
+      spine:
+        port: conv-mgmt-spine-01/E1/4
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: conv-mgmt-spine-01-fabric-conv-mgmt-leaf-02
+  namespace: default
+spec:
+  fabric:
+    links:
+    - leaf:
+        port: conv-mgmt-leaf-02/E1/49
+      spine:
+        port: conv-mgmt-spine-01/E1/5
+    - leaf:
+        port: conv-mgmt-leaf-02/E1/50
+      spine:
+        port: conv-mgmt-spine-01/E1/6
+    - leaf:
+        port: conv-mgmt-leaf-02/E1/51
+      spine:
+        port: conv-mgmt-spine-01/E1/7
+    - leaf:
+        port: conv-mgmt-leaf-02/E1/52
+      spine:
+        port: conv-mgmt-spine-01/E1/8
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: conv-mgmt-spine-01-fabric-conv-mgmt-leaf-03
+  namespace: default
+spec:
+  fabric:
+    links:
+    - leaf:
+        port: conv-mgmt-leaf-03/E1/49
+      spine:
+        port: conv-mgmt-spine-01/E1/9
+    - leaf:
+        port: conv-mgmt-leaf-03/E1/50
+      spine:
+        port: conv-mgmt-spine-01/E1/10
+    - leaf:
+        port: conv-mgmt-leaf-03/E1/51
+      spine:
+        port: conv-mgmt-spine-01/E1/11
+    - leaf:
+        port: conv-mgmt-leaf-03/E1/52
+      spine:
+        port: conv-mgmt-spine-01/E1/12
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: conv-mgmt-spine-01-fabric-conv-mgmt-leaf-04
+  namespace: default
+spec:
+  fabric:
+    links:
+    - leaf:
+        port: conv-mgmt-leaf-04/E1/49
+      spine:
+        port: conv-mgmt-spine-01/E1/13
+    - leaf:
+        port: conv-mgmt-leaf-04/E1/50
+      spine:
+        port: conv-mgmt-spine-01/E1/14
+    - leaf:
+        port: conv-mgmt-leaf-04/E1/51
+      spine:
+        port: conv-mgmt-spine-01/E1/15
+    - leaf:
+        port: conv-mgmt-leaf-04/E1/52
+      spine:
+        port: conv-mgmt-spine-01/E1/16

@@ -1,0 +1,656 @@
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: VLANNamespace
+metadata:
+  name: default
+  namespace: default
+spec:
+  ranges:
+  - from: 1000
+    to: 2999
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: IPv4Namespace
+metadata:
+  name: default
+  namespace: default
+spec:
+  subnets:
+  - 10.0.0.0/16
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Switch
+metadata:
+  name: fe-leaf-01
+  namespace: default
+spec:
+  role: server-leaf
+  profile: celestica-ds5000
+  boot:
+    mac: 02:95:fa:72:6a:56
+  portBreakouts:
+    E1/1: 4x200G
+    E1/3: 4x200G
+    E1/5: 4x200G
+    E1/7: 4x200G
+    E1/9: 4x200G
+    E1/11: 4x200G
+    E1/13: 4x200G
+    E1/15: 4x200G
+    E1/17: 4x200G
+    E1/19: 4x200G
+    E1/21: 4x200G
+    E1/23: 4x200G
+    E1/25: 4x200G
+    E1/27: 4x200G
+    E1/29: 4x200G
+    E1/31: 4x200G
+    E1/33: 4x200G
+    E1/35: 4x200G
+    E1/37: 4x200G
+    E1/39: 4x200G
+    E1/41: 4x200G
+    E1/43: 4x200G
+    E1/45: 4x200G
+    E1/47: 4x200G
+    E1/49: 4x200G
+    E1/51: 4x200G
+    E1/53: 4x200G
+    E1/55: 4x200G
+    E1/57: 4x200G
+    E1/59: 4x200G
+    E1/61: 4x200G
+    E1/63: 4x200G
+    E1/2: 1x800G
+    E1/4: 1x800G
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Switch
+metadata:
+  name: fe-leaf-02
+  namespace: default
+spec:
+  role: server-leaf
+  profile: celestica-ds5000
+  boot:
+    mac: 02:c2:05:8e:66:6c
+  portBreakouts:
+    E1/1: 4x200G
+    E1/3: 4x200G
+    E1/5: 4x200G
+    E1/7: 4x200G
+    E1/9: 4x200G
+    E1/11: 4x200G
+    E1/13: 4x200G
+    E1/15: 4x200G
+    E1/17: 4x200G
+    E1/19: 4x200G
+    E1/21: 4x200G
+    E1/23: 4x200G
+    E1/25: 4x200G
+    E1/27: 4x200G
+    E1/29: 4x200G
+    E1/31: 4x200G
+    E1/33: 4x200G
+    E1/35: 4x200G
+    E1/37: 4x200G
+    E1/39: 4x200G
+    E1/41: 4x200G
+    E1/43: 4x200G
+    E1/45: 4x200G
+    E1/47: 4x200G
+    E1/49: 4x200G
+    E1/51: 4x200G
+    E1/53: 4x200G
+    E1/55: 4x200G
+    E1/57: 4x200G
+    E1/59: 4x200G
+    E1/61: 4x200G
+    E1/63: 4x200G
+    E1/2: 1x800G
+    E1/4: 1x800G
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: compute-001
+  namespace: default
+spec: {}
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: compute-002
+  namespace: default
+spec: {}
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: compute-003
+  namespace: default
+spec: {}
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: compute-004
+  namespace: default
+spec: {}
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: compute-005
+  namespace: default
+spec: {}
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: compute-006
+  namespace: default
+spec: {}
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: compute-007
+  namespace: default
+spec: {}
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: compute-008
+  namespace: default
+spec: {}
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: compute-009
+  namespace: default
+spec: {}
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: compute-010
+  namespace: default
+spec: {}
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: compute-011
+  namespace: default
+spec: {}
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: compute-012
+  namespace: default
+spec: {}
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: compute-013
+  namespace: default
+spec: {}
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: compute-014
+  namespace: default
+spec: {}
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: compute-015
+  namespace: default
+spec: {}
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: compute-016
+  namespace: default
+spec: {}
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-001-fe-p0--unbundled--fe-leaf-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-001/fe-p0
+      switch:
+        port: fe-leaf-01/E1/1/1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-001-fe-p1--unbundled--fe-leaf-02
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-001/fe-p1
+      switch:
+        port: fe-leaf-02/E1/1/1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-002-fe-p0--unbundled--fe-leaf-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-002/fe-p0
+      switch:
+        port: fe-leaf-01/E1/1/2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-002-fe-p1--unbundled--fe-leaf-02
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-002/fe-p1
+      switch:
+        port: fe-leaf-02/E1/1/2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-003-fe-p0--unbundled--fe-leaf-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-003/fe-p0
+      switch:
+        port: fe-leaf-01/E1/1/3
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-003-fe-p1--unbundled--fe-leaf-02
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-003/fe-p1
+      switch:
+        port: fe-leaf-02/E1/1/3
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-004-fe-p0--unbundled--fe-leaf-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-004/fe-p0
+      switch:
+        port: fe-leaf-01/E1/1/4
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-004-fe-p1--unbundled--fe-leaf-02
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-004/fe-p1
+      switch:
+        port: fe-leaf-02/E1/1/4
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-005-fe-p0--unbundled--fe-leaf-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-005/fe-p0
+      switch:
+        port: fe-leaf-01/E1/3/1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-005-fe-p1--unbundled--fe-leaf-02
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-005/fe-p1
+      switch:
+        port: fe-leaf-02/E1/3/1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-006-fe-p0--unbundled--fe-leaf-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-006/fe-p0
+      switch:
+        port: fe-leaf-01/E1/3/2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-006-fe-p1--unbundled--fe-leaf-02
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-006/fe-p1
+      switch:
+        port: fe-leaf-02/E1/3/2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-007-fe-p0--unbundled--fe-leaf-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-007/fe-p0
+      switch:
+        port: fe-leaf-01/E1/3/3
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-007-fe-p1--unbundled--fe-leaf-02
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-007/fe-p1
+      switch:
+        port: fe-leaf-02/E1/3/3
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-008-fe-p0--unbundled--fe-leaf-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-008/fe-p0
+      switch:
+        port: fe-leaf-01/E1/3/4
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-008-fe-p1--unbundled--fe-leaf-02
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-008/fe-p1
+      switch:
+        port: fe-leaf-02/E1/3/4
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-009-fe-p0--unbundled--fe-leaf-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-009/fe-p0
+      switch:
+        port: fe-leaf-01/E1/5/1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-009-fe-p1--unbundled--fe-leaf-02
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-009/fe-p1
+      switch:
+        port: fe-leaf-02/E1/5/1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-010-fe-p0--unbundled--fe-leaf-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-010/fe-p0
+      switch:
+        port: fe-leaf-01/E1/5/2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-010-fe-p1--unbundled--fe-leaf-02
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-010/fe-p1
+      switch:
+        port: fe-leaf-02/E1/5/2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-011-fe-p0--unbundled--fe-leaf-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-011/fe-p0
+      switch:
+        port: fe-leaf-01/E1/5/3
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-011-fe-p1--unbundled--fe-leaf-02
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-011/fe-p1
+      switch:
+        port: fe-leaf-02/E1/5/3
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-012-fe-p0--unbundled--fe-leaf-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-012/fe-p0
+      switch:
+        port: fe-leaf-01/E1/5/4
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-012-fe-p1--unbundled--fe-leaf-02
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-012/fe-p1
+      switch:
+        port: fe-leaf-02/E1/5/4
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-013-fe-p0--unbundled--fe-leaf-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-013/fe-p0
+      switch:
+        port: fe-leaf-01/E1/7/1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-013-fe-p1--unbundled--fe-leaf-02
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-013/fe-p1
+      switch:
+        port: fe-leaf-02/E1/7/1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-014-fe-p0--unbundled--fe-leaf-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-014/fe-p0
+      switch:
+        port: fe-leaf-01/E1/7/2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-014-fe-p1--unbundled--fe-leaf-02
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-014/fe-p1
+      switch:
+        port: fe-leaf-02/E1/7/2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-015-fe-p0--unbundled--fe-leaf-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-015/fe-p0
+      switch:
+        port: fe-leaf-01/E1/7/3
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-015-fe-p1--unbundled--fe-leaf-02
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-015/fe-p1
+      switch:
+        port: fe-leaf-02/E1/7/3
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-016-fe-p0--unbundled--fe-leaf-01
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-016/fe-p0
+      switch:
+        port: fe-leaf-01/E1/7/4
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: compute-016-fe-p1--unbundled--fe-leaf-02
+  namespace: default
+spec:
+  unbundled:
+    link:
+      server:
+        port: compute-016/fe-p1
+      switch:
+        port: fe-leaf-02/E1/7/4
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: mesh-fe-leaf-01-fe-leaf-02
+  namespace: default
+spec:
+  mesh:
+    links:
+    - leaf1:
+        port: fe-leaf-01/E1/2
+      leaf2:
+        port: fe-leaf-02/E1/2
+    - leaf1:
+        port: fe-leaf-01/E1/4
+      leaf2:
+        port: fe-leaf-02/E1/4
